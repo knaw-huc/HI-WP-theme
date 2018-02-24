@@ -1,0 +1,40 @@
+@mixin clearfix
+  overflow: hidden
+
+@mixin legacy-clearfix
+
+  &::after
+    clear: both
+    display: table
+    content: ''
+
+@mixin stretch
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+@mixin hide-text
+  text-indent: -9999px
+
+@mixin remove-list-styles
+  margin: 0
+  padding: 0
+  list-style: none
+
+@mixin remove-button-styles
+  padding: 0
+  font: inherit
+  line-height: normal
+  text-align: inherit
+  overflow: visible
+  color: inherit
+  user-select: none
+  background: none
+  border: 0
+  outline: 0
+
+$browser-context: 16
+
+@function em($pixels, $context: $browser-context)
+  @return #{$pixels/$context}em
