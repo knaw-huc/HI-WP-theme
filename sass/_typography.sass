@@ -1,35 +1,96 @@
-// @mixin heading-1
-//   font-family: $playfair-display
-//   font-size: 48px
-//   font-weight: 400
-//   text-transform: uppercase
-//
-//   @media only screen and (max-width: 1024px)
-//     font-size: 36px
-//
-// @mixin heading-2
-//   font-family: $playfair-display
-//   font-size: 36px
-//   font-weight: 400
-//   text-transform: uppercase
-//
-// @mixin heading-3
-//   font-family: $playfair-display
-//   font-size: 24px
-//   font-weight: 400
-//   text-transform: uppercase
-//
-// @mixin paragraph
-//   font-family: $roboto
-//   font-size: 17px
-//   font-weight: 400
-//   line-height: 1.412 // 24px
-//
-//   @media only screen and (max-width: 1024px)
-//     font-size: 14px
-//
-// @mixin paragraph-small
-//   font-family: $roboto
-//   font-size: 14px
-//   font-weight: 400
-//   line-height: 1.412 // 24px
+@mixin heading-1
+  font-family: $asul
+  font-size: 64px
+  font-weight: 400
+  line-height: unitless(54px, 64px)
+
+  // @media (max-width: $media-tablet-portrait)
+  //   font-size: 16px
+
+@mixin heading-2
+  font-family: $chivo
+  font-size: 48px
+  font-weight: 400
+  line-height: 1
+
+@mixin heading-3
+  font-family: $asul
+  font-size: 32px
+  font-weight: 400
+  line-height: 1
+
+@mixin heading-4
+  font-family: $chivo
+  font-size: 24px
+  font-weight: 400
+  line-height: 1
+
+@mixin heading-5
+  font-family: $asul
+  font-size: 24px
+  font-weight: 400
+  line-height: 1
+
+@mixin heading-6
+  font-family: $asul
+  font-size: 20px
+  font-weight: 400
+  line-height: unitless(22px, 20px)
+
+@mixin name
+  font-family: $charis-sil
+  font-size: 18px
+  font-weight: 400
+  line-height: unitless(20px, 18px)
+
+@mixin paragraph-chivo-large
+  font-family: $chivo
+  font-size: 20px
+  font-weight: 400
+  line-height: unitless(28px, 20px)
+  letter-spacing: em(-0.2px, 20px)
+
+@mixin paragraph-chivo-medium
+  font-family: $chivo
+  font-size: 18px
+  font-weight: 400
+  line-height: unitless(27px, 18px)
+
+@mixin paragraph-chivo-small
+  font-family: $chivo
+  font-size: 14px
+  font-weight: 400
+  line-height: unitless(20px, 14px)
+  letter-spacing: em(-0.2px, 14px)
+
+@mixin paragraph-large
+  font-family: $charis-sil
+  font-size: 20px
+  font-weight: 400
+  line-height: unitless(28px, 20px)
+
+@mixin paragraph-medium
+  font-family: $charis-sil
+  font-size: 18px
+  font-weight: 400
+  line-height: unitless(27px, 18px)
+
+@mixin paragraph-small
+  font-family: $charis-sil
+  font-size: 14px
+  font-weight: 400
+  line-height: unitless(20px, 14px)
+
+@mixin tag
+  font-family: $chivo
+  font-size: 14px
+  font-weight: 400
+  line-height: 1
+  letter-spacing: em(-0.2px, 14px)
+
+@mixin tag-small
+  font-family: $chivo
+  font-size: 12px
+  font-weight: 400
+  line-height: unitless(14px, 12px)
+  letter-spacing: em(-0.17px, 12px)

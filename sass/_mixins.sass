@@ -38,3 +38,13 @@ $browser-context: 16
 
 @function em($pixels, $context: $browser-context)
   @return #{$pixels/$context}em
+
+@function unitless($pixels, $context: $browser-context)
+  @return #{$pixels/$context}
+
+@mixin wrapper
+  width: calc(100% - 64px)
+  max-width: 1120px
+
+  @media only screen and (max-width: 767px)
+    width: calc(100% - 30px)

@@ -1,0 +1,84 @@
+$navigation-height: 64px
+$logo-size: 128px
+
+body
+  padding-top: $navigation-height
+
+.header
+  position: fixed
+  top: 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  height: $navigation-height
+  padding-right: 42px
+  padding-left: $logo-size + 32px
+  background: $brand-black
+
+.logo
+  position: absolute
+  top: 0
+  left: 0
+  display: block
+  width: $logo-size
+  height: $logo-size
+
+.navigation
+  +remove-list-styles
+  display: flex
+
+.navigation__item
+  position: relative
+
+  & + .navigation__item
+    margin-left: $navigation-height / 2
+
+  &:hover
+
+    .navigation--sub
+      display: block
+
+.navigation__item__button
+  +paragraph-chivo-medium
+  position: relative
+  display: block
+  color: $brand-white
+
+  &::after
+    position: absolute
+    top: 1px
+    display: inline-block
+    width: 24px
+    height: 24px
+    font-family: $genericons
+    font-size: 24px
+    line-height: 1
+
+  &--has-sub
+
+    &::after
+      right: -25px
+      content: ''
+
+.navigation--utilities
+
+  .navigation__item__button
+
+    &::after
+      left: -31px
+      content: ''
+
+.navigation--sub
+  position: absolute
+  left: -$navigation-height / 4
+  display: none
+  flex-direction: column
+  padding: $navigation-height / 4
+  background: $brand-black
+
+  .navigation__item
+    margin-top: $navigation-height / 8
+
+    & + .navigation__item
+      margin-left: 0
