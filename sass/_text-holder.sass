@@ -34,8 +34,25 @@
       & + *
         margin-top: 16px
 
-  * + *
+  > * + *
     margin-top: 48px
 
-  p + p
+  p + p,
+  p + ul,
+  ul + ul,
+  ul + p
     margin-top: em(27px, 18px)
+
+  ul
+    +remove-list-styles
+    +paragraph-medium
+
+    li
+      position: relative
+      padding-left: 28px
+
+      &::before
+        position: absolute
+        top: 0
+        left: 0
+        content: '•'
