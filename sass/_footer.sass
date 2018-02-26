@@ -1,2 +1,52 @@
 .footer
   margin-top: 64px
+  padding-top: 67px
+  padding-bottom: 104px
+  color: $brand-white
+  background: $brand-dark-blue
+
+.footer__inner
+  +wrapper
+  display: flex
+
+.footer__column
+
+  &:nth-child(1)
+    width: 330px
+    padding-right: 32px
+    flex-shrink: 0
+
+  &:nth-child(2)
+    width: 430px
+    padding-right: 32px
+
+    *
+      max-width: 260px
+
+  &:nth-child(3)
+    flex-shrink: 0
+
+  h2
+    +heading-4
+
+  p
+    +paragraph-chivo-small
+    margin-top: em(25px, 14px)
+
+    & + p
+      margin-top: em(20px, 14px)
+
+.logo-holder
+  +remove-list-styles
+  margin-top: em(25px, 14px)
+  display: flex
+  align-items: center
+
+.logo-holder__item
+
+  & + .logo-holder__item
+    margin-left: 34px
+
+  a,
+  img
+    display: block
