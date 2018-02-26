@@ -1,0 +1,25 @@
+.main
+  +wrapper
+
+  &--white
+    display: flex
+    max-width: 1248px
+    padding: 64px
+    background: $brand-white
+
+.main__column
+
+  &--body
+    flex-shrink: 1
+
+  &--aside
+    margin-left: 127px
+    width: 255px
+    flex-shrink: 0
+
+.main__column__item
+  background: rgba(pink, .4) // temp
+  border: 2px solid pink // temp
+
+  & + .main__column__item
+    margin-top: 64px
