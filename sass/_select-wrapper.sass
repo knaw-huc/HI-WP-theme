@@ -1,0 +1,50 @@
+.select-wrapper
+  position: relative
+  display: inline-block
+  height: 40px
+  overflow: hidden
+  background-color: $brand-grey
+
+  select
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    z-index: $z-index-content
+    width: 100%
+    cursor: pointer
+    background-color: transparent
+    background-image: none
+    border: 0
+    box-shadow: none
+    appearance: none
+
+    &:focus
+      outline: none
+
+  span
+    +paragraph-chivo-small
+    position: relative
+    z-index: $z-index-content + 1
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+    padding-right: 32px
+    pointer-events: none
+    background-color: $brand-grey
+
+  &::after
+    position: absolute
+    top: 12px
+    right: 12px
+    z-index: $z-index-content + 2
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 18px
+    height: 16px
+    font-family: $genericons
+    font-size: 18px
+    pointer-events: none
+    content: ''

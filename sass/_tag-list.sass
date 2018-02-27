@@ -1,0 +1,19 @@
+.tag-list__item
+  +tag
+  display: flex
+  align-items: center
+  height: 20px
+  color: $brand-light-blue
+
+  &::before
+    width: 20px
+    height: 20px
+    font-family: $genericons
+    font-size: 20px
+    content: ''
+
+  &--category
+    color: $brand-dark-blue
+
+    &::before
+      content: ''

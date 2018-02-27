@@ -1,0 +1,19 @@
+.project-overview
+  display: flex
+  flex-wrap: wrap
+
+  .project-filter + &
+    margin-top: 63px
+
+  .card
+    margin-top: 32px
+    width: 352px
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3)
+      margin-top: 0
+
+    &:nth-child(3n-1),
+    &:nth-child(3n)
+      margin-left: 32px

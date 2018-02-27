@@ -5,7 +5,6 @@
 
 .sidebar__item__heading
   +heading-4
-  padding-bottom: 16px
   border-bottom: 1px dotted $brand-light-blue
 
 .sidebar__item__text-holder
@@ -73,21 +72,9 @@
       font-size: 32px
       content: ''
 
-.sidebar__item__tag
-  +tag
-  display: flex
-  align-items: center
-  height: 20px
-  color: $brand-light-blue
+.sidebar__item__body
 
-  &::before
-    width: 20px
-    height: 20px
-    font-family: $genericons
-    font-size: 20px
-    content: ''
-
-  &:first-child
+  .tag-list
     margin-top: 16px
 
 .sidebar__item__person

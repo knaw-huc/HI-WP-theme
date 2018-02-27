@@ -1,0 +1,95 @@
+// TODO: Lazyload
+// TODO: Add image filter
+// TODO: Truncate when title is too long
+
+.card
+  position: relative
+  display: flex
+
+  &--default
+    flex-direction: column
+
+    .card__info
+      flex-direction: column
+      justify-content: space-between
+      height: 198px
+
+  &--bar
+
+    .card__visual
+      width: 256px
+
+    .card__info
+      flex-grow: 1
+
+      .card__info__section
+
+        &:nth-child(1)
+          max-width: 256px
+          flex-shrink: 0
+
+        &:nth-child(2)
+          margin-left: 28px
+          flex-shrink: 1
+
+  &__visual
+    position: relative
+
+    &::before
+      display: block
+      width: 100%
+      padding-top: (198 / 352) * 100%
+      content: ''
+
+    .card__visual__markers
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      display: flex
+      flex-direction: column
+      width: 16px
+
+      &__item
+        flex-grow: 1
+
+        &--blue
+          background: $brand-blue
+
+        &--orange
+          background: $brand-orange
+
+        &--green
+          background: $brand-green
+
+        &--yellow
+          background: $brand-yellow
+
+    img
+      +stretch
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__info
+    display: flex
+    padding: 24px 30px
+    background: $brand-white
+
+    h6
+      +heading-6
+
+  &__button
+    position: absolute
+    right: 0
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 32px
+    height: 32px
+    font-family: $genericons
+    font-size: 32px
+    color: $brand-white
+    background: $brand-light-blue
