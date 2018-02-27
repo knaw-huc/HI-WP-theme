@@ -1,0 +1,122 @@
+.sidebar__item
+
+  & + .sidebar__item
+    margin-top: 64px
+
+.sidebar__item__heading
+  +heading-4
+  padding-bottom: 16px
+  border-bottom: 1px dotted $brand-light-blue
+
+.sidebar__item__text-holder
+  +paragraph-small
+
+  &--filter-links
+    font-family: $chivo
+
+  p
+    margin-top: 16px
+
+    & + p
+      margin-top: em(20px, 14px)
+
+  span
+    color: $brand-light-blue
+
+.sidebar__item__text-link
+  +paragraph-chivo-small
+  display: block
+  padding: 12px 0
+  border-bottom: 1px dotted $brand-light-blue
+
+  span
+    color: $brand-light-blue
+
+.sidebar__item__social-media
+  +remove-list-styles
+  display: flex
+  padding: 12px 0
+  border-bottom: 1px dotted $brand-light-blue
+
+.sidebar__item__social-media__item
+  font-family: $genericons
+  font-size: 28px
+
+
+  & + .sidebar__item__social-media__item
+    margin-left: 8px
+
+.sidebar__item__button
+  // TODO: Make mixin?
+  margin-top: 16px
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 40px
+  font-family: $chivo
+  font-size: 16px
+
+  &--yellow
+    background: $brand-yellow
+
+  &--orange
+    background: $brand-orange
+
+  &--outgoing
+    color: $brand-white
+    background: $brand-dark-blue
+
+    &::after
+      display: inline-block
+      width: 32px
+      font-family: $genericons
+      font-size: 32px
+      content: ''
+
+.sidebar__item__tag
+  +tag
+  display: flex
+  align-items: center
+  height: 20px
+  color: $brand-light-blue
+
+  &::before
+    width: 20px
+    height: 20px
+    font-family: $genericons
+    font-size: 20px
+    content: ''
+
+  &:first-child
+    margin-top: 16px
+
+.sidebar__item__person
+  margin-top: 24px
+  display: flex
+
+  & + .sidebar__item__person
+    margin-top: 32px
+
+.sidebar__item__person__portrait
+  // TODO: Add color filter
+  width: 80px
+  height: 80px
+  border-radius: 80px
+
+.sidebar__item__person__text
+  margin-left: 16px
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  &__title
+    +paragraph-chivo-small
+    line-height: 1
+
+  &__name
+    +paragraph-medium
+    line-height: 1
+
+  &__function
+    +tag
+    margin-top: 6px
