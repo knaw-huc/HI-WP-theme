@@ -8,11 +8,45 @@
 
   &--default
     flex-direction: column
+    max-width: 352px
 
     .card__info
       flex-direction: column
       justify-content: space-between
       height: 198px
+
+  &--thumbnail
+    max-width: 527px
+
+    .card__visual
+      width: 527px
+
+    .card__info
+      +stretch
+      position: absolute
+      justify-content: center
+      align-items: center
+      height: auto
+      padding: 0 64px
+      background: none
+
+      h6
+        +heading-3
+
+      p
+        text-align: center
+
+      .tag-list
+        display: flex
+
+      .tag-list__item
+        color: $brand-dark-blue
+
+        & + .tag-list__item
+          margin-left: 16px
+
+    .card__info__section + .card__info__section
+      margin-top: 16px
 
   &--bar
 
@@ -79,6 +113,9 @@
 
     h6
       +heading-6
+
+    p
+      +paragraph-medium
 
   &__button
     position: absolute
