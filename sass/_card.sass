@@ -78,6 +78,30 @@
         +heading-6
         text-align: center
 
+  &--compact
+    width: 100%
+
+    .card__info
+      position: relative
+      height: auto
+      padding: 20px
+
+      &::after
+        position: absolute
+        top: 0
+        right: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 64px
+        height: 64px
+        font-family: $genericons
+        font-size: 48px
+        content: ''
+
+      h6
+        +heading-4
+
   &__visual
     position: relative
 
