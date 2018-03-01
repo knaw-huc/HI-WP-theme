@@ -8,6 +8,16 @@ $('.page-intro__carousel').owlCarousel({
   'dots': false,
 });
 
+// Homepage carousel
+$('.homepage-carousel').owlCarousel({
+  'items': 1,
+  'loop': true,
+  // 'margin': 32,
+  // 'autoWidth': true,
+  // 'center': true,
+  'dots': true,
+});
+
 // Custom select elements
 $('.select-wrapper select').each(function() {
   var selectedOptionText = $(this).find('option:selected').text();
