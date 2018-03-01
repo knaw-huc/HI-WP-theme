@@ -1,3 +1,17 @@
+@mixin general-list-styling
+  +remove-list-styles
+  +paragraph-medium
+
+  li
+    position: relative
+    padding-left: 28px
+
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      content: '•'
+
 .text-holder
   color: $brand-dark-blue
 
@@ -35,18 +49,7 @@
         margin-top: 16px
 
   ul
-    +remove-list-styles
-    +paragraph-medium
-
-    li
-      position: relative
-      padding-left: 28px
-
-      &::before
-        position: absolute
-        top: 0
-        left: 0
-        content: '•'
+    +general-list-styling
 
   hr
     margin-bottom: 17px

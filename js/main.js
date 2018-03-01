@@ -18,3 +18,13 @@ $('.select-wrapper select').change(function() {
   var selectedOptionText = $(this).find('option:selected').text();
   $(this).parent().find('span').text(selectedOptionText);
 });
+
+// Publication overview
+$('.publication-overview__section__toggle').click(function(e) {
+
+  $(this).prev().addClass('is-open');
+  $(this).addClass('is-hidden');
+
+  e.preventDefault();
+
+});
