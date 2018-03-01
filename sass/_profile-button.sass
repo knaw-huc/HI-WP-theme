@@ -1,0 +1,27 @@
+.profile-button
+  display: flex
+
+.profile-button__portrait
+  width: 80px
+  height: 80px
+  overflow: hidden
+  border-radius: 80px
+
+.profile-button__text
+  margin-left: 16px
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  &__title
+    +paragraph-chivo-small
+    line-height: 1
+
+  &__name
+    +paragraph-medium
+    line-height: 1
+
+  &__function
+    +tag
+    margin-top: 6px
+    color: $brand-light-blue
