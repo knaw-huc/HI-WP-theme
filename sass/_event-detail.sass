@@ -1,0 +1,39 @@
+.main__column--event
+
+  .date
+    +paragraph-chivo-medium
+
+    & + h1
+      margin-top: em(16px, 48px)
+
+  h1 + .tag-list
+    margin-top: em(36px, 16px)
+
+  .tag-list
+    display: flex
+
+  .tag-list__item
+
+    & + .tag-list__item
+      margin-left: 15px
+
+  p
+
+    strong
+      +paragraph-medium
+      font-weight: bold
+
+.event-meta
+  display: flex
+  flex-direction: column
+
+  * + &,
+  & + .event-meta
+    margin-top: 24px
+
+  &__name
+    +tag
+    color: $brand-light-blue
+
+  &__value
+    +paragraph-large

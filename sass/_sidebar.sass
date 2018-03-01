@@ -11,6 +11,9 @@
 .sidebar__item__text-holder
   +paragraph-small
 
+  & + .sidebar__item__button
+    margin-top: 24px
+
   &--filter-links
     font-family: $chivo
 
@@ -22,6 +25,18 @@
 
   span
     color: $brand-light-blue
+
+  &--person
+
+    p
+      margin-top: 16px
+
+      strong
+        +name
+        line-height: unitless(20px, 14px)
+
+      & + p
+        margin-top: em(8px, 14px)
 
 .sidebar__item__text-link
   +paragraph-chivo-small
@@ -56,15 +71,22 @@
   font-family: $chivo
   font-size: 16px
 
+  &--small
+    display: inline-flex
+    padding: 0 18px
+
   &--yellow
     background: $brand-yellow
 
   &--orange
     background: $brand-orange
 
+  &--default,
   &--outgoing
     color: $brand-white
     background: $brand-dark-blue
+
+  &--outgoing
 
     &::after
       display: inline-block

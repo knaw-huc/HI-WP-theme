@@ -34,15 +34,6 @@
       & + *
         margin-top: 16px
 
-  > * + *
-    margin-top: 48px
-
-  p + p,
-  p + ul,
-  ul + ul,
-  ul + p
-    margin-top: em(27px, 18px)
-
   ul
     +remove-list-styles
     +paragraph-medium
@@ -56,3 +47,20 @@
         top: 0
         left: 0
         content: '•'
+
+  hr
+    margin-bottom: 17px
+    border: 0
+    border-bottom: 1px dotted $brand-light-blue
+
+  > * + *
+    margin-top: 48px
+
+  > * + hr
+    margin-top: 26px
+
+  p + p,
+  p + ul,
+  ul + ul,
+  ul + p
+    margin-top: em(27px, 18px)

@@ -10,6 +10,17 @@
 }
 
 @font-face {
+  font-family: 'CharisSIL';
+  src: url('../fonts/CharisSIL-Bold.eot');
+  src: url('../fonts/CharisSIL-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CharisSIL-Bold.woff') format('woff'),
+       url('../fonts/CharisSIL-Bold.ttf')  format('truetype'),
+       url('../fonts/CharisSIL-Bold.svg#fce281fce3710bdef0bac6e899de067e') format('svg');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
   font-family: 'Genericons';
   src: url('../fonts/Genericons.eot');
   src: url('../fonts/Genericons.eot?#iefix') format('embedded-opentype'),
@@ -21,6 +32,7 @@
 }
 
 // regular (400)
+// bold (700)
 $charis-sil: 'CharisSIL', serif;
 
 // regular (400)
