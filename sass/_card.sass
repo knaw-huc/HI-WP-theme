@@ -102,6 +102,38 @@
       h6
         +heading-4
 
+  &--event
+
+    .card__visual
+      width: 352px
+
+    .card__info
+      flex-direction: column
+      justify-content: space-between
+      padding-right: 60px
+
+      p
+        +paragraph-chivo-medium
+
+      h6
+        +heading-5
+
+      .card__info__section
+
+        &:nth-child(1)
+          max-width: initial
+
+        &:nth-child(2)
+          margin-left: 0
+
+      .tag-list
+        display: flex
+
+      .tag-list__item
+
+        & + .tag-list__item
+          margin-left: 15px
+
   &__visual
     position: relative
 
