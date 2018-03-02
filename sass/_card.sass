@@ -1,6 +1,5 @@
 // TODO: Lazyload
 // TODO: Truncate when title is too long
-// TODO: Hover: box-shadow: 0 0 8px 0 rgba(0,32,72,0.45)
 
 .card
   position: relative
@@ -206,3 +205,12 @@
     font-size: 32px
     color: $brand-white
     background: $brand-light-blue
+
+.project-overview .card,
+.resource-overview__list .card,
+.event-overview .card,
+.homepage-carousel .owl-stage-outer
+  transition: box-shadow .15s ease
+
+  &:hover
+    box-shadow: 0 0 8px 0 rgba(0,32,72,0.45)
