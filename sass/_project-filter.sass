@@ -23,7 +23,10 @@
     margin-top: 24px
     display: inline-block
     color: #667991
-    border-bottom: 1px solid #667991
+    border-bottom: 1px solid currentcolor
+
+    &:hover
+      color: $brand-dark-blue
 
     &::after
       position: relative
@@ -43,6 +46,11 @@
   height: 40px
   font-family: $chivo
   font-size: 16px
+  transition: color .3s ease, background .3s ease
+
+  &:hover
+    color: $brand-white
+    background: $brand-dark-blue
 
   &--active
     color: $brand-white
@@ -55,6 +63,10 @@
       font-size: 18px
       color: #667991
       content: ''
+      transition: color .3s ease
+
+    &:hover::after
+      color: $brand-white
 
   &--yellow
     background: $brand-yellow

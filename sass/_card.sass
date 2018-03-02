@@ -205,11 +205,16 @@
     font-size: 32px
     color: $brand-white
     background: $brand-light-blue
+    transition: background .3s ease
+
+    &:hover
+      background: $brand-dark-blue
 
 .project-overview .card,
 .resource-overview__list .card,
 .event-overview .card,
-.homepage-carousel .owl-stage-outer
+.homepage-carousel .owl-stage-outer,
+.search-results-list__item
   transition: box-shadow .15s ease
 
   &:hover

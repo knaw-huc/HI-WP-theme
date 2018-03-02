@@ -59,13 +59,18 @@ body
   &:hover
 
     .navigation--sub
-      display: block
+      display: flex
 
 .navigation__item__button
   +paragraph-chivo-medium
   position: relative
   display: block
+  line-height: 1.4285714286
   color: $brand-white
+  border-bottom: 1px solid transparent
+
+  &:hover
+    border-bottom: 1px solid currentcolor
 
   &::after
     position: absolute
@@ -111,6 +116,7 @@ body
   left: -$navigation-height / 4
   display: none
   flex-direction: column
+  align-items: flex-start
   padding: $navigation-height / 4
   background: $brand-black
 

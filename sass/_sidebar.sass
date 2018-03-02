@@ -23,6 +23,9 @@
     & + p
       margin-top: em(20px, 14px)
 
+    a:hover
+      text-decoration: underline
+
   span
     color: $brand-light-blue
 
@@ -44,7 +47,14 @@
   padding: 12px 0
   border-bottom: 1px dotted $brand-light-blue
 
+  &:hover
+    text-decoration: underline
+
+    span
+      text-decoration: none
+
   span
+    display: inline-block
     color: $brand-light-blue
 
 .sidebar__item__social-media
@@ -69,6 +79,11 @@
   height: 40px
   font-family: $chivo
   font-size: 16px
+  transition: color .3s ease, background .3s ease
+
+  &:hover
+    color: $brand-white
+    background: $brand-dark-blue
 
   &--small
     display: inline-flex
