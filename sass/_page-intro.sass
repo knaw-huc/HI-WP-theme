@@ -1,7 +1,3 @@
-// TODO: Carousel responsiveness
-// TODO: Carousel responsiveness (active items)
-// TODO: Next/prev on click
-
 .page-intro
   padding: 50px 0 64px
   background: #667991
@@ -20,12 +16,45 @@
 .page-intro__carousel
   margin-top: 48px
 
+  &__item
+    display: flex
+    justify-content: space-between
+
+    .card + .card
+      margin-left: 32px
+
   .card
     outline: none
 
-  // .owl-item,
-  // .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active
-  //   opacity: .33
-  //
-  // .owl-item.active
-  //   opacity: 1
+  // Onderzoeksprojecten
+  .owl-item .card--thumbnail
+    opacity: .33
+
+  .owl-item:hover .card--thumbnail
+    opacity: .66
+
+  .owl-item.center .card--thumbnail
+    opacity: 1
+
+  // Resources
+  @media (max-width: 1889px)
+
+    .owl-item .card--default:not(.card--thumbnail)
+      opacity: .33
+      transition: opacity .15s ease
+
+    .owl-item:hover .card--default:not(.card--thumbnail)
+      opacity: .66
+
+    .owl-item.active
+
+      .card--default:not(.card--thumbnail)
+        opacity: 1
+
+    .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active
+
+      .card--default:not(.card--thumbnail)
+        opacity: .33
+
+      &:hover .card--default:not(.card--thumbnail)
+        opacity: .66
