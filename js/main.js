@@ -1,7 +1,12 @@
 // Navigation
-$('.js-toggle-search').click(function(e) {
+$('.js-open-search').click(function(e) {
   $('.header').toggleClass('header--search');
   $('.search-form__input').focus();
+  e.preventDefault();
+});
+
+$('.js-close-search').click(function(e) {
+  $('.header').toggleClass('header--search');
   e.preventDefault();
 });
 
