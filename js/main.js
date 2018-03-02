@@ -1,3 +1,10 @@
+// Navigation
+$('.js-toggle-search').click(function(e) {
+  $('.header').toggleClass('header--search');
+  $('.search-form__input').focus();
+  e.preventDefault();
+});
+
 // Carousel
 $('.page-intro__carousel').owlCarousel({
   'items': 3,

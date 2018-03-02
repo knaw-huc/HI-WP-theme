@@ -8,22 +8,43 @@ body
   position: fixed
   top: 0
   z-index: $z-index-above-content
-  display: flex
-  justify-content: space-between
-  align-items: center
   width: 100%
-  height: $navigation-height
-  padding-right: 42px
-  padding-left: $logo-size + 32px
-  background: $brand-black
 
 .logo
   position: absolute
   top: 0
   left: 0
+  z-index: $z-index-above-content + 1
   display: block
   width: $logo-size
   height: $logo-size
+
+.header__bar
+  position: absolute
+  top: 0
+  right: 0
+  left: $logo-size
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: $navigation-height
+  padding-right: 42px
+  padding-left: 32px
+  background: $brand-black
+  transition: transform .6s ease
+
+  &--search
+    transform: translate3d(100%, 0, 0)
+
+.header--search
+
+  .header__bar
+
+    &--navigation
+      transform: translate3d(-100%, 0, 0)
+
+    &--search
+      transform: translate3d(0, 0, 0)
 
 .navigation
   +remove-list-styles
@@ -62,13 +83,28 @@ body
       right: -25px
       content: ''
 
-.navigation--utilities
+.navigation--open-search
 
   .navigation__item__button
 
     &::after
       left: -31px
       content: ''
+
+.navigation--close-search
+
+  .navigation__item__button
+
+    &::before
+      position: absolute
+      top: 3px
+      left: -26px
+      display: inline-block
+      width: 20px
+      height: 20px
+      content: ''
+      background: url('../img/close-search-ico.svg') center no-repeat
+      background-size: contain
 
 .navigation--sub
   position: absolute
@@ -83,3 +119,18 @@ body
 
     & + .navigation__item
       margin-left: 0
+
+.search-form
+  flex-grow: 1
+
+.search-form__input
+  +paragraph-chivo-medium
+  width: calc(100% - 40px)
+  height: 30px
+  padding: 0
+  color: $brand-white
+  background: transparent
+  border: 0
+  border-radius: 0
+  outline: 0
+  -webkit-appearance: none
