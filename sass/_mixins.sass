@@ -50,3 +50,63 @@ $browser-context: 16
 
   @media (max-width: $media-tablet-portrait)
     width: calc(100% - 50px)
+
+@mixin theme-button
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 40px
+  font-family: $chivo
+  font-size: 16px
+  border: 5px solid pink // temp
+  transition: color .3s ease, background .3s ease
+
+  &:hover
+    color: $brand-white
+    background: $brand-dark-blue
+
+  &--small
+    display: inline-flex
+    padding: 0 18px
+
+  &--default,
+  &--outgoing
+    color: $brand-white
+    background: $brand-dark-blue
+
+  &--outgoing
+
+    &::after
+      display: inline-block
+      width: 32px
+      font-family: $genericons
+      font-size: 32px
+      content: ''
+
+  &--yellow
+    background: $brand-yellow
+
+  &--orange
+    background: $brand-orange
+
+  &--blue
+    background: $brand-blue
+
+  &--green
+    background: $brand-green
+
+  &--active
+    color: $brand-white
+    background: $brand-dark-blue
+
+    &::after
+      position: absolute
+      right: 12px
+      font-family: $genericons
+      font-size: 18px
+      color: #667991
+      content: ''
+      transition: color .3s ease
+
+    &:hover::after
+      color: $brand-white
