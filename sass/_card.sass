@@ -199,16 +199,29 @@
     display: flex
     justify-content: center
     align-items: center
-    width: 32px
-    height: 32px
-    font-family: $genericons
     font-size: 32px
     color: $brand-white
     background: $brand-light-blue
-    transition: background .3s ease
 
     &:hover
       background: $brand-dark-blue
+
+      .card__button__text
+        display: block
+
+    &__text
+      +paragraph-chivo-small
+      position: relative
+      top: 1px
+      display: none
+      padding-left: 8px
+
+    &__icon
+      position: relative
+      top: -1px
+      width: 32px
+      height: 32px
+      font-family: $genericons
 
 @media (min-width: $media-tablet + 1px)
 
