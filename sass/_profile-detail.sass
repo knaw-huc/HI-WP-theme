@@ -128,3 +128,43 @@
 
   &.is-hidden
     display: none
+
+@media (max-width: $media-tablet-portrait)
+
+  .profile-section
+
+    & + .profile-section
+      margin-top: 32px
+
+    &--intro
+      padding-bottom: 32px
+      border-bottom: 1px dotted $brand-light-blue
+
+    &--details
+      padding-bottom: 32px
+      border-bottom: 1px dotted $brand-light-blue
+
+@media (max-width: $media-phone)
+
+  .profile-section--intro
+
+    .profile-button
+      flex-direction: column
+      align-items: center
+
+      .profile-button__text
+        margin-top: 24px
+        margin-left: 0
+        text-align: center
+
+  .profile-section__project-overview
+
+    .card
+
+      &:nth-child(n)
+        margin-top: 32px
+        margin-left: 0
+        width: 100%
+
+      &:nth-child(1)
+        margin-top: 23px
