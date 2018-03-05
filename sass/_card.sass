@@ -210,19 +210,20 @@
     &:hover
       background: $brand-dark-blue
 
-.project-overview .card,
-.resource-overview__list .card,
-.event-overview .card,
+@media (min-width: $media-tablet + 1px)
 
-.search-results-list__item
-  transition: box-shadow .2s ease, transform .35s ease
+  .project-overview .card,
+  .resource-overview__list .card,
+  .event-overview .card,
+  .search-results-list__item
+    transition: box-shadow .2s ease, transform .35s ease
 
-  &:hover
-    box-shadow: 2px 2px 8px 0 rgba(0,32,72,0.15)
-    transform: translate3d(-1px, -1px, 0)
+    &:hover
+      box-shadow: 2px 2px 8px 0 rgba(0,32,72,0.15)
+      transform: translate3d(-1px, -1px, 0)
 
-.homepage-carousel .owl-stage-outer
-  transition: box-shadow .2s ease
+  .homepage-carousel .owl-stage-outer
+    transition: box-shadow .2s ease
 
-  &:hover
-    box-shadow: 0 0 8px 0 rgba(0,32,72,0.25)
+    &:hover
+      box-shadow: 0 0 8px 0 rgba(0,32,72,0.25)
