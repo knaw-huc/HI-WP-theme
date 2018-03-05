@@ -1,0 +1,64 @@
+.mobile-navigation
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: $z-index-above-content
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: 263px
+  padding: 90px 32px 32px
+  color: $brand-white
+  pointer-events: none
+  background: $brand-black
+  transition: transform .2s ease
+  transform: translate3d(100%, 0, 0)
+
+  &.is-active
+    pointer-events: all
+    transform: translate3d(0, 0, 0)
+
+  @media (min-width: $media-phone + 1)
+    display: none
+
+  &__button
+    position: absolute
+    top: 16px
+    right: 24px
+    display: block
+    width: 32px
+    height: 32px
+    background: url('../img/close-search-ico.svg') center no-repeat
+    background-size: 20px
+
+  > .navigation
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  .navigation__item + .navigation__item
+    margin-top: 32px
+    margin-left: 0
+
+  .search-form
+    position: relative
+    margin-left: 31px
+    flex-grow: 0
+
+    &::after
+      position: absolute
+      top: 1px
+      left: -31px
+      display: inline-block
+      width: 24px
+      height: 24px
+      font-family: $genericons
+      font-size: 24px
+      line-height: 1
+      content: ''
+
+  .search-form__input
+
+    &::placeholder
+      color: $brand-white

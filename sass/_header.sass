@@ -144,6 +144,17 @@ body
   outline: 0
   -webkit-appearance: none
 
+.header
+
+  .mobile-navigation__button
+    display: none
+    font-family: $genericons
+    font-size: 28px
+    line-height: 1
+    text-align: center
+    color: $brand-white
+    background: none
+
 @media (max-width: 1439px)
 
   $navigation-height: 64px
@@ -164,3 +175,34 @@ body
 
   .header__bar
     left: $logo-size
+
+@media (max-width: $media-tablet-portrait)
+
+  .header__bar
+    padding-right: 24px
+    padding-left: 24px
+
+  .navigation__item + .navigation__item
+    margin-left: 24px
+
+  .navigation__item__button--has-sub
+
+    &::after
+      display: none
+
+  .navigation__item
+
+    &:hover
+
+      .navigation--sub
+        display: none
+
+@media (max-width: $media-phone)
+
+  .header
+
+    .mobile-navigation__button
+      display: block
+
+  .navigation
+    display: none

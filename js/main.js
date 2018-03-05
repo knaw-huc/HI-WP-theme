@@ -10,6 +10,12 @@ $('.js-close-search').click(function(e) {
   e.preventDefault();
 });
 
+// Mobile navigation
+$('.js-toggle-mobile-navigation').click(function(e) {
+  $('.mobile-navigation').toggleClass('is-active');
+  e.preventDefault();
+});
+
 // Carousel
 $('.page-intro__carousel').owlCarousel({
   'items': 3,
