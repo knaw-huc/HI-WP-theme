@@ -19,6 +19,9 @@ body
   width: $logo-size
   height: $logo-size
 
+  &__mobile
+    display: none
+
 .header__bar
   position: absolute
   top: 0
@@ -140,3 +143,24 @@ body
   border-radius: 0
   outline: 0
   -webkit-appearance: none
+
+@media (max-width: 1439px)
+
+  $navigation-height: 64px
+  $logo-size: 77px
+
+  .logo
+    width: $logo-size
+    height: $navigation-height
+    background: $brand-black
+
+    &__desktop
+      display: none
+
+    &__mobile
+      margin: 8px
+      display: block
+      width: 69px
+
+  .header__bar
+    left: $logo-size
