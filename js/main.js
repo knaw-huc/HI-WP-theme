@@ -56,3 +56,9 @@ $('.publication-overview__section__toggle').click(function(e) {
   e.preventDefault();
 
 });
+
+// Sidebar
+$('.sidebar__item__heading').click(function(e) {
+  $(this).parent().toggleClass('is-active');
+  e.preventDefault();
+});
