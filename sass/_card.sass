@@ -232,7 +232,7 @@
 
   .card
 
-    &--event
+    &--bar
 
       .card__visual::before
         padding-top: 100%
@@ -240,12 +240,25 @@
         img
           object-fit: cover
 
+      .card__info
+        flex-direction: column
+        justify-content: space-between
+
+        .card__info__section
+
+          &:nth-child(1)
+            max-width: initial
+
+          &:nth-child(2)
+            margin-left: 0
+
 @media (max-width: $media-phone)
 
   .card
 
-    &--event
+    &--bar
       flex-direction: column
+      max-width: 352px
 
       .card__visual
         width: 100%
