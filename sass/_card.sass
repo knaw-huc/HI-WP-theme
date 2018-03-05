@@ -213,9 +213,16 @@
 .project-overview .card,
 .resource-overview__list .card,
 .event-overview .card,
-.homepage-carousel .owl-stage-outer,
+
 .search-results-list__item
-  transition: box-shadow .15s ease
+  transition: box-shadow .2s ease, transform .35s ease
 
   &:hover
-    box-shadow: 0 0 8px 0 rgba(0,32,72,0.45)
+    box-shadow: 2px 2px 8px 0 rgba(0,32,72,0.15)
+    transform: translate3d(-1px, -1px, 0)
+
+.homepage-carousel .owl-stage-outer
+  transition: box-shadow .2s ease
+
+  &:hover
+    box-shadow: 0 0 8px 0 rgba(0,32,72,0.25)
