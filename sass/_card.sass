@@ -227,3 +227,39 @@
 
     &:hover
       box-shadow: 0 0 8px 0 rgba(0,32,72,0.25)
+
+@media (max-width: $media-tablet)
+
+  .card
+
+    &--event
+
+      .card__visual::before
+        padding-top: 100%
+
+        img
+          object-fit: cover
+
+@media (max-width: $media-phone)
+
+  .card
+
+    &--event
+      flex-direction: column
+
+      .card__visual
+        width: 100%
+
+        &::before
+          padding-top: 56.25%
+
+      .card__info__section
+
+        & + .card__info__section
+          margin-top: 16px
+
+        p
+          font-size: 14px
+
+        h6
+          margin-top: 8px
