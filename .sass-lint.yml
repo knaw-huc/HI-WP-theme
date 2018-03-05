@@ -28,7 +28,7 @@ rules:
   no-empty-rulesets: 0
   no-extends: 1
   no-ids: 1
-  no-important: 1
+  no-important: 0
   no-invalid-hex: 1
   no-mergeable-selectors: 0
   no-misspelled-properties:

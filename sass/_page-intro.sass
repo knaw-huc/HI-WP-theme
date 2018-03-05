@@ -60,3 +60,75 @@
 
       &:hover .card--default:not(.card--thumbnail)
         opacity: .66
+
+  @media (max-width: 1118px)
+
+    .owl-item .card--default:not(.card--thumbnail)
+      opacity: .33
+
+    .owl-item:hover .card--default:not(.card--thumbnail)
+      opacity: .66
+
+    .owl-item.active
+
+      .card--default:not(.card--thumbnail)
+        opacity: .33
+
+    .owl-item.center
+
+      .card--default:not(.card--thumbnail)
+        opacity: 1
+
+    .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active
+
+      .card--default:not(.card--thumbnail)
+        opacity: .33
+
+      &:hover .card--default:not(.card--thumbnail)
+        opacity: .66
+
+  @media (max-width: $media-phone)
+
+    .card--default:not(.card--thumbnail)
+      max-width: 280px
+
+      .card__info
+        height: auto
+
+      .card__info__section + .card__info__section
+        margin-top: 16px
+
+// Onderzoeksprojecten
+@media (min-width: 1201px)
+
+  .page-intro__carousel--mobile
+    display: none !important
+
+@media (max-width: 1200px)
+
+  .page-intro__carousel--desktop
+    display: none !important
+
+@media (max-width: $media-phone)
+
+  .page-intro__carousel .card--thumbnail
+
+    .card__visual
+      width: 280px
+
+    .card__info__section
+
+      &:not(:nth-of-type(1))
+        display: none
+
+      h6
+        text-align: center
+
+@media (max-width: $media-phone)
+
+  .page-intro
+    padding-top: 24px
+    padding-bottom: 48px
+
+  .page-intro__text p
+    margin-top: 1em

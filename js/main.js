@@ -17,6 +17,8 @@ $('.js-toggle-mobile-navigation').click(function(e) {
 });
 
 // Carousel
+
+// TODO: Bij 767 en smaller moet de margin 24 zijn. Anders 32px
 $('.page-intro__carousel').owlCarousel({
   'items': 3,
   'loop': true,
@@ -59,6 +61,12 @@ $('.publication-overview__section__toggle').click(function(e) {
 
 // Sidebar
 $('.sidebar__item__heading').click(function(e) {
+  $(this).parent().toggleClass('is-active');
+  e.preventDefault();
+});
+
+// Resource overview filter
+$('.resource-overview__filter__heading').click(function(e) {
   $(this).parent().toggleClass('is-active');
   e.preventDefault();
 });

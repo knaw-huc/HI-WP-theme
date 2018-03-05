@@ -8,6 +8,7 @@
 .project-filter__button-holder
   margin-top: 24px
   display: flex
+  flex-wrap: wrap
   justify-content: space-between
   width: 100%
 
@@ -44,3 +45,26 @@
 .project-filter__select-holder
   margin-top: 16px
   display: flex
+
+@media (max-width: $media-tablet-portrait)
+
+  .project-filter__button
+    width: calc((100% - 23px * 1) / 2)
+
+    &:nth-child(n)
+      margin-top: 23px
+
+    &:nth-child(1),
+    &:nth-child(2)
+      margin-top: 0
+
+@media (max-width: $media-tablet-portrait)
+
+  .project-filter__button
+    width: 100%
+
+    &:nth-child(n)
+      margin-top: 8px
+
+    &:nth-child(1)
+      margin-top: 0
