@@ -28,6 +28,36 @@
   .card
     outline: none
 
+  .owl-nav
+
+    @media (max-width: $media-phone)
+      display: none
+
+    .owl-prev,
+    .owl-next
+      position: absolute
+      top: 68px
+      width: 64px
+      height: 64px
+      background: $brand-dark-blue
+
+    .owl-prev
+      left: 0
+      background: url('../img/owl-prev.svg')
+
+    .owl-next
+      right: 0
+      background: url('../img/owl-next.svg')
+
+  &.page-intro__carousel--desktop
+
+    .owl-nav
+
+      .owl-prev,
+      .owl-next
+        top: 50%
+        margin-top: -32px
+
   // Onderzoeksprojecten
   .owl-item .card--thumbnail
     opacity: .33

@@ -18,12 +18,12 @@ $('.js-toggle-mobile-navigation').click(function(e) {
 
 // Carousel
 $('.page-intro__carousel').owlCarousel({
-  'items': 3,
   'loop': true,
   'margin': 24,
   'autoWidth': true,
   'center': true,
   'dots': false,
+  'nav': true,
   'responsive': {
     768: {
       'margin': 32,
