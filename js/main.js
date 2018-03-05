@@ -19,6 +19,7 @@ $('.js-toggle-mobile-navigation').click(function(e) {
 // Carousel
 $('.page-intro__carousel').owlCarousel({
   'loop': true,
+  'smartSpeed': 400,
   'margin': 24,
   'autoWidth': true,
   'center': true,
