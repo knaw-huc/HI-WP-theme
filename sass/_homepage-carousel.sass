@@ -67,3 +67,33 @@
 
   &.active
     background: $brand-dark-blue
+
+@media (max-width: $media-tablet-portrait)
+
+  .homepage-carousel .owl-stage-outer
+    background: $brand-light-blue
+
+  .homepage-carousel__item
+
+    .card--default
+      flex-direction: column
+      height: auto
+
+      .card__visual,
+      .card__info
+        width: 100%
+
+        img
+          position: relative
+
+      .card__info__section
+
+        h6:last-child
+          margin-bottom: 8px
+
+        p
+          font-size: 14px
+
+        p,
+        &:not(:first-child)
+          margin-top: 8px
