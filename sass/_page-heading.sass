@@ -9,7 +9,7 @@
 
   h2
     +heading-2
-    margin-bottom: 4px
+    margin-bottom: em(4px, 48px)
 
     &:not(:first-child)
       margin-top: em(32px, 48px)
@@ -37,3 +37,9 @@
     font-size: 18px
     color: currentcolor
     content: ''
+
+@media (max-width: $media-tablet-portrait)
+
+  .page-heading
+    padding-top: 24px
+    padding-bottom: 24px
