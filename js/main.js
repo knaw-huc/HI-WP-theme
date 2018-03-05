@@ -17,24 +17,24 @@ $('.js-toggle-mobile-navigation').click(function(e) {
 });
 
 // Carousel
-
-// TODO: Bij 767 en smaller moet de margin 24 zijn. Anders 32px
 $('.page-intro__carousel').owlCarousel({
   'items': 3,
   'loop': true,
-  'margin': 32,
+  'margin': 24,
   'autoWidth': true,
   'center': true,
   'dots': false,
+  'responsive': {
+    768: {
+      'margin': 32,
+    },
+  },
 });
 
 // Homepage carousel
 $('.homepage-carousel').owlCarousel({
   'items': 1,
   'loop': true,
-  // 'margin': 32,
-  // 'autoWidth': true,
-  // 'center': true,
   'dots': true,
 });
 
