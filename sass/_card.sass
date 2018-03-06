@@ -1,5 +1,53 @@
 // TODO: Lazyload
-// TODO: Truncate when title is too long
+
+$multiline-truncate-lines-to-show: 3
+
+@mixin multiline-truncate-default
+  display: block
+  display: -webkit-box
+  text-overflow: ellipsis
+  overflow: hidden
+  -webkit-box-orient: vertical
+
+@mixin disable-multiline-truncate
+  height: auto
+  text-overflow: inherit
+  overflow: visible
+  -webkit-line-clamp: initial
+
+@mixin multiline-truncate-default-20px
+
+  $multiline-truncate-font-size: 20px
+  $multiline-truncate-line-height: 1.1
+
+  +multiline-truncate-default
+  height: $multiline-truncate-font-size * $multiline-truncate-line-height * $multiline-truncate-lines-to-show // Fallback for non-webkit
+  font-size: $multiline-truncate-font-size
+  line-height: $multiline-truncate-line-height
+  -webkit-line-clamp: $multiline-truncate-lines-to-show
+
+@mixin multiline-truncate-default-20px-4
+
+  $multiline-truncate-font-size: 20px
+  $multiline-truncate-line-height: 1.1
+  $multiline-truncate-lines-to-show: 4
+
+  +multiline-truncate-default
+  height: $multiline-truncate-font-size * $multiline-truncate-line-height * $multiline-truncate-lines-to-show // Fallback for non-webkit
+  font-size: $multiline-truncate-font-size
+  line-height: $multiline-truncate-line-height
+  -webkit-line-clamp: $multiline-truncate-lines-to-show
+
+@mixin multiline-truncate-default-24px
+
+  $multiline-truncate-font-size: 24px
+  $multiline-truncate-line-height: 1
+
+  +multiline-truncate-default
+  height: $multiline-truncate-font-size * $multiline-truncate-line-height * $multiline-truncate-lines-to-show // Fallback for non-webkit
+  font-size: $multiline-truncate-font-size
+  line-height: $multiline-truncate-line-height
+  -webkit-line-clamp: $multiline-truncate-lines-to-show
 
 .card
   position: relative
@@ -15,6 +63,12 @@
       justify-content: space-between
       align-items: flex-start
       height: 198px
+
+      h6
+        +multiline-truncate-default-20px-4
+
+      span + h6
+        +multiline-truncate-default-20px
 
   &--thumbnail
     max-width: 527px
@@ -53,9 +107,13 @@
 
     .card__visual
       width: 256px
+      flex-shrink: 0
 
     .card__info
       flex-grow: 1
+
+      h6
+        +multiline-truncate-default-20px-4
 
       .card__info__section
 
@@ -107,6 +165,7 @@
 
     .card__visual
       width: 352px
+      flex-shrink: 0
 
     .card__info
       flex-direction: column
@@ -118,6 +177,7 @@
 
       h6
         +heading-5
+        +multiline-truncate-default-24px
 
       .card__info__section
 
@@ -189,6 +249,7 @@
 
     h6
       +heading-6
+      +multiline-truncate-default-20px
 
     p
       +paragraph-medium
@@ -258,6 +319,9 @@
         flex-direction: column
         justify-content: space-between
 
+        h6
+          +disable-multiline-truncate
+
         .card__info__section
 
           &:nth-child(1)
@@ -280,6 +344,11 @@
         &::before
           padding-top: 56.25%
 
+      .card__info
+
+        h6
+          +multiline-truncate-default-20px-4
+
       .card__info__section
 
         & + .card__info__section
@@ -290,3 +359,8 @@
 
         h6
           margin-top: 8px
+
+    &--event
+
+      .card__info
+        padding-right: 30px
