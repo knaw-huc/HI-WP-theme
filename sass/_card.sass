@@ -52,6 +52,7 @@ $multiline-truncate-lines-to-show: 3
 .card
   position: relative
   display: flex
+  width: 100%
   background: $brand-light-blue
 
   &--default
@@ -69,6 +70,9 @@ $multiline-truncate-lines-to-show: 3
 
       span + h6
         +multiline-truncate-default-20px
+
+      .card__info__section
+        width: 100%
 
   &--thumbnail
     max-width: 527px
@@ -99,6 +103,10 @@ $multiline-truncate-lines-to-show: 3
 
         & + .tag-list__item
           margin-left: 16px
+
+      .card__info__section
+        width: auto
+        max-width: 100%
 
     .card__info__section + .card__info__section
       margin-top: 16px
@@ -172,6 +180,7 @@ $multiline-truncate-lines-to-show: 3
     .card__info
       flex-direction: column
       justify-content: space-between
+      width: 100%
       padding-right: 60px
 
       p
@@ -184,7 +193,7 @@ $multiline-truncate-lines-to-show: 3
       .card__info__section
 
         &:nth-child(1)
-          max-width: initial
+          max-width: 100%
 
         &:nth-child(2)
           margin-left: 0
