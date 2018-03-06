@@ -10,6 +10,12 @@ body
   z-index: $z-index-above-content
   width: 100%
 
+  .admin-bar &
+    top: 32px
+
+    @media only screen and (max-width: 782px)
+      top: 46px
+
 .logo
   position: absolute
   top: 0
@@ -69,6 +75,7 @@ body
   position: relative
   display: block
   line-height: 1.4285714286
+  white-space: nowrap
   color: $brand-white
   border-bottom: 1px solid transparent
 
