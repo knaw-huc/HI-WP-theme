@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
-  <!-- TODO: Make this page dynamic -->
-  <!-- TODO: Kan deze single file gecombineerd worden met andere singles? -->
+  <!-- NOTE: Kan deze single file gecombineerd worden met andere singles? -->
 
   <div class="page-heading">
-    <a class="page-heading__button" href="#">Terug naar het overzicht</a>
+    <a class="page-heading__button" href="<?= get_post_type_archive_link('project'); ?>">Terug naar het overzicht</a>
   </div>
   <!-- end .page-heading -->
 
@@ -12,25 +11,14 @@
 
     <main class="main__column main__column--body text-holder">
 
-      <h1>Brieven van de Hollandse en Friese Stadhoudersvrouwen 1605 — 1725</h1>
+      <?php if ( have_posts() ) : ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-      <p><strong>Dit project is gewijd aan de brieven van zes vooraanstaande vrouwen uit de Republiek der Verenigde Nederlanden: Amalia van Solms-Braunfels, Mary Stuart en Mary II Stuart, Sophia Hedwig von Braunschweig-Wolffenbüttel, Albertine Agnes van Oranje-Nassau en Henriëtte Amalia von Anhalt Dessau.</strong></p>
+          <h1><?php the_title(); ?></h1>
+          <?php the_content(); ?>
 
-      <img src="./img/content/onderzoeksprojecten-detail/visual.jpg" alt="">
-
-      <p>De meeste brieven van deze zes vorstinnen waren tot nu toen niet ontsloten, noch gedigitaliseerd. Deze digitale editie maakt het mogelijk om nieuw wetenschappelijk onderzoek te verrichten naar de invloed die deze vrouwen hadden op de politieke, culturele en sociale processen, zowel binnen als buiten de zeventiende eeuwse Republiek der Verenigde Nederlanden.</p>
-
-      <p>In samenwerking met Koninklijke Verzamelingen Den Haag en Oxford University’s (Women) Early Modern Letters Online, (W)EMLO, heeft het Huygens ING ruim 3.500 brieven bewerkt en beschikbaar gesteld via de portal van EMLO. Hierin is de metadata van het volledige corpus niet alleen integraal doorzoekbaar, maar iedere stadhoudersvrouw heeft ook een eigen catalogus waarin de correspondentie ook afzonderlijk te raadplegen is.</p>
-
-      <ul>
-        <li>Overkoepelende pagina met brieven van alle zes vrouwen: 3.543 brieven</li>
-        <li>Sophia Hedwig von Braunschweig Wolffenbüttel, echtgenote van Ernst Casimir van Nassau-Dietz: 150 brieven.</li>
-        <li>Amalia van Solms-Braunfels, echtgenote van Frederik Hendrik van Oranje-Nassau: 1,170 brieven.</li>
-        <li>Mary Stuart, echtgenote van Willem II van Oranje-Nassau: 352 brieven.</li>
-        <li>Albertine Agnes van Oranje-Nassau, echtgenote van Willem Frederik van Nassau-Dietz: 404 brieven.</li>
-        <li>Mary (II) Stuart, echtgenote van Willem III van Oranje-Nassau: 116 brieven.</li>
-        <li>Henriette Amalia von Anhalt-Dessau, echtgenote van Hendrik Casimir II van Nassau-Dietz: 1,342 brieven.</li>
-      </ul>
+        <?php endwhile; ?>
+      <?php endif; ?>
 
     </main>
     <!-- end .main__column -->
@@ -43,15 +31,25 @@
 
         <div class="sidebar__item__body">
 
-          <a href="#" class="sidebar__item__button sidebar__item__button--yellow">
-            Debatcultuur
-          </a>
-          <!-- end .sidebar__item__button -->
+          <?php
+          $themas = wp_get_post_terms($post->ID, 'thema');
 
-          <a href="#" class="sidebar__item__button sidebar__item__button--orange">
-            Bestuur van Nederland
-          </a>
-          <!-- end .sidebar__item__button -->
+          foreach($themas as $thema) {
+
+            if($thema->slug == 'bestuur-van-nederland') {
+              $themaColor = 'orange';
+            } else if($thema->slug == 'circulation-of-impact') {
+              $themaColor = 'green';
+            } else if($thema->slug == 'debatcultuur') {
+              $themaColor = 'yellow';
+            } else if($thema->slug == 'vernieuwing-editeren') {
+              $themaColor = 'blue';
+            }
+
+            echo '<a href="' . get_term_link($thema) .'" class="sidebar__item__button sidebar__item__button--' . $themaColor . '">' . $thema->name . '</a>';
+
+          }
+          ?>
 
         </div>
         <!-- end .sidebar__item__body -->
@@ -65,11 +63,7 @@
 
         <div class="sidebar__item__body">
 
-          <div class="tag-list">
-            <a class="tag-list__item" href="#">Geschiedenis van Nederland</a>
-            <a class="tag-list__item" href="#">Letterkunde</a>
-          </div>
-          <!-- end .tag-list -->
+          <?php include('inc/tag-list.php'); ?>
 
         </div>
         <!-- end .sidebar__item__body -->
@@ -77,150 +71,188 @@
       </div>
       <!-- end .sidebar__item -->
 
-      <div class="sidebar__item">
+      <?php $posts = get_field('related_profiles'); ?>
 
-        <h4 class="sidebar__item__heading">Gerelateerde medewerkers</h4>
+      <?php if($posts): ?>
 
-        <div class="sidebar__item__body">
+        <div class="sidebar__item">
 
-          <div class="profile-button">
+          <h4 class="sidebar__item__heading">Gerelateerde medewerkers</h4>
 
-            <div class="profile-button__portrait image-filter">
-              <img src="./img/content/sidebar/portrait-1.jpg" alt="">
-            </div>
-            <!-- end .profile-button__portrait -->
+          <div class="sidebar__item__body">
 
-            <div class="profile-button__text">
-              <span class="profile-button__text__title">Dr.</span>
-              <span class="profile-button__text__name">Peter de Bruijn</span>
-              <span class="profile-button__text__function">Redacteur</span>
-            </div>
-            <!-- end .profile-button__text -->
+            <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 
-          </div>
-          <!-- end .profile-button -->
+              <?php setup_postdata($post); ?>
 
-          <div class="profile-button">
+              <?php include('inc/profile-button.php'); ?>
 
-            <div class="profile-button__portrait image-filter">
-              <img src="./img/content/sidebar/portrait-2.jpg" alt="">
-            </div>
-            <!-- end .profile-button__portrait -->
+            <?php endforeach; ?>
 
-            <div class="profile-button__text">
-              <span class="profile-button__text__title">Prof. Dr.</span>
-              <span class="profile-button__text__name">Lars Buitinck</span>
-              <span class="profile-button__text__function">Redacteur</span>
-            </div>
-            <!-- end .profile-button__text -->
+            <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
           </div>
-          <!-- end .profile-button -->
+          <!-- end .sidebar__item__body -->
 
         </div>
-        <!-- end .sidebar__item__body -->
+        <!-- end .sidebar__item -->
 
-      </div>
-      <!-- end .sidebar__item -->
+      <?php endif; ?>
 
-      <div class="sidebar__item">
+      <?php if( have_rows('project_links') || get_field('project_facebook') || get_field('project_twitter')): ?>
 
-        <h4 class="sidebar__item__heading">Links</h4>
+        <div class="sidebar__item">
 
-        <div class="sidebar__item__body">
+          <h4 class="sidebar__item__heading">Links</h4>
 
-          <a href="#" class="sidebar__item__text-link">
-            Website van het project
-          </a>
-          <!-- end .sidebar__item__text-link -->
+          <div class="sidebar__item__body">
 
-          <ul class="sidebar__item__social-media">
+            <?php if( have_rows('project_links') ): ?>
 
-            <li class="sidebar__item__social-media__item">
+              <?php while ( have_rows('project_links') ) : the_row(); ?>
 
-              <a href="#" class="sidebar__item__social-media__item__button">
-                
+                <a href="<?php the_sub_field('url'); ?>" target="_blank" class="sidebar__item__text-link">
+                  <?php the_sub_field('title'); ?>
+                </a>
+                <!-- end .sidebar__item__text-link -->
+
+              <?php endwhile; ?>
+
+            <?php endif; ?>
+
+            <?php if(get_field('project_facebook') || get_field('project_twitter')) { ?>
+
+              <ul class="sidebar__item__social-media">
+
+                <?php if(get_field('project_facebook')) { ?>
+
+                  <li class="sidebar__item__social-media__item">
+
+                    <a href="<?php the_field('project_facebook'); ?>" target="_blank" class="sidebar__item__social-media__item__button">
+                      
+                    </a>
+                    <!-- end .sidebar__item__social-media__item__button -->
+
+                  </li>
+                  <!-- end .sidebar__item__social-media__item -->
+
+                <?php } ?>
+
+                <?php if(get_field('project_twitter')) { ?>
+
+                  <li class="sidebar__item__social-media__item">
+
+                    <a href="<?php the_field('project_twitter'); ?>" target="_blank" class="sidebar__item__social-media__item__button">
+                      
+                    </a>
+                    <!-- end .sidebar__item__social-media__item__button -->
+
+                  </li>
+                  <!-- end .sidebar__item__social-media__item -->
+
+                <?php } ?>
+
+              </ul>
+              <!-- end .sidebar__item__social-media -->
+
+            <?php } ?>
+
+          </div>
+          <!-- end .sidebar__item__body -->
+
+        </div>
+        <!-- end .sidebar__item -->
+
+      <?php endif; ?>
+
+      <?php if( have_rows('profile_publications_2') ): ?>
+
+        <div class="sidebar__item">
+
+          <h4 class="sidebar__item__heading">Gerelateerde publicaties</h4>
+
+          <div class="sidebar__item__body">
+
+            <?php while ( have_rows('profile_publications_2') ) : the_row(); ?>
+
+              <a href="<?php the_sub_field('url'); ?>" target="_blank" class="sidebar__item__text-link">
+                <?php the_sub_field('title'); ?>
               </a>
-              <!-- end .sidebar__item__social-media__item__button -->
+              <!-- end .sidebar__item__text-link -->
 
-            </li>
-            <!-- end .sidebar__item__social-media__item -->
+            <?php endwhile; ?>
 
-            <li class="sidebar__item__social-media__item">
+          </div>
+          <!-- end .sidebar__item__body -->
 
-              <a href="#" class="sidebar__item__social-media__item__button">
-                
+        </div>
+        <!-- end .sidebar__item -->
+
+      <?php endif; ?>
+
+      <?php $posts = get_field('related_posts'); ?>
+
+      <?php if($posts): ?>
+
+        <div class="sidebar__item">
+
+          <h4 class="sidebar__item__heading">Gerelateerd nieuws</h4>
+
+          <div class="sidebar__item__body">
+
+            <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+
+              <?php setup_postdata($post); ?>
+
+              <a href="<?php the_permalink(); ?>" class="sidebar__item__text-link">
+                <?php the_title(); ?>
               </a>
-              <!-- end .sidebar__item__social-media__item__button -->
+              <!-- end .sidebar__item__text-link -->
 
-            </li>
-            <!-- end .sidebar__item__social-media__item -->
+            <?php endforeach; ?>
 
-          </ul>
-          <!-- end .sidebar__item__social-media -->
+            <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
-        </div>
-        <!-- end .sidebar__item__body -->
-
-      </div>
-      <!-- end .sidebar__item -->
-
-      <div class="sidebar__item">
-
-        <h4 class="sidebar__item__heading">Gerelateerde publicaties</h4>
-
-        <div class="sidebar__item__body">
-
-          <a href="#" class="sidebar__item__text-link">
-            Belle van Zuylen, te Europees voor Nederland?
-          </a>
-          <!-- end .sidebar__item__text-link -->
-
-          <a href="#" class="sidebar__item__text-link">
-            Bon appétit!: Hoe onder Napoleon koken een kunst werd
-          </a>
-          <!-- end .sidebar__item__text-link -->
+          </div>
+          <!-- end .sidebar__item__body -->
 
         </div>
-        <!-- end .sidebar__item__body -->
+        <!-- end .sidebar__item -->
 
-      </div>
-      <!-- end .sidebar__item -->
+      <?php endif; ?>
 
-      <div class="sidebar__item">
+      <?php $posts = get_field('related_events'); ?>
 
-        <h4 class="sidebar__item__heading">Gerelateerd nieuws</h4>
+      <?php if($posts): ?>
 
-        <div class="sidebar__item__body">
+        <div class="sidebar__item">
 
-          <a href="#" class="sidebar__item__text-link">
-            Een eeuw Tijdschrift voor Geschiedenis nu digitaal
-          </a>
-          <!-- end .sidebar__item__text-link -->
+          <h4 class="sidebar__item__heading">Gerelateerde evenementen</h4>
 
-        </div>
-        <!-- end .sidebar__item__body -->
+          <div class="sidebar__item__body">
 
-      </div>
-      <!-- end .sidebar__item -->
+            <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 
-      <div class="sidebar__item">
+              <?php setup_postdata($post); ?>
 
-        <h4 class="sidebar__item__heading">Gerelateerde evenementen</h4>
+              <a href="<?php the_permalink(); ?>" class="sidebar__item__text-link">
+                <!-- TODO: Make date dynamic -->
+                <span>12 december 2017</span><br />
+                <?php the_title(); ?>
+              </a>
+              <!-- end .sidebar__item__text-link -->
 
-        <div class="sidebar__item__body">
+            <?php endforeach; ?>
 
-          <a href="#" class="sidebar__item__text-link">
-            <span>12 december 2017</span><br />
-            Van scriptorium naar charterbank
-          </a>
-          <!-- end .sidebar__item__text-link -->
+            <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+
+          </div>
+          <!-- end .sidebar__item__body -->
 
         </div>
-        <!-- end .sidebar__item__body -->
+        <!-- end .sidebar__item -->
 
-      </div>
-      <!-- end .sidebar__item -->
+      <?php endif; ?>
 
     </aside>
     <!-- end .main__column -->

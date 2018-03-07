@@ -9,9 +9,11 @@
 
     <main class="main__column main__column--body text-holder">
 
+      <?php $term = get_queried_object(); ?>
+
       <h1><?php single_term_title(); ?></h1>
 
-      <?php the_field('thema_long_description'); ?>
+      <?php the_field('thema_long_description', $term); ?>
 
     </main>
     <!-- end .main__column -->

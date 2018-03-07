@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
   <!-- TODO: Make this page dynamic -->
-  <!-- TODO: Kan deze single file gecombineerd worden met andere singles? -->
+  <!-- NOTE: Kan deze single file gecombineerd worden met andere singles? -->
 
   <div class="page-heading">
     <a class="page-heading__button" href="#">Terug naar het overzicht</a>
