@@ -71,3 +71,8 @@ $('.resource-overview__filter__heading').click(function(e) {
   $(this).parent().toggleClass('is-active');
   e.preventDefault();
 });
+
+// Responsive embeds
+$('.text-holder iframe').wrap('<div class="embed"></div>').parent().fitVids({
+  customSelector: 'iframe[src*="facebook"]',
+});

@@ -1,10 +1,14 @@
 <?php
 
 // add custom thumbnails
-// add_image_size('carousel-large--large', 2880, 1220, true);
-// add_image_size('carousel-large--regular', 1440, 610, true);
-// add_image_size('carousel-large--small', 720, 305, true);
-//
+add_image_size('card--large', 704, 396, true);
+add_image_size('card--regular', 352, 198, true);
+add_image_size('card--small', 176, 99, true);
+
+add_image_size('profile-button--large', 320, 320, true);
+add_image_size('profile-button--regular', 160, 160, true);
+add_image_size('profile-button--small', 80, 80, true);
+
 // add_image_size('carousel-small--large', 2880, 548, true);
 // add_image_size('carousel-small--regular', 1440, 274, true);
 // add_image_size('carousel-small--small', 720, 137, true);
@@ -60,7 +64,7 @@ add_action( 'init', 'ryanbenhase_unregister_tags' );
 
 // Move Yoast to bottom
 function yoasttobottom() {
-	return 'low';
+  return 'low';
 }
 add_filter('wpseo_metabox_prio', 'yoasttobottom');
 
@@ -223,6 +227,29 @@ add_action( 'init', 'register_my_menu' );
 // Add ACF options page
 if(function_exists('acf_add_options_page')) {
   acf_add_options_page();
+}
+
+/**
+*
+* Prevent Wordpress from wrapping images and iframes in p tags
+* http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/
+* ( <p> and <iframe> and ACF support - http://wordpress.stackexchange.com/questions/136840/how-to-remove-p-tags-around-img-and-iframe-tags-in-the-acf-wysiwyg-field
+*/
+function filter_ptags_on_images_iframes($content)
+{
+    $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+    return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+}
+add_filter('the_content', 'filter_ptags_on_images_iframes');
+
+// ACF WYSIWYG Plugin
+function get_field_without_ptags_on_images($field_name) {
+  // add_filter('acf_the_content', 'filter_ptags_on_images_iframes');
+	$content = get_field($field_name);
+  // remove_filter('acf_the_content', 'filter_ptags_on_images_iframes');
+	// return $field;
+  $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+  return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
 }
 
 ?>

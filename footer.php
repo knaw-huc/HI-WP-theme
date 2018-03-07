@@ -45,12 +45,12 @@
           <ul class="logo-holder">
             <li class="logo-holder__item">
               <a href="https://literatuurmuseum.nl/" target="_blank">
-                <img src="img/logo-literatuurmuseum.svg" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/img/logo-literatuurmuseum.svg" alt="">
               </a>
             </li>
             <li class="logo-holder__item">
               <a href="https://www.historici.nl/" target="_blank">
-                <img src="img/logo-historici.svg" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/img/logo-historici.svg" alt="">
               </a>
             </li>
           </ul>
@@ -85,6 +85,7 @@
     </script>
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/SmoothScroll.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/owl.carousel.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery.fitvids.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
 
     <?php wp_footer(); ?>
