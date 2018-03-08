@@ -1,18 +1,28 @@
-<div class="sidebar__item">
+<?php if(get_field('sidebar_text_heading') || get_field('sidebar_text_body')): ?>
 
-  <h4 class="sidebar__item__heading"><?php the_field('sidebar_text_heading'); ?></h4>
+  <div class="sidebar__item">
 
-  <div class="sidebar__item__body">
+    <?php if(get_field('sidebar_text_heading')): ?>
+      <h4 class="sidebar__item__heading"><?php the_field('sidebar_text_heading'); ?></h4>
+    <?php endif; ?>
 
-    <div class="sidebar__item__text-holder">
+    <?php if(get_field('sidebar_text_body')): ?>
 
-      <?php the_field('sidebar_text_body'); ?>
+      <div class="sidebar_text_body">
 
-    </div>
-    <!-- end .sidebar__item__text-holder -->
+        <div class="sidebar__item__text-holder">
+
+          <?php the_field('sidebar_text_body'); ?>
+
+        </div>
+        <!-- end .sidebar__item__text-holder -->
+
+      </div>
+      <!-- end .sidebar__item__body -->
+
+    <?php endif; ?>
 
   </div>
-  <!-- end .sidebar__item__body -->
+  <!-- end .sidebar__item -->
 
-</div>
-<!-- end .sidebar__item -->
+<?php endif; ?>
