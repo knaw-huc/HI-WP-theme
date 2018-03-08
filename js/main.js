@@ -76,3 +76,26 @@ $('.resource-overview__filter__heading').click(function(e) {
 $('.text-holder iframe').wrap('<div class="embed"></div>').parent().fitVids({
   customSelector: 'iframe[src*="facebook"]',
 });
+
+// Project filter
+var currentPage = document.location.protocol + '//' + window.location.hostname + window.location.pathname + '?';
+var redirectPage;
+
+$('.project-filter select').change(function() {
+
+  redirectPage = currentPage;
+
+  // Dropdown: Period
+  if ($('.project-filter select.period').find('option:selected').val()) {
+    redirectPage += 'period=' + $('.project-filter select.period').find('option:selected').val() + '&';
+  }
+
+  // Dropdown: Tag
+  if ($('.project-filter select.tag').find('option:selected').val()) {
+    redirectPage += 'tag=' + $('.project-filter select.tag').find('option:selected').val() + '&';
+  }
+
+  redirectPage += '#content';
+  window.location.href = redirectPage;
+
+});
