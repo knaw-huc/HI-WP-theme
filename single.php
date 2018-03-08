@@ -36,117 +36,50 @@
   </div>
   <!-- end .main -->
 
+  <?php $displayedPosts[] = $post->ID; ?>
+
   <div class="main">
 
     <div class="content-overview">
 
       <h4 class="content-overview__heading">Gerelateerde nieuwsberichten</h4>
 
-      <!-- TODO: Handpicked related posts, aanvullen tot 3 met recente posts -->
-
       <div class="project-overview">
 
-        <a href="#" class="card card--default">
+        <?php $posts = get_field('related_posts'); ?>
 
-          <div class="card__visual">
+        <?php if($posts): ?>
 
-            <img src="./img/content/card/visual.jpg" alt="">
+          <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 
-          </div>
-          <!-- end .card__visual -->
+            <?php setup_postdata($post); ?>
 
-          <div class="card__info">
+            <?php include('inc/news-card.php'); ?>
 
-            <div class="card__info__section">
-              <span>22-11-2017</span>
-              <h6>Brieven van de Hollandse en Friese Stadhoudersvrouwen 1605-1725</h6>
-            </div>
-            <!-- end .card__info__section -->
+            <?php $displayedPosts[] = $post->ID; ?>
 
-            <div class="card__info__section">
+          <?php endforeach; ?>
 
-              <div class="tag-list">
-                <div class="tag-list__item">Scheepvaart</div>
-                <div class="tag-list__item">Recht</div>
-              </div>
-              <!-- end .tag-list -->
+          <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
-            </div>
-            <!-- end .card__info__section -->
+        <?php endif; ?>
 
-          </div>
-          <!-- end .card__info -->
+        <?php
+        $args = array(
+          'posts_per_page' => 3 - count($displayedPosts) + 1,
+          'post__not_in'   => $displayedPosts
+        );
 
-        </a>
-        <!-- end .card -->
+        query_posts($args)
+        ?>
 
-        <a href="#" class="card card--default">
+        <?php if ( have_posts() ) : ?>
+          <?php while ( have_posts() ) : the_post(); ?>
 
-          <div class="card__visual">
+            <?php include('inc/news-card.php'); ?>
 
-            <img src="./img/content/card/visual.jpg" alt="">
-
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <span>22-11-2017</span>
-              <h6>Brieven van de Hollandse en Friese Stadhoudersvrouwen 1605-1725</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item">Scheepvaart</div>
-                <div class="tag-list__item">Recht</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--default">
-
-          <div class="card__visual">
-
-            <img src="./img/content/card/visual.jpg" alt="">
-
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <span>22-11-2017</span>
-              <h6>Brieven van de Hollandse en Friese Stadhoudersvrouwen 1605-1725</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item">Scheepvaart</div>
-                <div class="tag-list__item">Recht</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-        </a>
-        <!-- end .card -->
+          <?php endwhile; ?>
+        <?php endif; ?>
 
       </div>
       <!-- end .project-overview -->
