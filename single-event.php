@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 
-  <!-- TODO: 1. Make this page dynamic -->
-
   <div class="page-heading">
-    <a class="page-heading__button" href="#">Terug naar het overzicht</a>
+    <a class="page-heading__button" href="<?= get_the_permalink(get_page_by_path('informatie/evenementen')); ?>">Terug naar het overzicht</a>
   </div>
   <!-- end .page-heading -->
 
@@ -14,34 +12,41 @@
       <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
-          <p class="date">30 november — 1 december 2017</p>
+          <p class="date"><?php the_field('event_date'); ?></p>
 
           <h1><?php the_title(); ?></h1>
 
-          <div class="tag-list">
-            <div class="tag-list__item">Politiek</div>
-            <div class="tag-list__item">International</div>
-          </div>
-          <!-- end .tag-list -->
+          <?php include('inc/tag-list.php'); ?>
 
-          <hr>
+          <?php if(get_field('event_location') || get_field('event_time')) { ?>
 
-          <div class="event-meta">
-            <span class="event-meta__name">Locatie</span>
-            <span class="event-meta__value">
-              Koninklijke bibliotheek Den Haag<br />
-              Prins Willem-Alexanderhof 5, Den Haag
-            </span>
-          </div>
-          <!-- end .event-meta -->
+            <hr>
 
-          <div class="event-meta">
-            <span class="event-meta__name">Aanvang/einde</span>
-            <span class="event-meta__value">10:00 — 17:00</span>
-          </div>
-          <!-- end .event-meta -->
+            <?php if(get_field('event_location')) { ?>
 
-          <hr>
+              <div class="event-meta">
+                <span class="event-meta__name">Locatie</span>
+                <span class="event-meta__value">
+                  <?php the_field('event_location'); ?>
+                </span>
+              </div>
+              <!-- end .event-meta -->
+
+            <?php } ?>
+
+            <?php if(get_field('event_time')) { ?>
+
+              <div class="event-meta">
+                <span class="event-meta__name">Aanvang/einde</span>
+                <span class="event-meta__value"><?php the_field('event_time'); ?></span>
+              </div>
+              <!-- end .event-meta -->
+
+            <?php } ?>
+
+            <hr>
+
+          <?php } ?>
 
           <?php the_content(); ?>
 
