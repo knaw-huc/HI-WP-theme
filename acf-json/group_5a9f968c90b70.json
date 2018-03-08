@@ -55,6 +55,13 @@
                 "operator": "==",
                 "value": "event"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "resource"
+            }
         ]
     ],
     "menu_order": 0,
@@ -65,5 +72,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1520500436
+    "modified": 1520506570
 }

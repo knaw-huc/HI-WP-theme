@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
   <!-- TODO: Make this page dynamic -->
+  <!-- TODO: Unlimited posts per page -->
 
   <div class="page-intro">
 
@@ -36,7 +37,7 @@
             <div class="card__info__section">
 
               <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Bronnenpublicatie</div>
+                <div class="tag-list__item tag-list__item--type">Bronnenpublicatie</div>
                 <div class="tag-list__item">Scheepvaart</div>
                 <div class="tag-list__item">Recht</div>
               </div>
@@ -82,7 +83,7 @@
             <div class="card__info__section">
 
               <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Bronnenpublicatie</div>
+                <div class="tag-list__item tag-list__item--type">Bronnenpublicatie</div>
                 <div class="tag-list__item">Scheepvaart</div>
                 <div class="tag-list__item">Recht</div>
               </div>
@@ -128,7 +129,7 @@
             <div class="card__info__section">
 
               <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Bronnenpublicatie</div>
+                <div class="tag-list__item tag-list__item--type">Bronnenpublicatie</div>
                 <div class="tag-list__item">Scheepvaart</div>
                 <div class="tag-list__item">Recht</div>
               </div>
@@ -174,7 +175,7 @@
             <div class="card__info__section">
 
               <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Bronnenpublicatie</div>
+                <div class="tag-list__item tag-list__item--type">Bronnenpublicatie</div>
                 <div class="tag-list__item">Scheepvaart</div>
                 <div class="tag-list__item">Recht</div>
               </div>
@@ -220,7 +221,7 @@
             <div class="card__info__section">
 
               <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Bronnenpublicatie</div>
+                <div class="tag-list__item tag-list__item--type">Bronnenpublicatie</div>
                 <div class="tag-list__item">Scheepvaart</div>
                 <div class="tag-list__item">Recht</div>
               </div>
@@ -266,7 +267,7 @@
             <div class="card__info__section">
 
               <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Bronnenpublicatie</div>
+                <div class="tag-list__item tag-list__item--type">Bronnenpublicatie</div>
                 <div class="tag-list__item">Scheepvaart</div>
                 <div class="tag-list__item">Recht</div>
               </div>
@@ -500,629 +501,13 @@
 
       <div class="resource-overview__list">
 
-        <a href="#" class="card card--bar">
+        <?php if ( have_posts() ) : ?>
+          <?php while ( have_posts() ) : the_post(); ?>
 
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
+            <?php include('inc/resource-card.php'); ?>
 
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-        <a href="#" class="card card--bar">
-
-          <div class="card__visual">
-            <img src="./img/content/card/visual.jpg" alt="">
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
-                <div class="tag-list__item">Politiek divn bestuur</div>
-                <div class="tag-list__item">Maatschappij</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
+          <?php endwhile; ?>
+        <?php endif; ?>
 
       </div>
       <!-- end .resource-overview__list -->
