@@ -134,7 +134,7 @@
 
     <div class="homepage-heading">
       <h4 class="homepage-heading__text">Resources</h4>
-      <a class="homepage-heading__button" href="#">Bekijk alle resources</a>
+      <a class="homepage-heading__button" href="<?= get_post_type_archive_link('resource'); ?>">Bekijk alle resources</a>
     </div>
     <!-- end .homepage-heading -->
 
@@ -159,7 +159,7 @@
           <div class="card__info__section">
 
             <div class="tag-list">
-              <div class="tag-list__item tag-list__item--category">Scheepvaart</div>
+              <div class="tag-list__item tag-list__item--type">Scheepvaart</div>
               <div class="tag-list__item">Scheepvaart</div>
               <div class="tag-list__item">Recht</div>
             </div>
@@ -200,7 +200,7 @@
           <div class="card__info__section">
 
             <div class="tag-list">
-              <div class="tag-list__item tag-list__item--category">Scheepvaart</div>
+              <div class="tag-list__item tag-list__item--type">Scheepvaart</div>
               <div class="tag-list__item">Scheepvaart</div>
               <div class="tag-list__item">Recht</div>
             </div>
@@ -241,7 +241,7 @@
           <div class="card__info__section">
 
             <div class="tag-list">
-              <div class="tag-list__item tag-list__item--category">Scheepvaart</div>
+              <div class="tag-list__item tag-list__item--type">Scheepvaart</div>
               <div class="tag-list__item">Scheepvaart</div>
               <div class="tag-list__item">Recht</div>
             </div>
