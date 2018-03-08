@@ -13,39 +13,6 @@ add_image_size('footer-logo--large', 1000, 60, false);
 add_image_size('footer-logo--regular', 500, 30, false);
 add_image_size('footer-logo--small', 250, 15, false);
 
-// add_image_size('carousel-small--large', 2880, 548, true);
-// add_image_size('carousel-small--regular', 1440, 274, true);
-// add_image_size('carousel-small--small', 720, 137, true);
-//
-// add_image_size('carousel-thumbnail--large', 120, 120, true);
-// add_image_size('carousel-thumbnail--regular', 60, 60, true);
-//
-// add_image_size('information-block-visual--large', 800, null, false);
-// add_image_size('information-block-visual--regular', 400, null, false);
-// add_image_size('information-block-visual--small', 200, null, false);
-//
-// add_image_size('project-visual--large', 972, null, false);
-// add_image_size('project-visual--regular', 486, null, false);
-// add_image_size('project-visual--small', 243, null, false);
-//
-// add_image_size('project-visual-overview--large', 1144, 600, true);
-// add_image_size('project-visual-overview--regular', 572, 300, true);
-// add_image_size('project-visual-overview--small', 286, 150, true);
-//
-// add_image_size('how-we-work--large', 660, 450, true);
-// add_image_size('how-we-work--regular', 330, 225, true);
-//
-// add_image_size('image-holder-landscape--large', 2000, null, false);
-// add_image_size('image-holder-landscape--regular', 1000, null, false);
-// add_image_size('image-holder-landscape--small', 500, null, false);
-//
-// add_image_size('image-holder-portrait--large', 1480, null, false);
-// add_image_size('image-holder-portrait--regular', 740, null, false);
-// add_image_size('image-holder-portrait--small', 370, null, false);
-//
-// add_image_size('team-visual--large', 460, 460, true);
-// add_image_size('team-visual--regular', 230, 230, true);
-
 // Remove comments section in CMS
 function remove_menus(){
   remove_menu_page('edit-comments.php');
@@ -267,5 +234,11 @@ function posts_link_attributes_previous() {
 function posts_link_attributes_next() {
     return 'class="pagination__button pagination__button--next"';
 }
+
+// Excerpt
+function new_excerpt_ellipsis( $more ) {
+    return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_ellipsis');
 
 ?>
