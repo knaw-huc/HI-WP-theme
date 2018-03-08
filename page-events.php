@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-  <!-- TODO: Make this page dynamic -->
+  <!-- TODO: 2. Make this page dynamic -->
 
   <div class="page-heading">
     <!-- TODO: If page has parent: show button below (and add url) -->

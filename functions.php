@@ -190,12 +190,12 @@ function cptui_register_my_taxes() {
   $args = array(
     "labels" => $labels,
     "label" => "Periodes",
-    "rewrite" => array( 'slug' => 'periods', 'with_front' => true )
+    "rewrite" => array( 'slug' => 'period', 'with_front' => true )
   );
 
   $args = array_merge($args, $default_args);
 
-  register_taxonomy( "periods", array( "project", "resource" ), $args );
+  register_taxonomy( "period", array( "project", "resource" ), $args );
 
   // Custom Taxonomy: Resource type
   $labels = array(

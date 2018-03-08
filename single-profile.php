@@ -116,7 +116,7 @@
         'post_type' => 'project',
         'meta_query' => array(
           array(
-            'key' => 'related_profiles', // name of custom field
+            'key' => 'sidebar_related_profiles', // name of custom field
             'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
             'compare' => 'LIKE'
           )
