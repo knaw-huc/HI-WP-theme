@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
   <div class="page-heading">
-    <!-- TODO: If page has parent: show button below (and add url) -->
-    <a class="page-heading__button" href="#">Terug naar het overzicht</a>
+    <a class="page-heading__button" href="<?= get_the_permalink(get_page_by_path('informatie')); ?>">Terug naar het overzicht</a>
     <h2>Nieuws</h2>
   </div>
   <!-- end .page-heading -->
@@ -27,26 +26,29 @@
 
   <div class="main">
 
-    <!-- TODO: Implement pagination -->
-
     <div class="pagination">
 
       <div class="pagination__column">
-        <a href="#" class="pagination__button pagination__button--previous">Vorige pagina</a>
+        <?php previous_posts_link('Vorige pagina'); ?>
       </div>
       <!-- end .pagination__column -->
 
       <div class="pagination__column">
-        <a href="#" class="pagination__button pagination__button--number">1</a>
-        <a href="#" class="pagination__button pagination__button--number">2</a>
-        <a href="#" class="pagination__button pagination__button--number">3</a>
-        <a href="#" class="pagination__button pagination__button--number">4</a>
-        <a href="#" class="pagination__button pagination__button--number">5</a>
+
+        <?php
+        $args = array(
+          'end_size'  => 0,
+          'prev_next' => false,
+        );
+
+        echo paginate_links($args);
+        ?>
+
       </div>
       <!-- end .pagination__column -->
 
       <div class="pagination__column">
-        <a href="#" class="pagination__button pagination__button--next">Volgende pagina</a>
+        <?php next_posts_link('Volgende pagina', ''); ?>
       </div>
       <!-- end .pagination__column -->
 

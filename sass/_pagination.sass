@@ -11,12 +11,14 @@
   align-items: center
   min-width: 132px
 
-.pagination__button
+.pagination__button,
+.page-numbers
   +paragraph-chivo-small
   display: flex
   align-items: center
 
-  & + .pagination__button
+  & + .pagination__button,
+  .page-numbers
     margin-left: 18px
 
   &::before,
@@ -41,8 +43,8 @@
       margin-left: 8px
       content: ''
 
-  &--number
-    +paragraph-chivo-medium
+.page-numbers
+  +paragraph-chivo-medium
 
 @media (max-width: $media-phone)
 

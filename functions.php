@@ -252,4 +252,16 @@ function get_field_without_ptags_on_images($field_name) {
   return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
 }
 
+// Pagination
+add_filter('previous_posts_link_attributes', 'posts_link_attributes_previous');
+add_filter('next_posts_link_attributes', 'posts_link_attributes_next');
+
+function posts_link_attributes_previous() {
+  return 'class="pagination__button pagination__button--previous"';
+}
+
+function posts_link_attributes_next() {
+    return 'class="pagination__button pagination__button--next"';
+}
+
 ?>
