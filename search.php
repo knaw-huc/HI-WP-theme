@@ -159,7 +159,7 @@
           <div class="card__info__section">
 
             <div class="tag-list">
-              <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
+              <div class="tag-list__item tag-list__item--type">Vakliteratuur</div>
               <div class="tag-list__item">Politiek divn bestuur</div>
               <div class="tag-list__item">Maatschappij</div>
             </div>
@@ -191,7 +191,7 @@
           <div class="card__info__section">
 
             <div class="tag-list">
-              <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
+              <div class="tag-list__item tag-list__item--type">Vakliteratuur</div>
               <div class="tag-list__item">Politiek divn bestuur</div>
               <div class="tag-list__item">Maatschappij</div>
             </div>
@@ -223,7 +223,7 @@
           <div class="card__info__section">
 
             <div class="tag-list">
-              <div class="tag-list__item tag-list__item--category">Vakliteratuur</div>
+              <div class="tag-list__item tag-list__item--type">Vakliteratuur</div>
               <div class="tag-list__item">Politiek divn bestuur</div>
               <div class="tag-list__item">Maatschappij</div>
             </div>
