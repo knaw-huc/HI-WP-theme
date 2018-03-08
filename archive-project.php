@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
   <!-- TODO: Make this page dynamic -->
+  <!-- TODO: Unlimited posts per page -->
 
   <div class="page-intro">
 
