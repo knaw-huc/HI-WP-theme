@@ -9,6 +9,10 @@ add_image_size('profile-button--large', 320, 320, true);
 add_image_size('profile-button--regular', 160, 160, true);
 add_image_size('profile-button--small', 80, 80, true);
 
+add_image_size('footer-logo--large', 1000, 60, false);
+add_image_size('footer-logo--regular', 500, 30, false);
+add_image_size('footer-logo--small', 250, 15, false);
+
 // add_image_size('carousel-small--large', 2880, 548, true);
 // add_image_size('carousel-small--regular', 1440, 274, true);
 // add_image_size('carousel-small--small', 720, 137, true);

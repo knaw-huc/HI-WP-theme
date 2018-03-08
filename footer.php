@@ -1,60 +1,47 @@
-    <!-- TODO: Make footer dynamic -->
     <footer class="footer">
 
       <div class="footer__inner">
 
         <div class="footer__column">
 
-          <h2>Contact</h2>
+          <h2><?php the_field('footer_column_1_heading', 'options'); ?></h2>
 
-          <p>
-            Ons bezoekadres:<br />
-            Spinhuis<br />
-            Oudezijds Achterburgwal 185<br />
-            1012 DK AMSTERDAM
-          </p>
-
-          <p>
-            Ons postadres:<br />
-            Huygens ING<br />
-            Postbus 10855<br />
-            1001 EW  AMSTERDAM
-          </p>
-
-          <p>
-            <a href="mailto:info@huygens.knaw.nl">info@huygens.knaw.nl</a><br />
-            +31 (0)20 — 224 68 00
-          </p>
+          <?php the_field('footer_column_1_text', 'options'); ?>
 
         </div>
         <!-- end .footer__column -->
 
         <div class="footer__column">
 
-          <h2>Huygens ING</h2>
+          <h2><?php the_field('footer_column_2_heading', 'options'); ?></h2>
 
-          <p>Door middel van inspirerend onderzoek en het maken van innovatieve tools maakt het Huygens ING oude ontoegankelijke bronnen begrijpbaar en toepasbaar. Dit doen we op het gebied van Wetenschaps- geschiedenis, Letterkunde en Politiek institutionele geschiedenis en Digital Humanities.</p>
+          <?php the_field('footer_column_2_text', 'options'); ?>
 
         </div>
         <!-- end .footer__column -->
 
         <div class="footer__column">
 
-          <h2>Huygens werkt mee aan</h2>
+          <h2><?php the_field('footer_column_3_heading', 'options'); ?></h2>
 
-          <ul class="logo-holder">
-            <li class="logo-holder__item">
-              <a href="https://literatuurmuseum.nl/" target="_blank">
-                <img src="<?php bloginfo('template_url'); ?>/img/logo-literatuurmuseum.svg" alt="">
-              </a>
-            </li>
-            <li class="logo-holder__item">
-              <a href="https://www.historici.nl/" target="_blank">
-                <img src="<?php bloginfo('template_url'); ?>/img/logo-historici.svg" alt="">
-              </a>
-            </li>
-          </ul>
-          <!-- end .logo-holder -->
+          <?php if( have_rows('footer_column_3_logos', 'options') ): ?>
+
+            <ul class="logo-holder">
+
+              <?php while ( have_rows('footer_column_3_logos', 'options') ) : the_row(); ?>
+
+                <li class="logo-holder__item">
+                  <a href="<?php the_sub_field('url'); ?>" target="_blank">
+                    <?php echo wp_get_attachment_image(get_sub_field('logo')['id'], 'footer-logo--regular', 0); ?>
+                  </a>
+                </li>
+
+              <?php endwhile; ?>
+
+            </ul>
+            <!-- end .logo-holder -->
+
+          <?php endif; ?>
 
         </div>
         <!-- end .footer__column -->
