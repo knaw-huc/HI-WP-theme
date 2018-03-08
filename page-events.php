@@ -6,11 +6,8 @@
 
 <?php get_header(); ?>
 
-  <!-- TODO: 2. Make this page dynamic -->
-
   <div class="page-heading">
-    <!-- TODO: If page has parent: show button below (and add url) -->
-    <a class="page-heading__button" href="#">Terug naar het overzicht</a>
+    <a class="page-heading__button" href="<?= get_the_permalink(get_page_by_path('informatie')); ?>">Terug naar het overzicht</a>
     <h2><?php the_title(); ?></h2>
   </div>
   <!-- end .page-heading -->
@@ -19,101 +16,34 @@
 
     <div class="event-overview">
 
-      <a href="#" class="card card--bar card--event">
+      <?php
+      $today = date('Ymd');
 
-        <div class="card__visual">
-          <img src="./img/content/card/visual.jpg" alt="">
-        </div>
-        <!-- end .card__visual -->
+      $args = array(
+        'posts_per_page' => -1,
+        'post_type'      => 'event',
+        'meta_key'       => 'event_hide_after',
+        'orderby'        => 'meta_value_num',
+        'order'          => 'ASC',
+        'meta_query'     => array(
+          array(
+            'key'     => 'event_hide_after',
+            'compare' => '>',
+            'value'   => $today,
+          ),
+        ),
+      );
 
-        <div class="card__info">
+      query_posts($args)
+      ?>
 
-          <div class="card__info__section">
-            <p>30 november — 1 december 2017</p>
-            <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-          </div>
-          <!-- end .card__info__section -->
+      <?php if ( have_posts() ) : ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-          <div class="card__info__section">
+          <?php include('inc/event-card.php'); ?>
 
-            <div class="tag-list">
-              <div class="tag-list__item">Politiek</div>
-              <div class="tag-list__item">Internationaal</div>
-            </div>
-            <!-- end .tag-list -->
-
-          </div>
-          <!-- end .card__info__section -->
-
-        </div>
-        <!-- end .card__info -->
-
-      </a>
-      <!-- end .card -->
-
-      <a href="#" class="card card--bar card--event">
-
-        <div class="card__visual">
-          <img src="./img/content/card/visual.jpg" alt="">
-        </div>
-        <!-- end .card__visual -->
-
-        <div class="card__info">
-
-          <div class="card__info__section">
-            <p>30 november</p>
-            <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-          </div>
-          <!-- end .card__info__section -->
-
-          <div class="card__info__section">
-
-            <div class="tag-list">
-              <div class="tag-list__item">Politiek</div>
-              <div class="tag-list__item">Internationaal</div>
-            </div>
-            <!-- end .tag-list -->
-
-          </div>
-          <!-- end .card__info__section -->
-
-        </div>
-        <!-- end .card__info -->
-
-      </a>
-      <!-- end .card -->
-
-      <a href="#" class="card card--bar card--event">
-
-        <div class="card__visual">
-          <img src="./img/content/card/visual.jpg" alt="">
-        </div>
-        <!-- end .card__visual -->
-
-        <div class="card__info">
-
-          <div class="card__info__section">
-            <p>30 november</p>
-            <h6>Acta van het consistorie van de Nederlandse gemeente te Londen 1569-1585</h6>
-          </div>
-          <!-- end .card__info__section -->
-
-          <div class="card__info__section">
-
-            <div class="tag-list">
-              <div class="tag-list__item">Politiek</div>
-              <div class="tag-list__item">Internationaal</div>
-            </div>
-            <!-- end .tag-list -->
-
-          </div>
-          <!-- end .card__info__section -->
-
-        </div>
-        <!-- end .card__info -->
-
-      </a>
-      <!-- end .card -->
+        <?php endwhile; ?>
+      <?php endif; ?>
 
     </div>
     <!-- end .event-overview -->
