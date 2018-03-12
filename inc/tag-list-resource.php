@@ -11,7 +11,7 @@
 
         <?php foreach($types as $type) { ?>
           <!-- TODO: This should link to a pre-filtered resource overview -->
-          <div class="tag-list__item tag-list__item--type">Vakliteratuur</div>
+          <div class="tag-list__item tag-list__item--type"><?php echo $type->name . ' '; ?></div>
         <?php } ?>
 
       <?php } ?>

@@ -95,7 +95,56 @@ $('.project-filter select').change(function() {
     redirectPage += 'tag=' + $('.project-filter select.tag').find('option:selected').val() + '&';
   }
 
-  // redirectPage += '#content';
   window.location.href = redirectPage;
 
+});
+
+// Resource filter
+var currentPage = document.location.protocol + '//' + window.location.hostname + window.location.pathname + '?';
+var redirectPage;
+
+function updateResourceOverview() {
+
+  redirectPage = currentPage;
+
+  // Checkbox: Type
+  redirectPage += 'rtype=';
+
+  $('.resource-overview__filter__body__item__button[name="rtype"]:checked').each(function(index, el) {
+    redirectPage += $(el).val() + '+';
+  });
+
+  redirectPage += '&';
+
+  // Checkbox: Periode
+  redirectPage += 'rperiod=';
+
+  $('.resource-overview__filter__body__item__button[name="rperiod"]:checked').each(function(index, el) {
+    redirectPage += $(el).val() + '+';
+  });
+
+  redirectPage += '&';
+
+  // Checkbox: Onderwerp
+  redirectPage += 'rtag=';
+
+  $('.resource-overview__filter__body__item__button[name="rtag"]:checked').each(function(index, el) {
+    redirectPage += $(el).val() + '+';
+  });
+
+  redirectPage += '&';
+
+  window.location.href = redirectPage;
+
+}
+
+$('.resource-overview__filter__body__item__button').change(function() {
+  updateResourceOverview();
+});
+
+// Resource filter reset
+$('.resource-overview__filter__body__button').click(function(e) {
+  $(this).parent().find('input').attr('checked', false);
+  updateResourceOverview();
+  e.preventDefault();
 });
