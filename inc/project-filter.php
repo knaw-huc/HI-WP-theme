@@ -1,14 +1,31 @@
+<!-- TODO: Zorgen dat er geen lege periodes in de dropdown staan -->
+<!-- TODO: Zorgen dat er geen lege tags in de dropdown staan -->
+
 <div class="project-filter">
 
   <h4 class="project-filter__heading">Filter onderzoeksprojecten</h4>
 
   <div class="project-filter__button-holder">
-    <a class="project-filter__button project-filter__button--yellow" href="?thema=debatcultuur#content">Debatcultuur</a>
-    <a class="project-filter__button project-filter__button--orange" href="?thema=bestuur-van-nederland#content">Bestuur van Nederland</a>
-    <a class="project-filter__button project-filter__button--blue" href="?thema=vernieuwing-editeren#content">Vernieuwing editeren</a>
-    <a class="project-filter__button project-filter__button--green" href="?thema=circulation-of-impact#content">Circulation of Impact</a>
+    <a class="project-filter__button project-filter__button--yellow" href="?thema=debatcultuur">Debatcultuur</a>
+    <a class="project-filter__button project-filter__button--orange" href="?thema=bestuur-van-nederland">Bestuur van Nederland</a>
+    <a class="project-filter__button project-filter__button--blue" href="?thema=vernieuwing-editeren">Vernieuwing editeren</a>
+    <a class="project-filter__button project-filter__button--green" href="?thema=circulation-of-impact">Circulation of Impact</a>
   </div>
   <!-- end .project-filter__button-holder -->
+
+  <?php if(isset($_GET['thema'])) { ?>
+
+    <?php
+    $thema = get_term_by('slug', $_GET['thema'], 'thema');
+    ?>
+
+    <div class="project-filter__information">
+      <?php the_field('thema_short_description', $thema); ?>
+      <a href="<?= get_term_link($thema); ?>">Meer over dit thema</a>
+    </div>
+    <!-- end .project-filter__information -->
+
+  <?php } ?>
 
   <div class="project-filter__select-holder">
 

@@ -95,7 +95,7 @@ $('.project-filter select').change(function() {
     redirectPage += 'tag=' + $('.project-filter select.tag').find('option:selected').val() + '&';
   }
 
-  redirectPage += '#content';
+  // redirectPage += '#content';
   window.location.href = redirectPage;
 
 });

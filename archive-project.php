@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-  <?php if(!isset($_GET['period']) && !isset($_GET['tag'])) { ?>
+  <?php if(!isset($_GET['thema']) && !isset($_GET['period']) && !isset($_GET['tag'])) { ?>
 
     <!-- TODO: Make this element dynamic -->
     <div class="page-intro">
