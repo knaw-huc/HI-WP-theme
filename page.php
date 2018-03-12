@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
-  <!-- TODO: Make this page dynamic -->
-
   <div class="page-heading">
-    <!-- TODO: If page has parent: show button below (and add url) -->
-    <a class="page-heading__button" href="#">Terug naar het overzicht</a>
+    <?php if(is_page() && $post->post_parent) { ?>
+      <a class="page-heading__button" href="<?php the_permalink($post->post_parent); ?>">Terug naar het overzicht</a>
+    <?php } ?>
   </div>
   <!-- end .page-heading -->
 

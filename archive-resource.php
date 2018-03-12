@@ -4,12 +4,11 @@
 
     <div class="page-intro">
 
-      <!-- TODO: Make text dynamic -->
       <div class="page-intro__text">
 
         <h2>Resources</h2>
 
-        <p>Het Huygens ING streeft ernaar bronnen en data op een zorgvuldige en wetenschappelijk verantwoorde wijze online te publiceren. Innovatieve tools proberen we zo toegankelijk mogelijk te maken. We hebben een enorme hoeveelheid aan kennis in huis, die we graag willen delen met academische collega’s en het bredere publiek.</p>
+        <?php the_field('resources_text', 'options'); ?>
 
       </div>
       <!-- end .page-intro__text -->

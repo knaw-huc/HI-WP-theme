@@ -7,8 +7,7 @@
 <?php get_header(); ?>
 
   <div class="page-heading">
-    <!-- TODO: If page has parent: show button below (and add url) -->
-    <a class="page-heading__button" href="#">Terug naar het overzicht</a>
+    <a class="page-heading__button" href="<?= get_the_permalink(get_page_by_path('informatie')); ?>">Terug naar het overzicht</a>
   </div>
   <!-- end .page-heading -->
 
