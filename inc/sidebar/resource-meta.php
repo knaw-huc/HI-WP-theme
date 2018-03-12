@@ -12,21 +12,18 @@
 
       <div class="sidebar__item__text-holder sidebar__item__text-holder--filter-links">
 
-
         <?php if ($types) { ?>
 
           <p>
             <span>Type</span><br />
 
             <?php foreach($types as $type) { ?>
-              <!-- TODO: This should link to a pre-filtered resource overview -->
-              <a href="#"><?php echo $type->name . ' '; ?></a><br />
+              <a href="<?= get_post_type_archive_link('resource'); ?>?rtype=<?php echo $type->term_id; ?>"><?php echo $type->name . ' '; ?></a><br />
             <?php } ?>
 
           </p>
 
         <?php } ?>
-
 
         <?php if ($periods) { ?>
 
@@ -34,14 +31,12 @@
             <span>Periode</span><br />
 
             <?php foreach($periods as $period) { ?>
-              <!-- TODO: This should link to a pre-filtered resource overview -->
-              <a href="#"><?php echo $period->name . ' '; ?></a><br />
+              <a href="<?= get_post_type_archive_link('resource'); ?>?rperiod=<?php echo $period->term_id; ?>"><?php echo $period->name . ' '; ?></a><br />
             <?php } ?>
 
           </p>
 
         <?php } ?>
-
 
         <?php if ($posttags) { ?>
 
@@ -49,8 +44,7 @@
             <span>Onderwerp</span><br />
 
             <?php foreach($posttags as $tag) { ?>
-              <!-- TODO: This should link to a pre-filtered resource overview -->
-              <a href="#"><?php echo $tag->name . ' '; ?></a><br />
+              <a href="<?= get_post_type_archive_link('resource'); ?>?rtag=<?php echo $tag->term_id; ?>"><?php echo $tag->name . ' '; ?></a><br />
             <?php } ?>
 
           </p>

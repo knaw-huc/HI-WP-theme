@@ -10,8 +10,7 @@
       <?php if ($types) { ?>
 
         <?php foreach($types as $type) { ?>
-          <!-- TODO: This should link to a pre-filtered resource overview -->
-          <div class="tag-list__item tag-list__item--type"><?php echo $type->name . ' '; ?></div>
+          <a href="<?= get_post_type_archive_link('resource'); ?>?rtype=<?php echo $type->term_id; ?>" class="tag-list__item tag-list__item--type"><?php echo $type->name . ' '; ?></a>
         <?php } ?>
 
       <?php } ?>
@@ -23,8 +22,7 @@
         <?php foreach($posttags as $tag) { ?>
 
           <?php if($i < 2) { ?>
-            <!-- TODO: This should link to a pre-filtered resource overview -->
-            <div class="tag-list__item"><?php echo $tag->name . ' '; ?></div>
+            <a href="<?= get_post_type_archive_link('resource'); ?>?rtag=<?php echo $tag->term_id; ?>" class="tag-list__item"><?php echo $tag->name . ' '; ?></a>
             <?php $i++; ?>
           <?php } ?>
 

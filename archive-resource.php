@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-  <!-- TODO: Make this page dynamic -->
   <?php if(!isset($_GET['rtype']) && !isset($_GET['rperiod']) && !isset($_GET['rtag'])) { ?>
 
     <div class="page-intro">
