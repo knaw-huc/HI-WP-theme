@@ -1,0 +1,43 @@
+{
+    "key": "group_5aa6311295d41",
+    "title": "Project informatie",
+    "fields": [
+        {
+            "key": "field_5aa6311299c24",
+            "label": "Korte beschrijving",
+            "name": "project_description",
+            "type": "text",
+            "instructions": "Deze wordt weergegeven op de overzichtspagina",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1520841054
+}

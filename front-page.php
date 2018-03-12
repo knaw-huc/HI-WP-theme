@@ -1,23 +1,19 @@
 <?php get_header(); ?>
 
-  <!-- TODO: Make this page dynamic -->
-
   <div class="homepage-intro">
 
     <div class="homepage-intro__text">
-
-      <p>Huygens ING is hét onderzoeksinstituut op het gebied van geschiedenis en cultuur.<br />Ons onderzoek is ingedeeld in de thema’s:</p>
-
+      <?php the_field('intro_text'); ?>
     </div>
     <!-- end .homepage-intro__text -->
 
     <div class="project-filter">
 
       <div class="project-filter__button-holder">
-        <a class="project-filter__button project-filter__button--yellow" href="#">Debatcultuur</a>
-        <a class="project-filter__button project-filter__button--orange" href="#">Bestuur van Nederland</a>
-        <a class="project-filter__button project-filter__button--blue" href="#">Vernieuwing editeren</a>
-        <a class="project-filter__button project-filter__button--green" href="#">Circulation of Impact</a>
+        <a class="project-filter__button project-filter__button--yellow" href="<?= get_post_type_archive_link('project'); ?>?thema=debatcultuur">Debatcultuur</a>
+        <a class="project-filter__button project-filter__button--orange" href="<?= get_post_type_archive_link('project'); ?>?thema=bestuur-van-nederland">Bestuur van Nederland</a>
+        <a class="project-filter__button project-filter__button--blue" href="<?= get_post_type_archive_link('project'); ?>?thema=vernieuwing-editeren">Vernieuwing editeren</a>
+        <a class="project-filter__button project-filter__button--green" href="<?= get_post_type_archive_link('project'); ?>?thema=circulation-of-impact">Circulation of Impact</a>
       </div>
       <!-- end .project-filter__button-holder -->
 
@@ -34,98 +30,7 @@
     </div>
     <!-- end .homepage-heading -->
 
-    <div class="homepage-carousel owl-carousel">
-
-      <div class="homepage-carousel__item">
-
-        <span class="homepage-carousel__item__label">Onderzoeksproject</span>
-
-        <a href="#" class="card card--default">
-
-          <div class="card__visual image-filter">
-
-            <img src="./img/content/card/visual.jpg" alt="">
-
-            <div class="card__visual__markers">
-              <div class="card__visual__markers__item card__visual__markers__item--orange"></div>
-              <div class="card__visual__markers__item card__visual__markers__item--green"></div>
-              <div class="card__visual__markers__item card__visual__markers__item--yellow"></div>
-            </div>
-            <!-- end .card__visual__markers -->
-
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Golden Agents</h6>
-              <p>Creative industries and the making of the Golden Age.</p>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item">Scheepvaart</div>
-                <div class="tag-list__item">Recht</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-        </a>
-        <!-- end .card -->
-
-      </div>
-      <!-- end .homepage-carousel__item -->
-
-      <div class="homepage-carousel__item">
-
-        <span class="homepage-carousel__item__label">Nieuws</span>
-
-        <a href="#" class="card card--default">
-
-          <div class="card__visual">
-
-            <img src="./img/content/card/visual.jpg" alt="">
-
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Biografie Wolkers van Onno Blom gepresenteerd</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item">Scheepvaart</div>
-                <div class="tag-list__item">Recht</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-        </a>
-        <!-- end .card -->
-
-      </div>
-      <!-- end .homepage-carousel__item -->
-
-    </div>
-    <!-- end .homepage-carousel -->
+    <?php include(get_template_directory() . '/inc/homepage-carousel.php'); ?>
 
   </div>
   <!-- end .main -->
@@ -137,6 +42,8 @@
       <a class="homepage-heading__button" href="<?= get_post_type_archive_link('resource'); ?>">Bekijk alle resources</a>
     </div>
     <!-- end .homepage-heading -->
+
+    <!-- TODO: Implement resources overview -->
 
     <div class="project-overview">
 
@@ -269,6 +176,7 @@
   </div>
   <!-- end .main -->
 
+  <!-- TODO: Implement newsletter form -->
   <div class="newsletter">
 
     <h4 class="newsletter__heading">Schrijf je in voor de nieuwsbrief</h4>
