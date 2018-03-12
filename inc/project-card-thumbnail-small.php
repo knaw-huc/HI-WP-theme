@@ -1,4 +1,4 @@
-<a href="<?php the_permalink(); ?>" class="card card--default card--thumbnail">
+<a href="<?php the_permalink(); ?>" class="card card--default card--thumbnail card--small">
 
   <div class="card__visual image-filter">
 
@@ -7,7 +7,7 @@
     <div class="card__visual__markers">
 
       <?php
-      $themas = wp_get_post_terms($post, 'thema');
+      $themas = wp_get_post_terms($post->ID, 'thema');
 
       foreach($themas as $thema) {
 
@@ -36,22 +36,6 @@
 
     <div class="card__info__section">
       <h6><?php the_title(); ?></h6>
-    </div>
-    <!-- end .card__info__section -->
-
-    <?php if(get_field('project_description')) { ?>
-
-      <div class="card__info__section">
-        <p><?php the_field('project_description'); ?></p>
-      </div>
-      <!-- end .card__info__section -->
-
-    <?php } ?>
-
-    <div class="card__info__section">
-
-      <?php include('tag-list.php'); ?>
-
     </div>
     <!-- end .card__info__section -->
 

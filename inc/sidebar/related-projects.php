@@ -12,7 +12,7 @@
 
         <?php setup_postdata($post); ?>
 
-        <?php include(get_template_directory() . '/inc/project-card-thumbnail.php'); ?>
+        <?php include(get_template_directory() . '/inc/project-card-thumbnail-small.php'); ?>
 
       <?php endforeach; ?>
 
