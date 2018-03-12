@@ -1,5 +1,36 @@
-<!-- TODO: Zorgen dat er geen lege periodes in de dropdown staan -->
-<!-- TODO: Zorgen dat er geen lege tags in de dropdown staan -->
+<?php
+$available_periods = array();
+$available_tags = array();
+
+$args = array(
+  'post_type' => 'project',
+  'posts_per_page' => '-1',
+);
+
+query_posts($args);
+?>
+
+<?php if ( have_posts() ) : ?>
+  <?php while ( have_posts() ) : the_post(); ?>
+
+    <?php
+    $periods = wp_get_post_terms($post->ID, 'period');
+
+    foreach($periods as $period) {
+      $available_periods[] = $period->term_id;
+    }
+
+    $posttags = get_the_tags();
+
+    if ($posttags) {
+      foreach($posttags as $tag) {
+        $available_tags[] = $tag->term_id;
+      }
+    }
+    ?>
+
+  <?php endwhile; ?>
+<?php endif; ?>
 
 <div class="project-filter">
 
@@ -54,6 +85,7 @@
     $periods = get_terms(array(
       'taxonomy' => 'period',
       'hide_empty' => true,
+      'include' => $available_periods,
     ));
 
     if(is_array($periods)) :
@@ -92,6 +124,7 @@
     $tags = get_terms(array(
       'taxonomy' => 'post_tag',
       'hide_empty' => true,
+      'include' => $available_tags,
     ));
 
     if(is_array($tags)) :
