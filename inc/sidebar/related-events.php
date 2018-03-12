@@ -13,8 +13,7 @@
         <?php setup_postdata($post); ?>
 
         <a href="<?php the_permalink(); ?>" class="sidebar__item__text-link">
-          <!-- TODO: Make date dynamic -->
-          <span>12 december 2017</span><br />
+          <span><?php the_time('j F Y'); ?></span><br />
           <?php the_title(); ?>
         </a>
         <!-- end .sidebar__item__text-link -->

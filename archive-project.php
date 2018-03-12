@@ -4,12 +4,11 @@
 
     <div class="page-intro">
 
-      <!-- TODO: Make this element dynamic -->
       <div class="page-intro__text">
 
         <h2>Onderzoeksprojecten</h2>
 
-        <p>Het Huygens ING verricht onderzoek op het gebied van de Geschiedenis, Letterkunde, Wetenschapsgeschiedenis, en Digital Humanities. We geven hier een selectie uit onze lopende projecten.</p>
+        <?php the_field('projects_text', 'options'); ?>
 
       </div>
       <!-- end .page-intro__text -->
