@@ -16,9 +16,16 @@
 
     <?php if ($posttags) { ?>
 
+      <?php $i = 0; ?>
+
       <?php foreach($posttags as $tag) { ?>
-        <!-- TODO: This should link to a pre-filtered resource overview -->
-        <div class="tag-list__item"><?php echo $tag->name . ' '; ?></div>
+
+        <?php if($i < 2) { ?>
+          <!-- TODO: This should link to a pre-filtered resource overview -->
+          <div class="tag-list__item"><?php echo $tag->name . ' '; ?></div>
+          <?php $i++; ?>
+        <?php } ?>
+
       <?php } ?>
 
     <?php } ?>

@@ -119,9 +119,15 @@
       &:hover .card--default:not(.card--thumbnail)
         opacity: .66
 
+  @media (min-width: $media-phone + 1)
+
+    .owl-item .card--default:not(.card--thumbnail)
+      width: 352px
+
   @media (max-width: $media-phone)
 
     .card--default:not(.card--thumbnail)
+      width: 280px
       max-width: 280px
 
       .card__info

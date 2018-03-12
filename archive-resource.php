@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
   <!-- TODO: Make this page dynamic -->
-  <!-- TODO: Unlimited posts per page -->
 
   <div class="page-intro">
 
+    <!-- TODO: Make text dynamic -->
     <div class="page-intro__text">
 
       <h2>Resources</h2>
@@ -14,289 +14,32 @@
     </div>
     <!-- end .page-intro__text -->
 
-    <div class="page-intro__carousel owl-carousel">
+    <?php $posts = get_field('featured_resources', 'options'); ?>
 
-      <div class="page-intro__carousel__item">
+    <?php if($posts): ?>
 
-        <a href="#" class="card card--default">
+      <div class="page-intro__carousel owl-carousel">
 
-          <div class="card__visual">
+        <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 
-            <img src="./img/content/card/visual.jpg" alt="">
+          <?php setup_postdata($post); ?>
 
-          </div>
-          <!-- end .card__visual -->
+          <?php include(get_template_directory() . '/inc/homepage-resource-card.php'); ?>
 
-          <div class="card__info">
+        <?php endforeach; ?>
 
-            <div class="card__info__section">
-              <h6>Brieven van de Hollandse en Friese Stadhoudersvrouwen 1605-1725</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--type">Bronnenpublicatie</div>
-                <div class="tag-list__item">Scheepvaart</div>
-                <div class="tag-list__item">Recht</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
+        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
       </div>
-      <!-- end .page-intro__carousel__item -->
+      <!-- end .page-intro__carousel -->
 
-      <div class="page-intro__carousel__item">
-
-        <a href="#" class="card card--default">
-
-          <div class="card__visual">
-
-            <img src="./img/content/card/visual.jpg" alt="">
-
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Brieven van de Hollandse en Friese Stadhoudersvrouwen 1605-1725</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--type">Bronnenpublicatie</div>
-                <div class="tag-list__item">Scheepvaart</div>
-                <div class="tag-list__item">Recht</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-      </div>
-      <!-- end .page-intro__carousel__item -->
-
-      <div class="page-intro__carousel__item">
-
-        <a href="#" class="card card--default">
-
-          <div class="card__visual">
-
-            <img src="./img/content/card/visual.jpg" alt="">
-
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Brieven van de Hollandse en Friese Stadhoudersvrouwen 1605-1725</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--type">Bronnenpublicatie</div>
-                <div class="tag-list__item">Scheepvaart</div>
-                <div class="tag-list__item">Recht</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-      </div>
-      <!-- end .page-intro__carousel__item -->
-
-      <div class="page-intro__carousel__item">
-
-        <a href="#" class="card card--default">
-
-          <div class="card__visual">
-
-            <img src="./img/content/card/visual.jpg" alt="">
-
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Brieven van de Hollandse en Friese Stadhoudersvrouwen 1605-1725</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--type">Bronnenpublicatie</div>
-                <div class="tag-list__item">Scheepvaart</div>
-                <div class="tag-list__item">Recht</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-      </div>
-      <!-- end .page-intro__carousel__item -->
-
-      <div class="page-intro__carousel__item">
-
-        <a href="#" class="card card--default">
-
-          <div class="card__visual">
-
-            <img src="./img/content/card/visual.jpg" alt="">
-
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Brieven van de Hollandse en Friese Stadhoudersvrouwen 1605-1725</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--type">Bronnenpublicatie</div>
-                <div class="tag-list__item">Scheepvaart</div>
-                <div class="tag-list__item">Recht</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-      </div>
-      <!-- end .page-intro__carousel__item -->
-
-      <div class="page-intro__carousel__item">
-
-        <a href="#" class="card card--default">
-
-          <div class="card__visual">
-
-            <img src="./img/content/card/visual.jpg" alt="">
-
-          </div>
-          <!-- end .card__visual -->
-
-          <div class="card__info">
-
-            <div class="card__info__section">
-              <h6>Brieven van de Hollandse en Friese Stadhoudersvrouwen 1605-1725</h6>
-            </div>
-            <!-- end .card__info__section -->
-
-            <div class="card__info__section">
-
-              <div class="tag-list">
-                <div class="tag-list__item tag-list__item--type">Bronnenpublicatie</div>
-                <div class="tag-list__item">Scheepvaart</div>
-                <div class="tag-list__item">Recht</div>
-              </div>
-              <!-- end .tag-list -->
-
-            </div>
-            <!-- end .card__info__section -->
-
-          </div>
-          <!-- end .card__info -->
-
-          <object>
-            <a href="#" class="card__button">
-              <span class="card__button__text">Bekijk resource</span>
-              <span class="card__button__icon"></span>
-            </a>
-          </object>
-
-        </a>
-        <!-- end .card -->
-
-      </div>
-      <!-- end .page-intro__carousel__item -->
-
-    </div>
-    <!-- end .page-intro__carousel -->
+    <?php endif; ?>
 
   </div>
-  <!-- end .page-intro -->
+   <!-- end .page-intro -->
+
+   <!-- TODO: Reset query for overview below -->
+   <!-- TODO: Unlimited posts per page -->
 
   <div class="main">
 

@@ -35,146 +35,37 @@
   </div>
   <!-- end .main -->
 
-  <div class="main">
+  <?php $posts = get_field('featured_resources'); ?>
 
-    <div class="homepage-heading">
-      <h4 class="homepage-heading__text">Resources</h4>
-      <a class="homepage-heading__button" href="<?= get_post_type_archive_link('resource'); ?>">Bekijk alle resources</a>
-    </div>
-    <!-- end .homepage-heading -->
+  <?php if($posts): ?>
 
-    <!-- TODO: Implement resources overview -->
+    <div class="main">
 
-    <div class="project-overview">
+      <div class="homepage-heading">
+        <h4 class="homepage-heading__text">Resources</h4>
+        <a class="homepage-heading__button" href="<?= get_post_type_archive_link('resource'); ?>">Bekijk alle resources</a>
+      </div>
+      <!-- end .homepage-heading -->
 
-      <a href="#" class="card card--default">
+      <div class="project-overview">
 
-        <div class="card__visual">
+        <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 
-          <img src="./img/content/card/visual.jpg" alt="">
+          <?php setup_postdata($post); ?>
 
-        </div>
-        <!-- end .card__visual -->
+          <?php include(get_template_directory() . '/inc/homepage-resource-card.php'); ?>
 
-        <div class="card__info">
+        <?php endforeach; ?>
 
-          <div class="card__info__section">
-            <h6>Resolutiën der Staten-Generaal 1576-1630</h6>
-          </div>
-          <!-- end .card__info__section -->
+        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
-          <div class="card__info__section">
-
-            <div class="tag-list">
-              <div class="tag-list__item tag-list__item--type">Scheepvaart</div>
-              <div class="tag-list__item">Scheepvaart</div>
-              <div class="tag-list__item">Recht</div>
-            </div>
-            <!-- end .tag-list -->
-
-          </div>
-          <!-- end .card__info__section -->
-
-        </div>
-        <!-- end .card__info -->
-
-        <object>
-          <a href="#" class="card__button">
-            <span class="card__button__text">Bekijk resource</span>
-            <span class="card__button__icon"></span>
-          </a>
-        </object>
-
-      </a>
-      <!-- end .card -->
-
-      <a href="#" class="card card--default">
-
-        <div class="card__visual">
-
-          <img src="./img/content/card/visual.jpg" alt="">
-
-        </div>
-        <!-- end .card__visual -->
-
-        <div class="card__info">
-
-          <div class="card__info__section">
-            <h6>Resolutiën der Staten-Generaal 1576-1630</h6>
-          </div>
-          <!-- end .card__info__section -->
-
-          <div class="card__info__section">
-
-            <div class="tag-list">
-              <div class="tag-list__item tag-list__item--type">Scheepvaart</div>
-              <div class="tag-list__item">Scheepvaart</div>
-              <div class="tag-list__item">Recht</div>
-            </div>
-            <!-- end .tag-list -->
-
-          </div>
-          <!-- end .card__info__section -->
-
-        </div>
-        <!-- end .card__info -->
-
-        <object>
-          <a href="#" class="card__button">
-            <span class="card__button__text">Bekijk resource</span>
-            <span class="card__button__icon"></span>
-          </a>
-        </object>
-
-      </a>
-      <!-- end .card -->
-
-      <a href="#" class="card card--default">
-
-        <div class="card__visual">
-
-          <img src="./img/content/card/visual.jpg" alt="">
-
-        </div>
-        <!-- end .card__visual -->
-
-        <div class="card__info">
-
-          <div class="card__info__section">
-            <h6>Resolutiën der Staten-Generaal 1576-1630</h6>
-          </div>
-          <!-- end .card__info__section -->
-
-          <div class="card__info__section">
-
-            <div class="tag-list">
-              <div class="tag-list__item tag-list__item--type">Scheepvaart</div>
-              <div class="tag-list__item">Scheepvaart</div>
-              <div class="tag-list__item">Recht</div>
-            </div>
-            <!-- end .tag-list -->
-
-          </div>
-          <!-- end .card__info__section -->
-
-        </div>
-        <!-- end .card__info -->
-
-        <object>
-          <a href="#" class="card__button">
-            <span class="card__button__text">Bekijk resource</span>
-            <span class="card__button__icon"></span>
-          </a>
-        </object>
-
-      </a>
-      <!-- end .card -->
+      </div>
+      <!-- end .project-overview -->
 
     </div>
-    <!-- end .project-overview -->
+    <!-- end .main -->
 
-  </div>
-  <!-- end .main -->
+  <?php endif; ?>
 
   <!-- TODO: Implement newsletter form -->
   <div class="newsletter">
