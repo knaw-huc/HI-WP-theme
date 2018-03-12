@@ -6,10 +6,31 @@
   <h4 class="project-filter__heading">Filter onderzoeksprojecten</h4>
 
   <div class="project-filter__button-holder">
-    <a class="project-filter__button project-filter__button--yellow" href="?thema=debatcultuur">Debatcultuur</a>
-    <a class="project-filter__button project-filter__button--orange" href="?thema=bestuur-van-nederland">Bestuur van Nederland</a>
-    <a class="project-filter__button project-filter__button--blue" href="?thema=vernieuwing-editeren">Vernieuwing editeren</a>
-    <a class="project-filter__button project-filter__button--green" href="?thema=circulation-of-impact">Circulation of Impact</a>
+
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'debatcultuur') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?">Debatcultuur</a>
+    <?php } else { ?>
+      <a class="project-filter__button project-filter__button--yellow" href="?thema=debatcultuur">Debatcultuur</a>
+    <?php } ?>
+
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'bestuur-van-nederland') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?">Bestuur van Nederland</a>
+    <?php } else { ?>
+      <a class="project-filter__button project-filter__button--orange" href="?thema=bestuur-van-nederland">Bestuur van Nederland</a>
+    <?php } ?>
+
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'vernieuwing-editeren') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?">Vernieuwing editeren</a>
+    <?php } else { ?>
+      <a class="project-filter__button project-filter__button--blue" href="?thema=vernieuwing-editeren">Vernieuwing editeren</a>
+    <?php } ?>
+
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'circulation-of-impact') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?">Circulation of Impact</a>
+    <?php } else { ?>
+      <a class="project-filter__button project-filter__button--green" href="?thema=circulation-of-impact">Circulation of Impact</a>
+    <?php } ?>
+
   </div>
   <!-- end .project-filter__button-holder -->
 
