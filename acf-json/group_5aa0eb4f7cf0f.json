@@ -1,7 +1,64 @@
 {
     "key": "group_5aa0eb4f7cf0f",
-    "title": "Sidebar: Contactpersoon (kopie)",
-    "fields": false,
+    "title": "Sidebar: Contactpersoon",
+    "fields": [
+        {
+            "key": "field_5aa0eb4f814db",
+            "label": "Naam",
+            "name": "sidebar_contactperson_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5aa0eb4f814ee",
+            "label": "E-mail adres",
+            "name": "sidebar_contactperson_email",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5aa0eb4f814fe",
+            "label": "Telefoonnummer",
+            "name": "sidebar_contactperson_phone",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
     "location": [
         [
             {
@@ -19,5 +76,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1520495439
+    "modified": 1520933305
 }

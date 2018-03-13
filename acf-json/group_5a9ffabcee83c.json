@@ -35,6 +35,13 @@
                 "operator": "==",
                 "value": "project"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-sidebar.php"
+            }
         ]
     ],
     "menu_order": 13,
@@ -45,5 +52,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1520434080
+    "modified": 1520933467
 }
