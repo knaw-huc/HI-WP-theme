@@ -73,6 +73,7 @@
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/SmoothScroll.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/owl.carousel.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery.fitvids.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/vendor/lazyload.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
 
     <?php wp_footer(); ?>

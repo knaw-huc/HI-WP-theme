@@ -1,7 +1,7 @@
 <a href="<?php the_permalink(); ?>" class="card card--bar">
 
   <div class="card__visual">
-    <?php echo wp_get_attachment_image(get_field('page_image')['id'], 'card--regular', 0, array('alt' => get_the_title())); ?>
+    <?php echo prepare_for_lazyload(wp_get_attachment_image(get_field('page_image')['id'], 'card--regular', 0, array('alt' => get_the_title()))); ?>
   </div>
   <!-- end .card__visual -->
 
