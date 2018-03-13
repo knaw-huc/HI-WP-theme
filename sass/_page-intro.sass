@@ -17,6 +17,23 @@
 
 .page-intro__carousel
   margin-top: 48px
+  display: block
+  height: 396px
+  opacity: 0
+
+  &.owl-loaded
+    opacity: 1
+
+  &.page-intro__carousel--desktop,
+  &.page-intro__carousel--mobile
+    height: 297px
+
+  @media (max-width: $media-phone)
+    height: 367px
+
+    &.page-intro__carousel--desktop,
+    &.page-intro__carousel--mobile
+      height: 158px
 
   &__item
     display: flex
