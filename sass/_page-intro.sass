@@ -1,5 +1,6 @@
 .page-intro
   padding: 50px 0 64px
+  overflow: hidden
   background: #667991
 
 .page-intro__text
@@ -23,6 +24,9 @@
 
   &.owl-loaded
     opacity: 1
+
+  .owl-stage-outer
+    overflow: visible
 
   &.page-intro__carousel--desktop,
   &.page-intro__carousel--mobile
@@ -56,15 +60,20 @@
       top: 68px
       width: 64px
       height: 64px
-      background: $brand-dark-blue
+      font-size: 0
+      background-color: $brand-dark-blue
+      transition: color .3s ease, background .3s ease
+
+      &:hover
+        background-color: $brand-black
 
     .owl-prev
       left: 0
-      background: url('../img/owl-prev.svg')
+      background-image: url('../img/owl-prev.svg')
 
     .owl-next
       right: 0
-      background: url('../img/owl-next.svg')
+      background-image: url('../img/owl-next.svg')
 
   &.page-intro__carousel--desktop
 

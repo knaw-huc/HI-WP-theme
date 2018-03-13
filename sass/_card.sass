@@ -94,7 +94,7 @@ $multiline-truncate-lines-to-show: 3
         text-align: center
 
       .tag-list
-        display: flex
+        flex-direction: row
 
       .tag-list__item
         color: $brand-dark-blue
@@ -198,7 +198,7 @@ $multiline-truncate-lines-to-show: 3
           margin-left: 0
 
       .tag-list
-        display: flex
+        flex-direction: row
 
       .tag-list__item
 
@@ -277,6 +277,7 @@ $multiline-truncate-lines-to-show: 3
 
     &:hover
       background: $brand-dark-blue
+      transition: color .3s ease, background .3s ease
 
       .card__button__text
         display: block
@@ -300,18 +301,15 @@ $multiline-truncate-lines-to-show: 3
   .project-overview .card,
   .resource-overview__list .card,
   .event-overview .card,
-  .search-results-list__item
+  .search-results-list__item,
+  .card--thumbnail.card--small,
+  .page-intro__carousel .owl-item.active .card,
+  .homepage-carousel .owl-stage-outer
     transition: box-shadow .2s ease, transform .35s ease
 
     &:hover
       box-shadow: 2px 2px 8px 0 rgba(0,32,72,0.15)
       transform: translate3d(-1px, -1px, 0)
-
-  .homepage-carousel .owl-stage-outer
-    transition: box-shadow .2s ease
-
-    &:hover
-      box-shadow: 0 0 8px 0 rgba(0,32,72,0.25)
 
 @media (max-width: $media-tablet)
 
