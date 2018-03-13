@@ -2,8 +2,12 @@
 
   <?php if( have_posts() ) { ?>
 
+    <?php
+    $allsearch = new WP_Query("s=$s&showposts=0");
+    ?>
+
     <div class="page-heading">
-      <h2>Resultaten voor ‘<?php echo get_search_query(); ?>’</h2>
+      <h2><?= $allsearch->found_posts; ?> resultaten voor ‘<?php echo get_search_query(); ?>’</h2>
     </div>
     <!-- end .page-heading -->
 
