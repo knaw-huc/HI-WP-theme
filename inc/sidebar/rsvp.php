@@ -19,7 +19,7 @@
 
       <?php endif; ?>
 
-      <?php if(get_field('sidebar_rsvp_button_text') && get_field('sidebar_twitter')): ?>
+      <?php if(get_field('sidebar_rsvp_button_text') && get_field('sidebar_rsvp_button_url')): ?>
 
         <a href="<?php the_field('sidebar_rsvp_button_url'); ?>" target="_blank" class="sidebar__item__button sidebar__item__button--default sidebar__item__button--small">
           <?php the_field('sidebar_rsvp_button_text'); ?>
