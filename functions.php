@@ -98,7 +98,7 @@ function cptui_register_my_cpts() {
   );
 
   $args = array(
-    "rewrite" => array( "slug" => "organisatie", "with_front" => true ),
+    "rewrite" => array( "slug" => "medewerkers", "with_front" => true ),
     "labels" => $labels
   );
 

@@ -1,6 +1,6 @@
 <div class="main">
 
-  <h4 class="search-results-heading">Organisatie</h4>
+  <h4 class="search-results-heading">Medewerkers</h4>
 
   <div class="profile-overview__category">
 

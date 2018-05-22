@@ -1,6 +1,6 @@
 <?php
 /**
-* Template name: Organisatie
+* Template name: Medewerkers
  */
 ?>
 

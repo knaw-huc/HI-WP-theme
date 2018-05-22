@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
   <div class="page-heading">
-    <a class="page-heading__button" href="<?= get_the_permalink(get_page_by_path('informatie/organisatie')); ?>">Terug naar het overzicht</a>
+    <a class="page-heading__button" href="<?= get_the_permalink(get_page_by_path('informatie/medewerkers')); ?>">Terug naar het overzicht</a>
   </div>
   <!-- end .page-heading -->
 
