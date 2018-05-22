@@ -36,7 +36,8 @@
             },
             "post_type": [
                 "post",
-                "project"
+                "project",
+                "event"
             ],
             "taxonomy": [],
             "filters": [
@@ -69,5 +70,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1520841233
+    "modified": 1527014758
 }
