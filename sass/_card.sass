@@ -304,13 +304,19 @@ $multiline-truncate-lines-to-show: 3
   .event-overview .card,
   .search-results-list__item,
   .card--thumbnail.card--small,
-  .page-intro__carousel .owl-item.active .card,
   .homepage-carousel .owl-stage-outer
     transition: box-shadow .2s ease, transform .35s ease
 
     &:hover
       box-shadow: 2px 2px 8px 0 rgba(0,32,72,0.15)
       transform: translate3d(-1px, -1px, 0)
+
+  .page-intro__carousel .owl-item.active .card
+    transition: box-shadow .2s ease, transform .35s ease
+
+    &:hover
+      box-shadow: 2px 2px 8px 0 rgba(0,32,72,0.15)
+      transform: translate3d(-2px, -2px, 0)
 
 @media (max-width: $media-tablet)
 
