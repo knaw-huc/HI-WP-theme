@@ -2,7 +2,7 @@
 
   <div class="card__visual image-filter">
 
-    <?php echo wp_get_attachment_image(get_field('page_image')['id'], 'card--regular', 0, array('alt' => get_the_title())); ?>
+    <?php echo wp_get_attachment_image(get_field('page_image')['id'], 'card-thumbnail--regular', 0, array('alt' => get_the_title())); ?>
 
     <div class="card__visual__markers">
 

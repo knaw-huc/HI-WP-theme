@@ -5,6 +5,10 @@ add_image_size('card--large', 704, 396, true);
 add_image_size('card--regular', 352, 198, true);
 add_image_size('card--small', 176, 99, true);
 
+add_image_size('card-thumbnail--large', 1056, 596, true);
+add_image_size('card-thumbnail--regular', 528, 298, true);
+add_image_size('card-thumbnail--small', 264, 149, true);
+
 add_image_size('profile-button--large', 320, 320, true);
 add_image_size('profile-button--regular', 160, 160, true);
 add_image_size('profile-button--small', 80, 80, true);
