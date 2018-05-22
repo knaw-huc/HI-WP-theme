@@ -25,7 +25,7 @@
                     "key": "field_5a9fc93a50fa8",
                     "label": "Titel",
                     "name": "title",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -36,9 +36,9 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
                 },
                 {
                     "key": "field_5a9fc94a50fa9",
@@ -81,7 +81,7 @@
                     "key": "field_5a9fc9e800f70",
                     "label": "Titel",
                     "name": "title",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -92,9 +92,9 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
                 },
                 {
                     "key": "field_5a9fc9e800f71",
@@ -137,7 +137,7 @@
                     "key": "field_5a9fca0c00f73",
                     "label": "Titel",
                     "name": "title",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -148,9 +148,9 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
                 },
                 {
                     "key": "field_5a9fca0c00f74",
@@ -190,5 +190,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1520421471
+    "modified": 1527011178
 }
