@@ -79,7 +79,7 @@
       <div class="header__bar header__bar--search">
 
         <form action="<?php bloginfo('url'); ?>" method="get" class="search-form">
-          <input name="s" type="search" class="search-form__input" placeholder="Typ hier uw zoekterm">
+          <input name="s" type="search" class="search-form__input" placeholder="Typ hier uw zoekterm en druk op enter">
         </form>
         <!-- end .header__search -->
 
