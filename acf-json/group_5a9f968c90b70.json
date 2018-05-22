@@ -8,7 +8,7 @@
             "name": "page_image",
             "type": "image",
             "instructions": "Deze wordt weergegeven op de overzichtspagina",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -72,5 +72,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1520506570
+    "modified": 1525675163
 }
