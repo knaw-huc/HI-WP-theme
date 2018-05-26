@@ -29,6 +29,7 @@
       <?php include('inc/sidebar/publications.php'); ?>
       <?php include('inc/sidebar/related-posts.php'); ?>
       <?php include('inc/sidebar/related-events.php'); ?>
+      <?php include('inc/sidebar/text.php'); ?>
     </aside>
     <!-- end .main__column -->
 
