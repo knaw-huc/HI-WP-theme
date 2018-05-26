@@ -89,6 +89,56 @@
 
             <?php } ?>
 
+
+
+
+            <?php if(get_field('profile_linkedin')) { ?>
+
+              <li class="profile-social-media__item">
+
+                <a href="<?php the_field('profile_linkedin'); ?>" target="_blank" class="profile-social-media__item__button">
+                  
+                </a>
+                <!-- end .profile-social-media__item__button -->
+
+              </li>
+              <!-- end .profile-social-media__item -->
+
+            <?php } ?>
+
+            <?php if(get_field('profile_instagram')) { ?>
+
+              <li class="profile-social-media__item">
+
+                <a href="<?php the_field('profile_instagram'); ?>" target="_blank" class="profile-social-media__item__button profile-social-media__item__button--instagram">
+                  
+                </a>
+                <!-- end .profile-social-media__item__button -->
+
+              </li>
+              <!-- end .profile-social-media__item -->
+
+            <?php } ?>
+
+            <?php if(get_field('profile_website')) { ?>
+
+              <li class="profile-social-media__item">
+
+                <a href="<?php the_field('profile_website'); ?>" target="_blank" class="profile-social-media__item__button profile-social-media__item__button--website">
+                  
+                </a>
+                <!-- end .profile-social-media__item__button -->
+
+              </li>
+              <!-- end .profile-social-media__item -->
+
+            <?php } ?>
+
+
+
+
+
+
           </ul>
           <!-- end .profile-social-media -->
 
