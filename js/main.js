@@ -28,6 +28,9 @@ $('.page-intro__carousel').owlCarousel({
   'center': true,
   'dots': false,
   'nav': true,
+  'autoplay': true,
+  'autoplayTimeout': 3000,
+  'autoplayHoverPause': true,
   'responsive': {
     768: {
       'margin': 32,
