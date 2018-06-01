@@ -74,9 +74,9 @@
 
     <!-- Begin MailChimp Signup Form -->
     <div id="mc_embed_signup">
-      <form action="#" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+      <form action="https://knaw.us5.list-manage.com/subscribe/post?u=a63356907976be035ff6cb4f5&amp;id=060fbba545" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
         <div id="mc_embed_signup_scroll"><input class="required email" id="mce-EMAIL" name="EMAIL" placeholder="Jouw emailadres" type="email" value="" />
-          <div style="position: absolute; left: -5000px;"><input name="" tabindex="-1" type="text" value="" /></div>
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a63356907976be035ff6cb4f5_060fbba545" tabindex="-1" value=""></div>
           <input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Abonneren" /></div>
         </form>
       </div>
