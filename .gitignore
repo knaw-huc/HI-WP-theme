@@ -2,7 +2,6 @@
 *.sublime-workspace
 .DS_Store
 .sass-cache
-css
 main.min.js*
 src
 config.codekit3
