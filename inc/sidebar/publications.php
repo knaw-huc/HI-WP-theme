@@ -1,4 +1,6 @@
-<?php if( have_rows('sidebar_related_publications') ): ?>
+<?php $posts = get_field('sidebar_related_publications'); ?>
+
+<?php if($posts): ?>
 
   <div class="sidebar__item">
 
@@ -6,14 +8,18 @@
 
     <div class="sidebar__item__body">
 
-      <?php while ( have_rows('sidebar_related_publications') ) : the_row(); ?>
+      <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 
-        <a href="<?php the_sub_field('url'); ?>" target="_blank" class="sidebar__item__text-link">
-          <?php the_sub_field('title'); ?>
+        <?php setup_postdata($post); ?>
+
+        <a href="<?php the_field('publication_url'); ?>" target="_blank" class="sidebar__item__text-link">
+          <?php the_title(); ?>
         </a>
         <!-- end .sidebar__item__text-link -->
 
-      <?php endwhile; ?>
+      <?php endforeach; ?>
+
+      <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
     </div>
     <!-- end .sidebar__item__body -->

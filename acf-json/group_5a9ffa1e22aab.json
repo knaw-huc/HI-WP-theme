@@ -6,7 +6,7 @@
             "key": "field_5a9ffa1e26f3d",
             "label": "Gerelateerde publicaties",
             "name": "sidebar_related_publications",
-            "type": "repeater",
+            "type": "relationship",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,51 +15,17 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "Regel toevoegen",
-            "sub_fields": [
-                {
-                    "key": "field_5a9ffa63b316f",
-                    "label": "Titel",
-                    "name": "title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5a9ffa6bb3170",
-                    "label": "URL",
-                    "name": "url",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
+            "post_type": [
+                "publication"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
         }
     ],
     "location": [
@@ -79,5 +45,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1520933540
+    "modified": 1528979925
 }

@@ -229,7 +229,9 @@
 
         <div class="publication-overview">
 
-          <?php if( have_rows('profile_publications_1') ): ?>
+          <?php $posts = get_field('profile_publications_1'); ?>
+
+          <?php if($posts): ?>
 
             <?php $i = 0; ?>
 
@@ -239,15 +241,19 @@
 
               <ul class="publication-overview__section__list">
 
-                <?php while ( have_rows('profile_publications_1') ) : the_row(); ?>
+                <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+
+                  <?php setup_postdata($post); ?>
 
                   <?php $i++; ?>
 
                   <li class="publication-overview__section__list__item">
-                    <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a>
+                    <a href="<?php the_field('publication_url'); ?>" target="_blank"><?php the_title(); ?></a>
                   </li>
 
-                <?php endwhile; ?>
+                <?php endforeach; ?>
+
+                <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
               </ul>
 
@@ -260,7 +266,9 @@
 
           <?php endif; ?>
 
-          <?php if( have_rows('profile_publications_2') ): ?>
+          <?php $posts = get_field('profile_publications_2'); ?>
+
+          <?php if($posts): ?>
 
             <?php $i = 0; ?>
 
@@ -270,15 +278,19 @@
 
               <ul class="publication-overview__section__list">
 
-                <?php while ( have_rows('profile_publications_2') ) : the_row(); ?>
+                <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+
+                  <?php setup_postdata($post); ?>
 
                   <?php $i++; ?>
 
                   <li class="publication-overview__section__list__item">
-                    <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a>
+                    <a href="<?php the_field('publication_url'); ?>" target="_blank"><?php the_title(); ?></a>
                   </li>
 
-                <?php endwhile; ?>
+                <?php endforeach; ?>
+
+                <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
               </ul>
 
@@ -291,7 +303,9 @@
 
           <?php endif; ?>
 
-          <?php if( have_rows('profile_publications_3') ): ?>
+          <?php $posts = get_field('profile_publications_3'); ?>
+
+          <?php if($posts): ?>
 
             <?php $i = 0; ?>
 
@@ -301,15 +315,19 @@
 
               <ul class="publication-overview__section__list">
 
-                <?php while ( have_rows('profile_publications_3') ) : the_row(); ?>
+                <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+
+                  <?php setup_postdata($post); ?>
 
                   <?php $i++; ?>
 
                   <li class="publication-overview__section__list__item">
-                    <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a>
+                    <a href="<?php the_field('publication_url'); ?>" target="_blank"><?php the_title(); ?></a>
                   </li>
 
-                <?php endwhile; ?>
+                <?php endforeach; ?>
+
+                <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
               </ul>
 

@@ -75,7 +75,7 @@ function cptui_register_my_cpts() {
     'taxonomies' => array('post_tag')
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_post_type( "project", $args );
 
@@ -91,7 +91,7 @@ function cptui_register_my_cpts() {
     'taxonomies' => array('post_tag')
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_post_type( "resource", $args );
 
@@ -106,9 +106,26 @@ function cptui_register_my_cpts() {
     "labels" => $labels
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_post_type( "profile", $args );
+
+  // Custom Post Type: Publication
+  $labels = array(
+    "name" => "Publicaties",
+    "singular_name" => "Publicatie",
+  );
+
+  $args = array(
+    "rewrite" => array( "slug" => "publications", "with_front" => true ),
+    "labels" => $labels,
+    "publicly_queryable" => false,
+    "exclude_from_search" => true
+  );
+
+  $args = array_merge($default_args, $args);
+
+  register_post_type( "publication", $args );
 
   // Custom Post Type: Event
   $labels = array(
@@ -122,7 +139,7 @@ function cptui_register_my_cpts() {
     'taxonomies' => array('post_tag')
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_post_type( "event", $args );
 
@@ -152,7 +169,7 @@ function cptui_register_my_taxes() {
     "rewrite" => array( 'slug' => 'thema', 'with_front' => true )
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_taxonomy( "thema", array( "project" ), $args );
 
@@ -168,7 +185,7 @@ function cptui_register_my_taxes() {
     "rewrite" => array( 'slug' => 'period', 'with_front' => true )
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_taxonomy( "period", array( "project", "resource" ), $args );
 
@@ -184,7 +201,7 @@ function cptui_register_my_taxes() {
     "rewrite" => array( 'slug' => 'resource_type', 'with_front' => true )
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_taxonomy( "resource_type", array( "resource" ), $args );
 }
