@@ -67,7 +67,6 @@
 
   <?php endif; ?>
 
-  <!-- TODO: Implement newsletter form -->
   <div class="newsletter">
 
     <h4 class="newsletter__heading">Schrijf je in voor de nieuwsbrief</h4>
