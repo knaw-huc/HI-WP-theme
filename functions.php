@@ -110,6 +110,23 @@ function cptui_register_my_cpts() {
 
   register_post_type( "profile", $args );
 
+  // Custom Post Type: Profile (pure)
+  $labels = array(
+    "name" => "Profielen (pure)",
+    "singular_name" => "Profiel (pure)",
+  );
+
+  $args = array(
+    "rewrite" => array( "slug" => "medewerkers_pure", "with_front" => true ),
+    "labels" => $labels,
+    "publicly_queryable" => false,
+    "exclude_from_search" => true
+  );
+
+  $args = array_merge($default_args, $args);
+
+  register_post_type( "profile_pure", $args );
+
   // Custom Post Type: Publication
   $labels = array(
     "name" => "Publicaties",
@@ -126,6 +143,23 @@ function cptui_register_my_cpts() {
   $args = array_merge($default_args, $args);
 
   register_post_type( "publication", $args );
+
+  // Custom Post Type: Publication (pure)
+  $labels = array(
+    "name" => "Publicaties (pure)",
+    "singular_name" => "Publicatie (pure)",
+  );
+
+  $args = array(
+    "rewrite" => array( "slug" => "publications_pure", "with_front" => true ),
+    "labels" => $labels,
+    "publicly_queryable" => false,
+    "exclude_from_search" => true
+  );
+
+  $args = array_merge($default_args, $args);
+
+  register_post_type( "publication_pure", $args );
 
   // Custom Post Type: Event
   $labels = array(

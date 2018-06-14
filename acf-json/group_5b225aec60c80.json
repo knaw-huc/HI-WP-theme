@@ -26,6 +26,13 @@
                 "operator": "==",
                 "value": "publication"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "publication_pure"
+            }
         ]
     ],
     "menu_order": 0,
@@ -38,5 +45,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1528978265
+    "modified": 1528980932
 }
