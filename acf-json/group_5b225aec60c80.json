@@ -8,7 +8,7 @@
             "name": "publication_url",
             "type": "url",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -45,5 +45,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1528980932
+    "modified": 1528982581
 }
