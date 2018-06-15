@@ -239,27 +239,7 @@
 
               <h5 class="publication-overview__section__heading">Belangrijkste publicaties</h5>
 
-              <ul class="publication-overview__section__list">
-
-                <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-
-                  <?php setup_postdata($post); ?>
-
-                  <?php $i++; ?>
-
-                  <li class="publication-overview__section__list__item">
-                    <a href="<?php the_field('publication_url'); ?>" target="_blank"><?php the_title(); ?></a>
-                  </li>
-
-                <?php endforeach; ?>
-
-                <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-
-              </ul>
-
-              <?php if($i > 5) { ?>
-                <a href="#" class="publication-overview__section__toggle">Bekijk meer</a>
-              <?php } ?>
+              <?php include(get_template_directory() . '/inc/publication-overview-section-list.php'); ?>
 
             </div>
             <!-- end .publication-overview__section -->
@@ -276,27 +256,7 @@
 
               <h5 class="publication-overview__section__heading">Overige publicaties</h5>
 
-              <ul class="publication-overview__section__list">
-
-                <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-
-                  <?php setup_postdata($post); ?>
-
-                  <?php $i++; ?>
-
-                  <li class="publication-overview__section__list__item">
-                    <a href="<?php the_field('publication_url'); ?>" target="_blank"><?php the_title(); ?></a>
-                  </li>
-
-                <?php endforeach; ?>
-
-                <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-
-              </ul>
-
-              <?php if($i > 5) { ?>
-                <a href="#" class="publication-overview__section__toggle">Bekijk meer</a>
-              <?php } ?>
+              <?php include(get_template_directory() . '/inc/publication-overview-section-list.php'); ?>
 
             </div>
             <!-- end .publication-overview__section -->
@@ -313,27 +273,7 @@
 
               <h5 class="publication-overview__section__heading">Populair-wetenschappelijke publicaties</h5>
 
-              <ul class="publication-overview__section__list">
-
-                <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-
-                  <?php setup_postdata($post); ?>
-
-                  <?php $i++; ?>
-
-                  <li class="publication-overview__section__list__item">
-                    <a href="<?php the_field('publication_url'); ?>" target="_blank"><?php the_title(); ?></a>
-                  </li>
-
-                <?php endforeach; ?>
-
-                <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-
-              </ul>
-
-              <?php if($i > 5) { ?>
-                <a href="#" class="publication-overview__section__toggle">Bekijk meer</a>
-              <?php } ?>
+              <?php include(get_template_directory() . '/inc/publication-overview-section-list.php'); ?>
 
             </div>
             <!-- end .publication-overview__section -->

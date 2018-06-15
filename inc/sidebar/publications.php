@@ -12,8 +12,17 @@
 
         <?php setup_postdata($post); ?>
 
-        <a href="<?php the_field('publication_url'); ?>" target="_blank" class="sidebar__item__text-link">
-          <?php the_title(); ?>
+        <?php
+        $publicationTitle = get_the_title();
+        $publicationURL = get_field('publication_url');
+
+        if(empty($publicationURL) && isset(get_field('pure_publication')[0])) {
+          $publicationURL = get_field('publication_url', get_field('pure_publication')[0]);
+        }
+        ?>
+
+        <a href="<?= $publicationURL; ?>" target="_blank" class="sidebar__item__text-link">
+          <?= $publicationTitle; ?>
         </a>
         <!-- end .sidebar__item__text-link -->
 
