@@ -269,11 +269,15 @@ function filter_ptags_on_images_iframes($content)
 add_filter('the_content', 'filter_ptags_on_images_iframes');
 
 // ACF WYSIWYG Plugin
-function get_field_without_ptags_on_images($field_name) {
+function get_field_without_ptags_on_images($field_name, $post_id = false) {
   // add_filter('acf_the_content', 'filter_ptags_on_images_iframes');
-	$content = get_field($field_name);
+  if($post_id) {
+    $content = get_field($field_name, $post_id);
+  } else {
+    $content = get_field($field_name);
+  }
   // remove_filter('acf_the_content', 'filter_ptags_on_images_iframes');
-	// return $field;
+  // return $field;
   $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
   return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
 }

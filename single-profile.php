@@ -16,40 +16,82 @@
       </div>
       <!-- end .profile-section -->
 
+      <?php
+      $profileDepartment = get_field('profile_department');
+      $profileFocus = get_field('profile_focus');
+      $profileEmail = get_field('profile_email');
+      $profilePhone = get_field('profile_phone');
+      $profileFacebook = get_field('profile_facebook');
+      $profileTwitter = get_field('profile_twitter');
+      $profileLinkedin = get_field('profile_linkedin');
+      $profileInstagram = get_field('profile_instagram');
+      $profileWebsite = get_field('profile_website');
+      $profileText = get_field_without_ptags_on_images('profile_text');
+
+      if(empty($profileDepartment) && isset(get_field('pure_profile')[0])) {
+        $profileDepartment = get_field('profile_department', get_field('pure_profile')[0]);
+      }
+      if(empty($profileFocus) && isset(get_field('pure_profile')[0])) {
+        $profileFocus = get_field('profile_focus', get_field('pure_profile')[0]);
+      }
+      if(empty($profileEmail) && isset(get_field('pure_profile')[0])) {
+        $profileEmail = get_field('profile_email', get_field('pure_profile')[0]);
+      }
+      if(empty($profilePhone) && isset(get_field('pure_profile')[0])) {
+        $profilePhone = get_field('profile_phone', get_field('pure_profile')[0]);
+      }
+      if(empty($profileFacebook) && isset(get_field('pure_profile')[0])) {
+        $profileFacebook = get_field('profile_facebook', get_field('pure_profile')[0]);
+      }
+      if(empty($profileTwitter) && isset(get_field('pure_profile')[0])) {
+        $profileTwitter = get_field('profile_twitter', get_field('pure_profile')[0]);
+      }
+      if(empty($profileLinkedin) && isset(get_field('pure_profile')[0])) {
+        $profileLinkedin = get_field('profile_linkedin', get_field('pure_profile')[0]);
+      }
+      if(empty($profileInstagram) && isset(get_field('pure_profile')[0])) {
+        $profileInstagram = get_field('profile_instagram', get_field('pure_profile')[0]);
+      }
+      if(empty($profileWebsite) && isset(get_field('pure_profile')[0])) {
+        $profileWebsite = get_field('profile_website', get_field('pure_profile')[0]);
+      }
+      if(empty($profileText) && isset(get_field('pure_profile')[0])) {
+        $profileText = get_field_without_ptags_on_images('profile_text', get_field('pure_profile')[0]);
+      }
+      ?>
+
       <div class="profile-section profile-section--details">
 
-        <?php if(get_field('profile_department')) { ?>
+        <?php if(!empty($profileDepartment)) { ?>
 
           <div class="profile-meta">
             <span class="profile-meta__name">Afdeling</span>
-            <span class="profile-meta__value">
-              <?php the_field('profile_department'); ?>
-            </span>
+            <span class="profile-meta__value"><?= $profileDepartment; ?></span>
           </div>
           <!-- end .profile-meta -->
 
         <?php } ?>
 
-        <?php if(get_field('profile_focus')) { ?>
+        <?php if(!empty($profileFocus)) { ?>
 
           <div class="profile-meta">
             <span class="profile-meta__name">Specialisatie</span>
-            <span class="profile-meta__value"><?php the_field('profile_focus'); ?></span>
+            <span class="profile-meta__value"><?= $profileFocus; ?></span>
           </div>
           <!-- end .profile-meta -->
 
         <?php } ?>
 
-        <?php if(get_field('profile_email') || get_field('profile_phone')) { ?>
+        <?php if(!empty($profileEmail) || !empty($profilePhone)) { ?>
 
           <div class="profile-meta">
             <span class="profile-meta__name">Contact</span>
             <span class="profile-meta__value">
-              <?php if(get_field('profile_email')) { ?>
-                <a href="mailto:<?php the_field('profile_email'); ?>"><?php the_field('profile_email'); ?></a><br />
+              <?php if(!empty($profileEmail)) { ?>
+                <a href="mailto:<?= $profileEmail; ?>"><?= $profileEmail; ?></a><br />
               <?php } ?>
-              <?php if(get_field('profile_phone')) { ?>
-                <?php the_field('profile_phone'); ?>
+              <?php if(!empty($profilePhone)) { ?>
+                <?= $profilePhone; ?>
               <?php } ?>
             </span>
           </div>
@@ -57,15 +99,15 @@
 
         <?php } ?>
 
-        <?php if(get_field('profile_facebook') || get_field('profile_twitter')) { ?>
+        <?php if(!empty($profileFacebook) || !empty($profileTwitter) || !empty($profileLinkedin) || !empty($profileInstagram) || !empty($profileWebsite)) { ?>
 
           <ul class="profile-social-media">
 
-            <?php if(get_field('profile_facebook')) { ?>
+            <?php if(!empty($profileFacebook)) { ?>
 
               <li class="profile-social-media__item">
 
-                <a href="<?php the_field('profile_facebook'); ?>" target="_blank" class="profile-social-media__item__button">
+                <a href="<?= $profileFacebook; ?>" target="_blank" class="profile-social-media__item__button">
                   
                 </a>
                 <!-- end .profile-social-media__item__button -->
@@ -75,11 +117,11 @@
 
             <?php } ?>
 
-            <?php if(get_field('profile_twitter')) { ?>
+            <?php if(!empty($profileTwitter)) { ?>
 
               <li class="profile-social-media__item">
 
-                <a href="<?php the_field('profile_twitter'); ?>" target="_blank" class="profile-social-media__item__button">
+                <a href="<?= $profileTwitter; ?>" target="_blank" class="profile-social-media__item__button">
                   
                 </a>
                 <!-- end .profile-social-media__item__button -->
@@ -89,14 +131,11 @@
 
             <?php } ?>
 
-
-
-
-            <?php if(get_field('profile_linkedin')) { ?>
+            <?php if(!empty($profileLinkedin)) { ?>
 
               <li class="profile-social-media__item">
 
-                <a href="<?php the_field('profile_linkedin'); ?>" target="_blank" class="profile-social-media__item__button">
+                <a href="<?= $profileLinkedin; ?>" target="_blank" class="profile-social-media__item__button">
                   
                 </a>
                 <!-- end .profile-social-media__item__button -->
@@ -106,11 +145,11 @@
 
             <?php } ?>
 
-            <?php if(get_field('profile_instagram')) { ?>
+            <?php if(!empty($profileInstagram)) { ?>
 
               <li class="profile-social-media__item">
 
-                <a href="<?php the_field('profile_instagram'); ?>" target="_blank" class="profile-social-media__item__button profile-social-media__item__button--instagram">
+                <a href="<?= $profileInstagram; ?>" target="_blank" class="profile-social-media__item__button profile-social-media__item__button--instagram">
                   
                 </a>
                 <!-- end .profile-social-media__item__button -->
@@ -120,11 +159,11 @@
 
             <?php } ?>
 
-            <?php if(get_field('profile_website')) { ?>
+            <?php if(!empty($profileWebsite)) { ?>
 
               <li class="profile-social-media__item">
 
-                <a href="<?php the_field('profile_website'); ?>" target="_blank" class="profile-social-media__item__button profile-social-media__item__button--website">
+                <a href="<?= $profileWebsite; ?>" target="_blank" class="profile-social-media__item__button profile-social-media__item__button--website">
                   
                 </a>
                 <!-- end .profile-social-media__item__button -->
@@ -134,11 +173,6 @@
 
             <?php } ?>
 
-
-
-
-
-
           </ul>
           <!-- end .profile-social-media -->
 
@@ -147,10 +181,10 @@
       </div>
       <!-- end .profile-section -->
 
-      <?php if(get_field('profile_text')) { ?>
+      <?php if(!empty($profileText)) { ?>
 
         <div class="profile-section text-holder">
-          <?php echo get_field_without_ptags_on_images('profile_text'); ?>
+          <?= $profileText; ?>
         </div>
         <!-- end .profile-section -->
 
@@ -223,13 +257,29 @@
 
       <?php endif; ?>
 
+      <?php
+      $profilePublications1 = get_field('profile_publications_1');
+      $profilePublications2 = get_field('profile_publications_2');
+      $profilePublications3 = get_field('profile_publications_3');
+
+      if(empty($profilePublications1) && isset(get_field('pure_profile')[0])) {
+        $profilePublications1 = get_field('profile_publications_1', get_field('pure_profile')[0]);
+      }
+      if(empty($profilePublications2) && isset(get_field('pure_profile')[0])) {
+        $profilePublications2 = get_field('profile_publications_2', get_field('pure_profile')[0]);
+      }
+      if(empty($profilePublications3) && isset(get_field('pure_profile')[0])) {
+        $profilePublications3 = get_field('profile_publications_3', get_field('pure_profile')[0]);
+      }
+      ?>
+
       <div class="profile-section">
 
         <h4 class="profile-section__heading">Publicaties</h4>
 
         <div class="publication-overview">
 
-          <?php $posts = get_field('profile_publications_1'); ?>
+          <?php $posts = $profilePublications1; ?>
 
           <?php if($posts): ?>
 
@@ -246,7 +296,7 @@
 
           <?php endif; ?>
 
-          <?php $posts = get_field('profile_publications_2'); ?>
+          <?php $posts = $profilePublications2; ?>
 
           <?php if($posts): ?>
 
@@ -263,7 +313,7 @@
 
           <?php endif; ?>
 
-          <?php $posts = get_field('profile_publications_3'); ?>
+          <?php $posts = $profilePublications3; ?>
 
           <?php if($posts): ?>
 
