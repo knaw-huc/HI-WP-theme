@@ -120,7 +120,17 @@ function cptui_register_my_cpts() {
     "rewrite" => array( "slug" => "medewerkers_pure", "with_front" => true ),
     "labels" => $labels,
     "publicly_queryable" => false,
-    "exclude_from_search" => true
+    "exclude_from_search" => true,
+    'capabilities' => array(
+      'edit_post'          => 'update_core',
+      'read_post'          => 'update_core',
+      'delete_post'        => 'update_core',
+      'edit_posts'         => 'update_core',
+      'edit_others_posts'  => 'update_core',
+      'delete_posts'       => 'update_core',
+      'publish_posts'      => 'update_core',
+      'read_private_posts' => 'update_core'
+    ),
   );
 
   $args = array_merge($default_args, $args);
@@ -154,7 +164,17 @@ function cptui_register_my_cpts() {
     "rewrite" => array( "slug" => "publications_pure", "with_front" => true ),
     "labels" => $labels,
     "publicly_queryable" => false,
-    "exclude_from_search" => true
+    "exclude_from_search" => true,
+    'capabilities' => array(
+      'edit_post'          => 'update_core',
+      'read_post'          => 'update_core',
+      'delete_post'        => 'update_core',
+      'edit_posts'         => 'update_core',
+      'edit_others_posts'  => 'update_core',
+      'delete_posts'       => 'update_core',
+      'publish_posts'      => 'update_core',
+      'read_private_posts' => 'update_core'
+    ),
   );
 
   $args = array_merge($default_args, $args);
