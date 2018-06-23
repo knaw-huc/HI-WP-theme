@@ -16,11 +16,13 @@
                 "id": ""
             },
             "post_type": [
-                "publication"
+                "publication",
+                "publication_pure"
             ],
             "taxonomy": [],
             "filters": [
-                "search"
+                "search",
+                "post_type"
             ],
             "elements": "",
             "min": "",
@@ -45,5 +47,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528979925
+    "modified": 1529759465
 }
