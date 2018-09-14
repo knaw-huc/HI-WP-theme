@@ -281,6 +281,21 @@
 
           <?php $posts = $profilePublications1; ?>
 
+          <?php
+          if(empty($profilePublications1) && empty($profilePublications2) && empty($profilePublications3)) {
+
+            $args = array(
+              'post_type' => 'publication_pure',
+              'posts_per_page' => '-1',
+              'meta_key' => 'profile_uuid',
+              'meta_value' => get_field('uuid', get_field('pure_profile'))
+            );
+
+            $posts = get_posts($args);
+
+          }
+          ?>
+
           <?php if($posts): ?>
 
             <?php $i = 0; ?>
