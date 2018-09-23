@@ -1,6 +1,6 @@
 <div class="main">
 
-  <h4 class="search-results-heading">Medewerkers</h4>
+  <h4 class="search-results-heading"><?php _e('Medewerkers', 'huygens'); ?></h4>
 
   <div class="profile-overview__category">
 

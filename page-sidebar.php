@@ -8,7 +8,7 @@
 
   <div class="page-heading">
     <?php if(is_page() && $post->post_parent) { ?>
-      <a class="page-heading__button" href="<?php the_permalink($post->post_parent); ?>">Terug naar het overzicht</a>
+      <a class="page-heading__button" href="<?php the_permalink($post->post_parent); ?>"><?php _e('Terug naar het overzicht', 'huygens'); ?></a>
     <?php } ?>
   </div>
   <!-- end .page-heading -->

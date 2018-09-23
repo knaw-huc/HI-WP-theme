@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
   <div class="page-heading">
-    <a class="page-heading__button" href="<?= get_post_type_archive_link('resource'); ?>">Terug naar het overzicht</a>
+    <a class="page-heading__button" href="<?= get_post_type_archive_link('resource'); ?>"><?php _e('Terug naar het overzicht', 'huygens'); ?></a>
   </div>
   <!-- end .page-heading -->
 

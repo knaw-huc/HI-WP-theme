@@ -350,4 +350,17 @@ function get_language_link($site_id, $post_id) {
   return $link . '?noredirect=' . mlp_get_blog_language($site_id, false);
 }
 
+// Load translation files
+function transparent_theme_setup() {
+   load_theme_textdomain( 'huygens', get_template_directory() . '/languages' );
+
+   $locale = get_locale();
+   $locale_file = get_template_directory() . "/languages/$locale.php";
+
+   if ( is_readable( $locale_file ) ) {
+       require_once( $locale_file );
+   }
+}
+add_action( 'after_setup_theme', 'transparent_theme_setup' );
+
 ?>

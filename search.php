@@ -39,7 +39,7 @@
   <?php } else { ?>
 
     <div class="page-heading">
-      <a class="page-heading__button" href="<?php bloginfo('url'); ?>">Terug naar de homepage</a>
+      <a class="page-heading__button" href="<?php bloginfo('url'); ?>"><?php _e('Terug naar de homepage', 'huygens'); ?></a>
       <h2>Resultaten voor ‘<?php echo get_search_query(); ?>’</h2>
     </div>
     <!-- end .page-heading -->
@@ -47,7 +47,7 @@
     <div class="main main--white">
 
       <main class="main__column main__column--body text-holder">
-        <p>Niets gevonden.</p>
+        <p><?php _e('Niets gevonden.', 'huygens'); ?></p>
       </main>
       <!-- end .main__column -->
 

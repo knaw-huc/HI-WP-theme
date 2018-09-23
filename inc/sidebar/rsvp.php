@@ -2,7 +2,7 @@
 
   <div class="sidebar__item">
 
-    <h4 class="sidebar__item__heading">Aanmelden</h4>
+    <h4 class="sidebar__item__heading"><?php _e('Aanmelden', 'huygens'); ?></h4>
 
     <div class="sidebar__item__body">
 

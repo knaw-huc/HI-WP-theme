@@ -34,32 +34,32 @@ query_posts($args);
 
 <div class="project-filter">
 
-  <h4 class="project-filter__heading">Filter onderzoeksprojecten</h4>
+  <h4 class="project-filter__heading"><?php _e('Filter onderzoeksprojecten', 'huygens'); ?></h4>
 
   <div class="project-filter__button-holder">
 
     <?php if(isset($_GET['thema']) && $_GET['thema'] == 'debatcultuur') { ?>
-      <a class="project-filter__button project-filter__button--active" href="?">Debatcultuur</a>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Debatcultuur', 'huygens'); ?></a>
     <?php } else { ?>
-      <a class="project-filter__button project-filter__button--yellow" href="?thema=debatcultuur">Debatcultuur</a>
+      <a class="project-filter__button project-filter__button--yellow" href="?thema=debatcultuur"><?php _e('Debatcultuur', 'huygens'); ?></a>
     <?php } ?>
 
     <?php if(isset($_GET['thema']) && $_GET['thema'] == 'bestuur-van-nederland') { ?>
-      <a class="project-filter__button project-filter__button--active" href="?">Bestuur van Nederland</a>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Bestuur van Nederland', 'huygens'); ?></a>
     <?php } else { ?>
-      <a class="project-filter__button project-filter__button--orange" href="?thema=bestuur-van-nederland">Bestuur van Nederland</a>
+      <a class="project-filter__button project-filter__button--orange" href="?thema=bestuur-van-nederland"><?php _e('Bestuur van Nederland', 'huygens'); ?></a>
     <?php } ?>
 
     <?php if(isset($_GET['thema']) && $_GET['thema'] == 'vernieuwing-editeren') { ?>
-      <a class="project-filter__button project-filter__button--active" href="?">Vernieuwing editeren</a>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Vernieuwing editeren', 'huygens'); ?></a>
     <?php } else { ?>
-      <a class="project-filter__button project-filter__button--blue" href="?thema=vernieuwing-editeren">Vernieuwing editeren</a>
+      <a class="project-filter__button project-filter__button--blue" href="?thema=vernieuwing-editeren"><?php _e('Vernieuwing editeren', 'huygens'); ?></a>
     <?php } ?>
 
     <?php if(isset($_GET['thema']) && $_GET['thema'] == 'circulation-of-impact') { ?>
-      <a class="project-filter__button project-filter__button--active" href="?">Circulation of Impact</a>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Circulation of Impact', 'huygens'); ?></a>
     <?php } else { ?>
-      <a class="project-filter__button project-filter__button--green" href="?thema=circulation-of-impact">Circulation of Impact</a>
+      <a class="project-filter__button project-filter__button--green" href="?thema=circulation-of-impact"><?php _e('Circulation of Impact', 'huygens'); ?></a>
     <?php } ?>
 
   </div>
@@ -73,7 +73,7 @@ query_posts($args);
 
     <div class="project-filter__information">
       <?php the_field('thema_short_description', $thema); ?>
-      <a href="<?= get_term_link($thema); ?>">Meer over dit thema</a>
+      <a href="<?= get_term_link($thema); ?>"><?php _e('Meer over dit thema', 'huygens'); ?></a>
     </div>
     <!-- end .project-filter__information -->
 
@@ -98,9 +98,9 @@ query_posts($args);
         <select class="period">
 
           <?php if(isset($_GET['period'])) { ?>
-            <option value="" disabled>Periode</option>
+            <option value="" disabled><?php _e('Periode', 'huygens'); ?></option>
           <?php } else { ?>
-            <option value="" selected disabled>Periode</option>
+            <option value="" selected disabled><?php _e('Periode', 'huygens'); ?></option>
           <?php } ?>
 
           <?php foreach($periods as $period) : ?>
@@ -137,9 +137,9 @@ query_posts($args);
         <select class="tag">
 
           <?php if(isset($_GET['tag'])) { ?>
-            <option value="" disabled>Tag</option>
+            <option value="" disabled><?php _e('Tag', 'huygens'); ?></option>
           <?php } else { ?>
-            <option value="" selected disabled>Tag</option>
+            <option value="" selected disabled><?php _e('Tag', 'huygens'); ?></option>
           <?php } ?>
 
           <?php foreach($tags as $tag) : ?>

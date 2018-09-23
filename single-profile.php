@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
   <div class="page-heading">
-    <a class="page-heading__button" href="<?= get_the_permalink(get_page_by_path('informatie/medewerkers')); ?>">Terug naar het overzicht</a>
+    <a class="page-heading__button" href="<?= get_the_permalink(get_page_by_path('informatie/medewerkers')); ?>"><?php _e('Terug naar het overzicht', 'huygens'); ?></a>
   </div>
   <!-- end .page-heading -->
 
@@ -65,7 +65,7 @@
         <?php if(!empty($profileDepartment)) { ?>
 
           <div class="profile-meta">
-            <span class="profile-meta__name">Afdeling</span>
+            <span class="profile-meta__name"><?php _e('Afdeling', 'huygens'); ?></span>
             <span class="profile-meta__value"><?= $profileDepartment; ?></span>
           </div>
           <!-- end .profile-meta -->
@@ -75,7 +75,7 @@
         <?php if(!empty($profileFocus)) { ?>
 
           <div class="profile-meta">
-            <span class="profile-meta__name">Specialisatie</span>
+            <span class="profile-meta__name"><?php _e('Specialisatie', 'huygens'); ?></span>
             <span class="profile-meta__value"><?= $profileFocus; ?></span>
           </div>
           <!-- end .profile-meta -->
@@ -85,7 +85,7 @@
         <?php if(!empty($profileEmail) || !empty($profilePhone)) { ?>
 
           <div class="profile-meta">
-            <span class="profile-meta__name">Contact</span>
+            <span class="profile-meta__name"><?php _e('Contact', 'huygens'); ?></span>
             <span class="profile-meta__value">
               <?php if(!empty($profileEmail)) { ?>
                 <a href="mailto:<?= $profileEmail; ?>"><?= $profileEmail; ?></a><br />
@@ -212,7 +212,7 @@
 
         <div class="profile-section">
 
-          <h4 class="profile-section__heading">Onderzoeksprojecten</h4>
+          <h4 class="profile-section__heading"><?php _e('Onderzoeksprojecten', 'huygens'); ?></h4>
 
           <div class="profile-section__project-overview">
 
@@ -275,7 +275,7 @@
 
       <div class="profile-section">
 
-        <h4 class="profile-section__heading">Publicaties</h4>
+        <h4 class="profile-section__heading"><?php _e('Publicaties', 'huygens'); ?></h4>
 
         <div class="publication-overview">
 
@@ -303,7 +303,7 @@
 
             <div class="publication-overview__section">
 
-              <h5 class="publication-overview__section__heading">Belangrijkste publicaties</h5>
+              <h5 class="publication-overview__section__heading"><?php _e('Belangrijkste publicaties', 'huygens'); ?></h5>
 
               <?php include(get_template_directory() . '/inc/publication-overview-section-list.php'); ?>
 
@@ -320,7 +320,7 @@
 
             <div class="publication-overview__section">
 
-              <h5 class="publication-overview__section__heading">Overige publicaties</h5>
+              <h5 class="publication-overview__section__heading"><?php _e('Overige publicaties', 'huygens'); ?></h5>
 
               <?php include(get_template_directory() . '/inc/publication-overview-section-list.php'); ?>
 
@@ -337,7 +337,7 @@
 
             <div class="publication-overview__section">
 
-              <h5 class="publication-overview__section__heading">Populair-wetenschappelijke publicaties</h5>
+              <h5 class="publication-overview__section__heading"><?php _e('Populair-wetenschappelijke publicaties', 'huygens'); ?></h5>
 
               <?php include(get_template_directory() . '/inc/publication-overview-section-list.php'); ?>
 

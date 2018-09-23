@@ -26,5 +26,5 @@
 </ul>
 
 <?php if($i > 5) { ?>
-  <a href="#" class="publication-overview__section__toggle">Bekijk meer</a>
+  <a href="#" class="publication-overview__section__toggle"><?php _e('Bekijk meer', 'huygens'); ?></a>
 <?php } ?>

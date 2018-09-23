@@ -26,7 +26,7 @@
 
     <object>
       <a href="<?php the_field('sidebar_resource_url'); ?>" target="_blank" class="card__button">
-        <span class="card__button__text">Bekijk resource</span>
+        <span class="card__button__text"><?php _e('Bekijk resource', 'huygens'); ?></span>
         <span class="card__button__icon"></span>
       </a>
     </object>

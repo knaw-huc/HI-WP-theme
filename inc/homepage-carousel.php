@@ -11,9 +11,9 @@
       <div class="homepage-carousel__item">
 
         <?php if(get_post_type() == 'project') { ?>
-          <span class="homepage-carousel__item__label">Onderzoeksproject</span>
+          <span class="homepage-carousel__item__label"><?php _e('Onderzoeksproject', 'huygens'); ?></span>
         <?php } elseif(get_post_type() == 'post') { ?>
-          <span class="homepage-carousel__item__label">Nieuws</span>
+          <span class="homepage-carousel__item__label"><?php _e('Nieuws', 'huygens'); ?></span>
         <?php } ?>
 
         <?php include(get_template_directory() . '/inc/homepage-carousel-card.php'); ?>

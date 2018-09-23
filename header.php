@@ -75,7 +75,7 @@
 
         <ul class="navigation navigation--open-search">
           <li class="navigation__item">
-            <a href="#" class="navigation__item__button js-open-search">Zoeken</a>
+            <a href="#" class="navigation__item__button js-open-search"><?php _e('Zoeken', 'huygens'); ?></a>
           </li>
         </ul>
         <!-- end .navigation -->
@@ -86,13 +86,13 @@
       <div class="header__bar header__bar--search">
 
         <form action="<?php bloginfo('url'); ?>" method="get" class="search-form">
-          <input name="s" type="search" class="search-form__input" placeholder="Typ hier uw zoekterm en druk op enter">
+          <input name="s" type="search" class="search-form__input" placeholder="<?php _e('Typ hier uw zoekterm en druk op enter', 'huygens'); ?>">
         </form>
         <!-- end .header__search -->
 
         <ul class="navigation navigation--close-search">
           <li class="navigation__item">
-            <a href="#" class="navigation__item__button js-close-search">Sluiten</a>
+            <a href="#" class="navigation__item__button js-close-search"><?php _e('Sluiten', 'huygens'); ?></a>
           </li>
         </ul>
         <!-- end .navigation -->

@@ -6,7 +6,7 @@
 
       <div class="page-intro__text">
 
-        <h2>Resources</h2>
+        <h2><?php _e('Resources', 'huygens'); ?></h2>
 
         <?php the_field('resources_text', 'options'); ?>
 
