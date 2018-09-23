@@ -288,7 +288,8 @@
               'post_type' => 'publication_pure',
               'posts_per_page' => '-1',
               'meta_key' => 'profile_uuid',
-              'meta_value' => get_field('uuid', get_field('pure_profile'))
+              'meta_value' => get_field('uuid', get_field('pure_profile')[0]->ID),
+              'meta_compare' => 'LIKE'
             );
 
             $posts = get_posts($args);
