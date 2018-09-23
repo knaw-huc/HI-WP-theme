@@ -1,0 +1,41 @@
+.language-toggle
+  display: flex
+  align-items: center
+  color: $brand-white
+
+.language-toggle__label
+  +paragraph-chivo-small
+
+.language-toggle__visual
+  position: relative
+  margin: 0 4px
+  display: flex
+  align-items: center
+  width: 22px
+  height: 14px
+
+  &--align-left
+    justify-content: flex-start
+
+  &--align-right
+    justify-content: flex-end
+
+  &::after
+    position: absolute
+    top: 50%
+    right: 0
+    left: 0
+    margin-top: -4px
+    display: block
+    height: 8px
+    content: ''
+    background: #667991
+    border-radius: 8px
+
+.language-toggle__visual__inner
+  position: relative
+  z-index: $z-index-above-content + 1
+  width: 14px
+  height: 14px
+  background: $brand-light-blue
+  border-radius: 14px

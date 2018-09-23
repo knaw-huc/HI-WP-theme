@@ -66,6 +66,13 @@
 
         <?php include('inc/navigation.php'); ?>
 
+        <ul class="navigation navigation--language-toggle">
+          <li class="navigation__item">
+            <?php include('inc/language-toggle.php'); ?>
+          </li>
+        </ul>
+        <!-- end .navigation -->
+
         <ul class="navigation navigation--open-search">
           <li class="navigation__item">
             <a href="#" class="navigation__item__button js-open-search">Zoeken</a>

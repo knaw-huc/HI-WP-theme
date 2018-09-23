@@ -16,6 +16,9 @@ body
     @media only screen and (max-width: 782px)
       top: 46px
 
+  .hide-in-header
+    display: none
+
 .logo
   position: absolute
   top: 0
@@ -58,6 +61,12 @@ body
 .navigation
   +remove-list-styles
   display: flex
+
+  &--pages
+    flex-grow: 1
+
+  &--open-search
+    margin-left: 60px
 
 .navigation__item
   position: relative
