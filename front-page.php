@@ -13,7 +13,7 @@
         <a class="project-filter__button project-filter__button--yellow" href="<?= get_post_type_archive_link('project'); ?>?thema=debatcultuur">Debatcultuur</a>
         <a class="project-filter__button project-filter__button--orange" href="<?= get_post_type_archive_link('project'); ?>?thema=bestuur-van-nederland">Bestuur van Nederland</a>
         <a class="project-filter__button project-filter__button--blue" href="<?= get_post_type_archive_link('project'); ?>?thema=vernieuwing-editeren">Vernieuwing editeren</a>
-        <a class="project-filter__button project-filter__button--green" href="<?= get_post_type_archive_link('project'); ?>?thema=circulation-of-impact">Circulation of Impact</a>
+        <a class="project-filter__button project-filter__button--green" href="<?= get_post_type_archive_link('project'); ?>?thema=circulation-of-impact">Impact of Circulation</a>
       </div>
       <!-- end .project-filter__button-holder -->
 
