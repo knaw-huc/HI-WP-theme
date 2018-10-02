@@ -1,6 +1,6 @@
 <div class="main">
 
-  <h4 class="search-results-heading">Onderzoeksprojecten</h4>
+  <h4 class="search-results-heading"><?php _e('Onderzoeksprojecten', 'huygens'); ?></h4>
 
   <div class="project-overview">
 

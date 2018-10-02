@@ -1,6 +1,6 @@
 <div class="main">
 
-  <h4 class="search-results-heading">Nieuws</h4>
+  <h4 class="search-results-heading"><?php _e('Nieuws', 'huygens'); ?></h4>
 
   <div class="project-overview">
 

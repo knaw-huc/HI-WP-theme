@@ -165,6 +165,13 @@
                 "operator": "==",
                 "value": "profile"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "profile_pure"
+            }
         ]
     ],
     "menu_order": 1,
@@ -177,5 +184,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1527331582
+    "modified": 1528980996
 }

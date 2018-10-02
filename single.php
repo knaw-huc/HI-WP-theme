@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
   <div class="page-heading">
-    <a class="page-heading__button" href="<?= get_the_permalink(get_page_by_path('informatie/nieuws')); ?>">Terug naar het overzicht</a>
+    <a class="page-heading__button" href="<?= get_the_permalink(get_page_by_path('informatie/nieuws')); ?>"><?php _e('Terug naar het overzicht', 'huygens'); ?></a>
   </div>
   <!-- end .page-heading -->
 
@@ -42,7 +42,7 @@
 
     <div class="content-overview">
 
-      <h4 class="content-overview__heading">Gerelateerde nieuwsberichten</h4>
+      <h4 class="content-overview__heading"><?php _e('Gerelateerde nieuwsberichten', 'huygens'); ?></h4>
 
       <div class="project-overview">
 

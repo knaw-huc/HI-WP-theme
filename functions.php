@@ -75,7 +75,7 @@ function cptui_register_my_cpts() {
     'taxonomies' => array('post_tag')
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_post_type( "project", $args );
 
@@ -91,7 +91,7 @@ function cptui_register_my_cpts() {
     'taxonomies' => array('post_tag')
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_post_type( "resource", $args );
 
@@ -106,9 +106,80 @@ function cptui_register_my_cpts() {
     "labels" => $labels
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_post_type( "profile", $args );
+
+  // Custom Post Type: Profile (pure)
+  $labels = array(
+    "name" => "Profielen (pure)",
+    "singular_name" => "Profiel (pure)",
+  );
+
+  $args = array(
+    "rewrite" => array( "slug" => "medewerkers_pure", "with_front" => true ),
+    "labels" => $labels,
+    "publicly_queryable" => false,
+    "exclude_from_search" => true,
+    'capabilities' => array(
+      'edit_post'          => 'update_core',
+      'read_post'          => 'update_core',
+      'delete_post'        => 'update_core',
+      'edit_posts'         => 'update_core',
+      'edit_others_posts'  => 'update_core',
+      'delete_posts'       => 'update_core',
+      'publish_posts'      => 'update_core',
+      'read_private_posts' => 'update_core'
+    ),
+  );
+
+  $args = array_merge($default_args, $args);
+
+  register_post_type( "profile_pure", $args );
+
+  // Custom Post Type: Publication
+  $labels = array(
+    "name" => "Publicaties",
+    "singular_name" => "Publicatie",
+  );
+
+  $args = array(
+    "rewrite" => array( "slug" => "publications", "with_front" => true ),
+    "labels" => $labels,
+    "publicly_queryable" => false,
+    "exclude_from_search" => true
+  );
+
+  $args = array_merge($default_args, $args);
+
+  register_post_type( "publication", $args );
+
+  // Custom Post Type: Publication (pure)
+  $labels = array(
+    "name" => "Publicaties (pure)",
+    "singular_name" => "Publicatie (pure)",
+  );
+
+  $args = array(
+    "rewrite" => array( "slug" => "publications_pure", "with_front" => true ),
+    "labels" => $labels,
+    "publicly_queryable" => false,
+    "exclude_from_search" => true,
+    'capabilities' => array(
+      'edit_post'          => 'update_core',
+      'read_post'          => 'update_core',
+      'delete_post'        => 'update_core',
+      'edit_posts'         => 'update_core',
+      'edit_others_posts'  => 'update_core',
+      'delete_posts'       => 'update_core',
+      'publish_posts'      => 'update_core',
+      'read_private_posts' => 'update_core'
+    ),
+  );
+
+  $args = array_merge($default_args, $args);
+
+  register_post_type( "publication_pure", $args );
 
   // Custom Post Type: Event
   $labels = array(
@@ -122,7 +193,7 @@ function cptui_register_my_cpts() {
     'taxonomies' => array('post_tag')
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_post_type( "event", $args );
 
@@ -152,7 +223,7 @@ function cptui_register_my_taxes() {
     "rewrite" => array( 'slug' => 'thema', 'with_front' => true )
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_taxonomy( "thema", array( "project" ), $args );
 
@@ -168,7 +239,7 @@ function cptui_register_my_taxes() {
     "rewrite" => array( 'slug' => 'period', 'with_front' => true )
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_taxonomy( "period", array( "project", "resource" ), $args );
 
@@ -184,7 +255,7 @@ function cptui_register_my_taxes() {
     "rewrite" => array( 'slug' => 'resource_type', 'with_front' => true )
   );
 
-  $args = array_merge($args, $default_args);
+  $args = array_merge($default_args, $args);
 
   register_taxonomy( "resource_type", array( "resource" ), $args );
 }
@@ -218,11 +289,15 @@ function filter_ptags_on_images_iframes($content)
 add_filter('the_content', 'filter_ptags_on_images_iframes');
 
 // ACF WYSIWYG Plugin
-function get_field_without_ptags_on_images($field_name) {
+function get_field_without_ptags_on_images($field_name, $post_id = false) {
   // add_filter('acf_the_content', 'filter_ptags_on_images_iframes');
-	$content = get_field($field_name);
+  if($post_id) {
+    $content = get_field($field_name, $post_id);
+  } else {
+    $content = get_field($field_name);
+  }
   // remove_filter('acf_the_content', 'filter_ptags_on_images_iframes');
-	// return $field;
+  // return $field;
   $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
   return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
 }
@@ -253,5 +328,39 @@ function prepare_for_lazyload($image) {
 
   return $image;
 }
+
+// Get linked elements (provided by multilingualpress)
+function get_linked_elements() {
+  // ask mlp
+  $type = ( is_tax() ? 'term' : 'post' );
+  return mlp_get_linked_elements(get_queried_object_id(), $type, get_current_blog_id());
+}
+
+// Get term link (provided by multilingualpress)
+function get_blog_term_link( $blog_id, $term_id ) {
+  switch_to_blog( $blog_id );
+  $link = get_term_link( $term_id );
+  restore_current_blog();
+  return $link;
+}
+
+// Get language link (provided by multilingualpress)
+function get_language_link($site_id, $post_id) {
+  $link = ( is_tax() ? get_blog_term_link($site_id, $post_id) : get_blog_permalink($site_id, $post_id) );
+  return $link . '?noredirect=' . mlp_get_blog_language($site_id, false);
+}
+
+// Load translation files
+function transparent_theme_setup() {
+   load_theme_textdomain( 'huygens', get_template_directory() . '/languages' );
+
+   $locale = get_locale();
+   $locale_file = get_template_directory() . "/languages/$locale.php";
+
+   if ( is_readable( $locale_file ) ) {
+       require_once( $locale_file );
+   }
+}
+add_action( 'after_setup_theme', 'transparent_theme_setup' );
 
 ?>

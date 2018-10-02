@@ -71,7 +71,7 @@ query_posts($args);
 
     <div class="resource-overview__filter">
 
-      <h4 class="resource-overview__filter__heading">Type</h4>
+      <h4 class="resource-overview__filter__heading"><?php _e('Type', 'huygens'); ?></h4>
 
       <div class="resource-overview__filter__body">
 
@@ -93,7 +93,7 @@ query_posts($args);
         <?php endforeach; ?>
 
         <?php if(isset($_GET['rtype']) && strlen($selected_types[0]) > 0) { ?>
-          <a href="" class="resource-overview__filter__body__button">Wis selectie</a>
+          <a href="" class="resource-overview__filter__body__button"><?php _e('Wis selectie', 'huygens'); ?></a>
         <?php } ?>
 
       </div>
@@ -116,7 +116,7 @@ query_posts($args);
 
     <div class="resource-overview__filter">
 
-      <h4 class="resource-overview__filter__heading">Periode</h4>
+      <h4 class="resource-overview__filter__heading"><?php _e('Periode', 'huygens'); ?></h4>
 
       <div class="resource-overview__filter__body">
 
@@ -138,7 +138,7 @@ query_posts($args);
         <?php endforeach; ?>
 
         <?php if(isset($_GET['rperiod']) && strlen($selected_periods[0]) > 0) { ?>
-          <a href="" class="resource-overview__filter__body__button">Wis selectie</a>
+          <a href="" class="resource-overview__filter__body__button"><?php _e('Wis selectie', 'huygens'); ?></a>
         <?php } ?>
 
       </div>
@@ -161,7 +161,7 @@ query_posts($args);
 
     <div class="resource-overview__filter">
 
-      <h4 class="resource-overview__filter__heading">Onderwerp</h4>
+      <h4 class="resource-overview__filter__heading"><?php _e('Onderwerp', 'huygens'); ?></h4>
 
       <div class="resource-overview__filter__body">
 
@@ -183,7 +183,7 @@ query_posts($args);
         <?php endforeach; ?>
 
         <?php if(isset($_GET['rtag']) && strlen($selected_tags[0]) > 0) { ?>
-          <a href="" class="resource-overview__filter__body__button">Wis selectie</a>
+          <a href="" class="resource-overview__filter__body__button"><?php _e('Wis selectie', 'huygens'); ?></a>
         <?php } ?>
 
       </div>

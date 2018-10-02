@@ -6,7 +6,7 @@
 
       <div class="page-intro__text">
 
-        <h2>Onderzoeksprojecten</h2>
+        <h2><?php _e('Onderzoeksprojecten', 'huygens'); ?></h2>
 
         <?php the_field('projects_text', 'options'); ?>
 

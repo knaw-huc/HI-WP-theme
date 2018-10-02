@@ -1,6 +1,6 @@
 <div class="sidebar__item">
 
-  <h4 class="sidebar__item__heading">Tags</h4>
+  <h4 class="sidebar__item__heading"><?php _e('Tags', 'huygens'); ?></h4>
 
   <div class="sidebar__item__body">
 

@@ -4,7 +4,7 @@
 
   <div class="sidebar__item">
 
-    <h4 class="sidebar__item__heading">Gerelateerd nieuws</h4>
+    <h4 class="sidebar__item__heading"><?php _e('Gerelateerd nieuws', 'huygens'); ?></h4>
 
     <div class="sidebar__item__body">
 

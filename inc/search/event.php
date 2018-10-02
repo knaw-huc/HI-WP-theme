@@ -1,6 +1,6 @@
 <div class="main">
 
-  <h4 class="search-results-heading">Evenementen</h4>
+  <h4 class="search-results-heading"><?php _e('Evenementen', 'huygens'); ?></h4>
 
   <div class="event-overview">
 

@@ -62,5 +62,10 @@ $menuItems = wp_get_nav_menu_items('header-menu');
 
   <?php endforeach; ?>
 
+  <li class="navigation__item hide-in-header">
+    <?php include(get_template_directory() . '/inc/language-toggle.php'); ?>
+  </li>
+  <!-- end .navigation__item -->
+
 </ul>
 <!-- end .navigation -->

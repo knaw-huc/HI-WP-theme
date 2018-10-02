@@ -10,7 +10,7 @@
 
           <div class="disclaimer">
             <div>
-              <span>Design & Development:</span>
+              <span><?php _e('Design & Development:', 'huygens'); ?></span>
               <a href="https://www.vruchtvlees.com" target="_blank">
                 <svg width="240px" height="24px" viewBox="0 0 240 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="vruchtvlees">
                   <path d="M21,24 L15.6663147,24 L10.9630412,8.67965462 C10.8553326,8.35267063 10.7655755,8.0538031 10.6979937,7.79138283 L10.5670539,7.331106 L10.4667371,7.75493557 L10.3305174,8.18605458 C10.2882788,8.33913308 10.2449842,8.50262507 10.1964097,8.67965462 L5.4656811,24 L0,24 L7.96515312,0 L13.0665259,0 L21,24 Z" id="letter-v" style="transform: translateX(0px) translateY(0px);"></path>
@@ -80,7 +80,7 @@
       <?php include('inc/navigation.php'); ?>
 
       <form action="<?php bloginfo('url'); ?>" method="get" class="search-form">
-        <input name="s" type="search" class="search-form__input" placeholder="Zoeken">
+        <input name="s" type="search" class="search-form__input" placeholder="<?php _e('Zoeken', 'huygens'); ?>">
       </form>
       <!-- end .header__search -->
 

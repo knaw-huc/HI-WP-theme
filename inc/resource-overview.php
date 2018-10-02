@@ -5,6 +5,8 @@ $args = array(
   'tax_query' => array(
     'relation' => 'AND',
   ),
+  'orderby' => 'title',
+  'order' => 'ASC',
 );
 
 // Checkbox: Type

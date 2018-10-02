@@ -6,7 +6,7 @@
             "key": "field_5a9fb608bd9a3",
             "label": "Belangrijkste publicaties",
             "name": "profile_publications_1",
-            "type": "repeater",
+            "type": "relationship",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,54 +15,25 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "Regel toevoegen",
-            "sub_fields": [
-                {
-                    "key": "field_5a9fc93a50fa8",
-                    "label": "Titel",
-                    "name": "title",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 3,
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_5a9fc94a50fa9",
-                    "label": "URL",
-                    "name": "url",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                }
-            ]
+            "post_type": [
+                "publication",
+                "publication_pure"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
         },
         {
             "key": "field_5a9fc9e800f6f",
             "label": "Overige publicaties",
             "name": "profile_publications_2",
-            "type": "repeater",
+            "type": "relationship",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -71,54 +42,25 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "Regel toevoegen",
-            "sub_fields": [
-                {
-                    "key": "field_5a9fc9e800f70",
-                    "label": "Titel",
-                    "name": "title",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 3,
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_5a9fc9e800f71",
-                    "label": "URL",
-                    "name": "url",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                }
-            ]
+            "post_type": [
+                "publication",
+                "publication_pure"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
         },
         {
             "key": "field_5a9fca0c00f72",
             "label": "Populair-wetenschappelijke publicaties",
             "name": "profile_publications_3",
-            "type": "repeater",
+            "type": "relationship",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -127,48 +69,19 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "Regel toevoegen",
-            "sub_fields": [
-                {
-                    "key": "field_5a9fca0c00f73",
-                    "label": "Titel",
-                    "name": "title",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 3,
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_5a9fca0c00f74",
-                    "label": "URL",
-                    "name": "url",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                }
-            ]
+            "post_type": [
+                "publication",
+                "publication_pure"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
         }
     ],
     "location": [
@@ -177,6 +90,13 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "profile"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "profile_pure"
             }
         ]
     ],
@@ -190,5 +110,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1527011178
+    "modified": 1529759463
 }

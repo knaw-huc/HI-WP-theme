@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
   <div class="page-heading">
-    <a class="page-heading__button" href="<?= get_the_permalink(get_page_by_path('informatie')); ?>">Terug naar het overzicht</a>
+    <a class="page-heading__button" href="<?= get_the_permalink(get_page_by_path('informatie')); ?>"><?php _e('Terug naar het overzicht', 'huygens'); ?></a>
     <h2><?php the_title(); ?></h2>
   </div>
   <!-- end .page-heading -->

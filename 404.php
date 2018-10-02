@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
   <div class="page-heading">
-    <a class="page-heading__button" href="<?php bloginfo('url'); ?>">Terug naar de homepage</a>
+    <a class="page-heading__button" href="<?php bloginfo('url'); ?>"><?php _e('Terug naar de homepage', 'huygens'); ?></a>
   </div>
   <!-- end .page-heading -->
 
@@ -9,8 +9,8 @@
 
     <main class="main__column main__column--body text-holder">
 
-      <h1>Deze pagina is niet gevonden</h1>
-      <h5>Sorry! De pagina die je zoekt bestaat niet of niet meer.</h5>
+      <h1><?php _e('Deze pagina is niet gevonden', 'huygens'); ?></h1>
+      <h5><?php _e('Sorry! De pagina die je zoekt bestaat niet of niet meer.', 'huygens'); ?></h5>
 
     </main>
     <!-- end .main__column -->

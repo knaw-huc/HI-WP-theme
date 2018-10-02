@@ -1,6 +1,6 @@
 <div class="main">
 
-  <h4 class="search-results-heading">Resources</h4>
+  <h4 class="search-results-heading"><?php _e('Resources', 'huygens'); ?></h4>
 
   <div class="resource-overview__list">
 

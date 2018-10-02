@@ -1,6 +1,6 @@
 <div class="main">
 
-  <h4 class="search-results-heading">Overigen</h4>
+  <h4 class="search-results-heading"><?php _e('Overigen', 'huygens'); ?></h4>
 
   <div class="search-results-list">
 
