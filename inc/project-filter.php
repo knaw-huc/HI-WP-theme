@@ -57,9 +57,9 @@ query_posts($args);
     <?php } ?>
 
     <?php if(isset($_GET['thema']) && $_GET['thema'] == 'circulation-of-impact') { ?>
-      <a class="project-filter__button project-filter__button--active" href="?">Circulation of Impact</a>
+      <a class="project-filter__button project-filter__button--active" href="?">Impact of Circulation</a>
     <?php } else { ?>
-      <a class="project-filter__button project-filter__button--green" href="?thema=circulation-of-impact">Circulation of Impact</a>
+      <a class="project-filter__button project-filter__button--green" href="?thema=circulation-of-impact">Impact of Circulation</a>
     <?php } ?>
 
   </div>
