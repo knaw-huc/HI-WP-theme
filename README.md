@@ -1,2 +1,2 @@
-# HI-WP-theme
+# Huygens main website Wordpress theme
  
