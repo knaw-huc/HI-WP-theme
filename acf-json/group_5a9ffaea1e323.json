@@ -1,0 +1,56 @@
+{
+    "key": "group_5a9ffaea1e323",
+    "title": "Sidebar: Gerelateerde evenementen",
+    "fields": [
+        {
+            "key": "field_5a9ffaea220c6",
+            "label": "Gerelateerde evenementen",
+            "name": "sidebar_related_events",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "event"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-sidebar.php"
+            }
+        ]
+    ],
+    "menu_order": 14,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1520933475
+}

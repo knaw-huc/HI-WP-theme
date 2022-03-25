@@ -1,0 +1,341 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: "
+"Blank WordPress Pot "
+"v1.0.0\n"
+"POT-Creation-Date: "
+"2018-09-23 18:31+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Your "
+"Name <you@example.com>\n"
+"Language-Team: \n"
+"Report-Msgid-Bugs-To: "
+"Translator Name "
+"<translations@example."
+"com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/"
+"plain; charset=UTF-8\n"
+"Content-Transfer-"
+"Encoding: 8bit\n"
+"Plural-Forms: "
+"nplurals=2; plural=n != "
+"1;\n"
+"X-Textdomain-Support: "
+"yesX-Generator: Poedit "
+"1.6.4\n"
+"X-Poedit-SourceCharset: "
+"UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;esc_html_e;"
+"esc_html_x:1,2c;"
+"esc_html__;esc_attr_e;"
+"esc_attr_x:1,2c;"
+"esc_attr__;_ex:1,2c;"
+"_nx:4c,1,2;"
+"_nx_noop:4c,1,2;_x:1,2c;"
+"_n:1,2;_n_noop:1,2;"
+"__ngettext:1,2;"
+"__ngettext_noop:1,2;_c,"
+"_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"Language: en_US\n"
+"X-Generator: Poedit "
+"2.1.1\n"
+"X-Poedit-"
+"SearchPath-0: .\n"
+"X-Poedit-"
+"SearchPathExcluded-0: "
+"functions.php\n"
+
+#: 404.php:4 search.php:42
+msgid ""
+"Terug naar de homepage"
+msgstr ""
+
+#: 404.php:12
+msgid ""
+"Deze pagina is niet "
+"gevonden"
+msgstr ""
+
+#: 404.php:13
+msgid ""
+"Sorry! De pagina die je "
+"zoekt bestaat niet of "
+"niet meer."
+msgstr ""
+
+#: archive-project.php:9
+#: inc/search/project.php:3
+#: single-profile.php:215
+msgid "Onderzoeksprojecten"
+msgstr ""
+
+#: archive-resource.php:9
+#: front-page.php:45
+#: inc/search/resource.php:3
+msgid "Resources"
+msgstr ""
+
+#: footer.php:13
+msgid ""
+"Design & Development:"
+msgstr ""
+
+#: footer.php:83
+#: header.php:78
+msgid "Zoeken"
+msgstr ""
+
+#: front-page.php:13
+#: inc/project-filter.php:42
+#: inc/project-filter.php:44
+msgid "Debatcultuur"
+msgstr ""
+
+#: front-page.php:14
+#: inc/project-filter.php:48
+#: inc/project-filter.php:50
+msgid ""
+"Bestuur van Nederland"
+msgstr ""
+
+#: front-page.php:15
+#: inc/project-filter.php:54
+#: inc/project-filter.php:56
+msgid ""
+"Vernieuwing editeren"
+msgstr ""
+
+#: front-page.php:16
+#: inc/project-filter.php:60
+#: inc/project-filter.php:62
+msgid ""
+"Impact of Circulation"
+msgstr ""
+
+#: front-page.php:29
+msgid "Uitgelicht"
+msgstr ""
+
+#: front-page.php:46
+msgid ""
+"Bekijk alle resources"
+msgstr ""
+
+#: front-page.php:72
+msgid ""
+"Schrijf je in voor de "
+"nieuwsbrief"
+msgstr ""
+
+#: header.php:89
+msgid ""
+"Typ hier uw zoekterm en "
+"druk op enter"
+msgstr ""
+
+#: header.php:95
+msgid "Sluiten"
+msgstr ""
+
+#: inc/homepage-carousel.php:14
+msgid "Onderzoeksproject"
+msgstr ""
+
+#: inc/homepage-carousel.php:16
+#: inc/search/post.php:3
+#: index.php:5
+msgid "Nieuws"
+msgstr ""
+
+#: inc/homepage-resource-card.php:29
+#: inc/resource-card.php:29
+#: inc/sidebar/resource-button.php:8
+msgid "Bekijk resource"
+msgstr ""
+
+#: inc/project-filter.php:37
+msgid ""
+"Filter "
+"onderzoeksprojecten"
+msgstr ""
+
+#: inc/project-filter.php:76
+msgid ""
+"Meer over dit thema"
+msgstr ""
+
+#: inc/project-filter.php:101
+#: inc/project-filter.php:103
+#: inc/resource-filter.php:119
+#: inc/sidebar/resource-meta.php:31
+msgid "Periode"
+msgstr ""
+
+#: inc/project-filter.php:140
+#: inc/project-filter.php:142
+msgid "Tag"
+msgstr ""
+
+#: inc/publication-overview-section-list.php:29
+msgid "Bekijk meer"
+msgstr ""
+
+#: inc/resource-filter.php:74
+#: inc/sidebar/resource-meta.php:18
+msgid "Type"
+msgstr ""
+
+#: inc/resource-filter.php:96
+#: inc/resource-filter.php:141
+#: inc/resource-filter.php:186
+msgid "Wis selectie"
+msgstr ""
+
+#: inc/resource-filter.php:164
+#: inc/sidebar/resource-meta.php:44
+msgid "Onderwerp"
+msgstr ""
+
+#: inc/search/event.php:3
+msgid "Evenementen"
+msgstr ""
+
+#: inc/search/page.php:3
+msgid "Overigen"
+msgstr ""
+
+#: inc/search/profile.php:3
+msgid "Medewerkers"
+msgstr ""
+
+#: inc/sidebar/contactperson.php:5
+msgid "Contactpersoon"
+msgstr ""
+
+#: inc/sidebar/links.php:5
+msgid "Links"
+msgstr ""
+
+#: inc/sidebar/publications.php:7
+msgid ""
+"Gerelateerde publicaties"
+msgstr ""
+
+#: inc/sidebar/related-events.php:7
+msgid ""
+"Gerelateerde evenementen"
+msgstr ""
+
+#: inc/sidebar/related-posts.php:7
+msgid "Gerelateerd nieuws"
+msgstr ""
+
+#: inc/sidebar/related-profiles.php:7
+msgid ""
+"Gerelateerde medewerkers"
+msgstr ""
+
+#: inc/sidebar/related-projects.php:7
+msgid ""
+"Gerelateerde "
+"onderzoeksprojecten"
+msgstr ""
+
+#: inc/sidebar/resource-meta.php:9
+msgid "Kenmerken"
+msgstr ""
+
+#: inc/sidebar/rsvp.php:5
+msgid "Aanmelden"
+msgstr ""
+
+#: inc/sidebar/tags.php:3
+msgid "Tags"
+msgstr ""
+
+#: inc/sidebar/themas.php:3
+msgid ""
+"Gerelateerde thema’s"
+msgstr ""
+
+#: index.php:4
+#: page-events.php:10
+#: page-profile-overview.php:10
+#: page-sidebar.php:11
+#: page.php:5
+#: single-event.php:4
+#: single-profile.php:4
+#: single-project.php:4
+#: single-resource.php:4
+#: single.php:4
+#: taxonomy-thema.php:4
+msgid ""
+"Terug naar het overzicht"
+msgstr ""
+
+#: index.php:32
+msgid "Vorige pagina"
+msgstr ""
+
+#: index.php:51
+msgid "Volgende pagina"
+msgstr ""
+
+#: search.php:50
+msgid "Niets gevonden."
+msgstr ""
+
+#: single-event.php:28
+msgid "Locatie"
+msgstr ""
+
+#: single-event.php:40
+msgid "Aanvang/einde"
+msgstr ""
+
+#: single-profile.php:68
+msgid "Afdeling"
+msgstr ""
+
+#: single-profile.php:78
+msgid "Specialisatie"
+msgstr ""
+
+#: single-profile.php:88
+msgid "Contact"
+msgstr ""
+
+#: single-profile.php:278
+msgid "Publicaties"
+msgstr ""
+
+#: single-profile.php:306
+msgid ""
+"Belangrijkste "
+"publicaties"
+msgstr ""
+
+#: single-profile.php:323
+msgid ""
+"Overige publicaties"
+msgstr ""
+
+#: single-profile.php:340
+msgid ""
+"Populair-"
+"wetenschappelijke "
+"publicaties"
+msgstr ""
+
+#: single.php:45
+msgid ""
+"Gerelateerde "
+"nieuwsberichten"
+msgstr ""

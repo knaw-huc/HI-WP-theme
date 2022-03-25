@@ -1,0 +1,44 @@
+.page-heading
+  +wrapper
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: flex-start
+  padding-top: 40px
+  padding-bottom: 44px
+
+  h2
+    +heading-2
+    margin-bottom: em(4px, 48px)
+
+    &:not(:first-child)
+      margin-top: em(32px, 48px)
+
+.page-heading__button
+  +tag
+  display: flex
+  align-items: center
+  height: 40px
+  padding: 0 18px 0 12px
+  color: $brand-black
+  border: 1px solid #CED8DA
+  transition: color .3s ease, background .3s ease
+
+  &:hover
+    background: #CED8DA
+
+  &::before
+    position: relative
+    top: -1px
+    margin-right: 2px
+    width: 18px
+    font-family: $genericons
+    font-size: 18px
+    color: currentcolor
+    content: ''
+
+@media (max-width: $media-tablet-portrait)
+
+  .page-heading
+    padding-top: 24px
+    padding-bottom: 24px

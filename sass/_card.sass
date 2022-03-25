@@ -1,0 +1,381 @@
+$multiline-truncate-lines-to-show: 3
+
+@mixin multiline-truncate-default
+  display: block
+  display: -webkit-box
+  text-overflow: ellipsis
+  overflow: hidden
+  -webkit-box-orient: vertical
+
+@mixin disable-multiline-truncate
+  height: auto
+  text-overflow: inherit
+  overflow: visible
+  -webkit-line-clamp: initial
+
+@mixin multiline-truncate-default-20px
+
+  $multiline-truncate-font-size: 20px
+  $multiline-truncate-line-height: 1.1
+
+  +multiline-truncate-default
+  height: $multiline-truncate-font-size * $multiline-truncate-line-height * $multiline-truncate-lines-to-show // Fallback for non-webkit
+  font-size: $multiline-truncate-font-size
+  line-height: $multiline-truncate-line-height
+  -webkit-line-clamp: $multiline-truncate-lines-to-show
+
+@mixin multiline-truncate-default-20px-4
+
+  $multiline-truncate-font-size: 20px
+  $multiline-truncate-line-height: 1.1
+  $multiline-truncate-lines-to-show: 4
+
+  +multiline-truncate-default
+  height: $multiline-truncate-font-size * $multiline-truncate-line-height * $multiline-truncate-lines-to-show // Fallback for non-webkit
+  font-size: $multiline-truncate-font-size
+  line-height: $multiline-truncate-line-height
+  -webkit-line-clamp: $multiline-truncate-lines-to-show
+
+@mixin multiline-truncate-default-24px
+
+  $multiline-truncate-font-size: 24px
+  $multiline-truncate-line-height: 1
+
+  +multiline-truncate-default
+  height: $multiline-truncate-font-size * $multiline-truncate-line-height * $multiline-truncate-lines-to-show // Fallback for non-webkit
+  font-size: $multiline-truncate-font-size
+  line-height: $multiline-truncate-line-height
+  -webkit-line-clamp: $multiline-truncate-lines-to-show
+
+.card
+  position: relative
+  display: flex
+  width: 100%
+  background: $brand-light-blue
+
+  &--default
+    flex-direction: column
+    max-width: 352px
+
+    .card__info
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+      height: 198px
+
+      h6
+        +multiline-truncate-default-20px-4
+
+      span + h6
+        +multiline-truncate-default-20px
+
+      .card__info__section
+        width: 100%
+
+  &--thumbnail
+    max-width: 527px
+
+    .card__visual
+      width: 527px
+
+    .card__info
+      +stretch
+      position: absolute
+      justify-content: center
+      align-items: center
+      height: auto
+      padding: 0 64px
+      background: none
+
+      h6
+        +heading-3
+        text-align: center
+
+      p
+        text-align: center
+
+      .tag-list
+        flex-direction: row
+
+      .tag-list__item
+        color: $brand-dark-blue
+
+        & + .tag-list__item
+          margin-left: 16px
+
+      .card__info__section
+        width: auto
+        max-width: 100%
+
+    .card__info__section + .card__info__section
+      margin-top: 16px
+
+  &--bar
+
+    .card__visual
+      width: 256px
+      flex-shrink: 0
+
+    .card__info
+      flex-grow: 1
+
+      h6
+        +multiline-truncate-default-20px-4
+
+      .card__info__section
+
+        &:nth-child(1)
+          flex-grow: 1
+          max-width: 256px
+          flex-shrink: 0
+
+        &:nth-child(2)
+          margin-left: 28px
+          flex-shrink: 1
+
+  &--small
+
+    .card__visual
+      width: 100%
+
+    .card__info
+      padding: 0 33px
+
+      h6
+        +heading-6
+        +disable-multiline-truncate
+        text-align: center
+
+  &--compact
+    width: 100%
+
+    .card__info
+      position: relative
+      height: auto
+      padding: 20px
+
+      &::after
+        position: absolute
+        top: 0
+        right: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 64px
+        height: 64px
+        font-family: $genericons
+        font-size: 48px
+        content: ''
+
+      h6
+        +heading-4
+        +disable-multiline-truncate
+
+  &--event
+
+    .card__visual
+      width: 352px
+      flex-shrink: 0
+
+    .card__info
+      flex-direction: column
+      justify-content: space-between
+      width: 100%
+      padding-right: 60px
+
+      p
+        +paragraph-chivo-medium
+
+      h6
+        +heading-5
+        +multiline-truncate-default-24px
+
+      .card__info__section
+
+        &:nth-child(1)
+          max-width: 100%
+
+        &:nth-child(2)
+          margin-left: 0
+
+      .tag-list
+        flex-direction: row
+
+      .tag-list__item
+
+        & + .tag-list__item
+          margin-left: 15px
+
+  &__visual
+    position: relative
+
+    &::before
+      display: block
+      width: 100%
+      padding-top: (198 / 352) * 100%
+      content: ''
+
+    .card__visual__markers
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      display: flex
+      flex-direction: column
+      width: 16px
+
+      &__item
+        flex-grow: 1
+
+        &--blue
+          background: $brand-blue
+
+        &--orange
+          background: $brand-orange
+
+        &--green
+          background: $brand-green
+
+        &--yellow
+          background: $brand-yellow
+
+    img
+      +stretch
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__info
+    display: flex
+    padding: 24px 30px
+    background: $brand-white
+
+    span
+      +tag
+      color: $brand-light-blue-alternative
+
+      & + h6
+        margin-top: 7px
+
+    h6
+      +heading-6
+      +multiline-truncate-default-20px
+
+    p
+      +paragraph-medium
+
+  &__button
+    position: absolute
+    right: 0
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 32px
+    color: $brand-white
+    background: $brand-light-blue
+
+    &:hover
+      background: $brand-dark-blue
+      transition: color .3s ease, background .3s ease
+
+      .card__button__text
+        display: block
+
+    &__text
+      +paragraph-chivo-small
+      position: relative
+      top: 1px
+      display: none
+      padding-left: 8px
+
+    &__icon
+      position: relative
+      top: -1px
+      width: 32px
+      height: 32px
+      font-family: $genericons
+
+@media (min-width: $media-tablet + 1px)
+
+  .project-overview .card,
+  .resource-overview__list .card,
+  .event-overview .card,
+  .search-results-list__item,
+  .card--thumbnail.card--small,
+  .homepage-carousel .owl-stage-outer
+    transition: box-shadow .2s ease, transform .35s ease
+
+    &:hover
+      box-shadow: 2px 2px 8px 0 rgba(0,32,72,0.15)
+      transform: translate3d(-1px, -1px, 0)
+
+  .page-intro__carousel .owl-item.active .card
+    transition: box-shadow .2s ease, transform .35s ease
+
+    &:hover
+      box-shadow: 2px 2px 8px 0 rgba(0,32,72,0.15)
+      transform: translate3d(-2px, -2px, 0)
+
+@media (max-width: $media-tablet)
+
+  .card
+
+    &--bar
+
+      .card__visual::before
+        padding-top: 100%
+
+        img
+          object-fit: cover
+
+      .card__info
+        flex-direction: column
+        justify-content: space-between
+
+        h6
+          +disable-multiline-truncate
+
+        .card__info__section
+
+          &:nth-child(1)
+            max-width: initial
+
+          &:nth-child(2)
+            margin-left: 0
+
+@media (max-width: $media-phone)
+
+  .card
+
+    &--bar
+      flex-direction: column
+      max-width: 352px
+
+      .card__visual
+        width: 100%
+
+        &::before
+          padding-top: 56.25%
+
+      .card__info
+
+        h6
+          +multiline-truncate-default-20px-4
+
+      .card__info__section
+
+        & + .card__info__section
+          margin-top: 16px
+
+        p
+          font-size: 14px
+
+        h6
+          margin-top: 8px
+
+    &--event
+
+      .card__info
+        padding-right: 30px

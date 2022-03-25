@@ -1,0 +1,79 @@
+@mixin general-list-styling
+  +remove-list-styles
+  +paragraph-medium
+
+  li
+    position: relative
+    padding-left: 28px
+
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      content: '•'
+
+.text-holder
+  color: $brand-dark-blue
+
+  h1
+    +heading-2
+    font-family: $asul
+
+  h2
+    +heading-2
+
+  h3
+    +heading-3
+
+  h4
+    +heading-4
+
+  h5
+    +heading-5
+
+  h6
+    +heading-6
+
+  p
+    +paragraph-medium
+
+    strong
+      +heading-5
+      line-height: unitless(32px, 24px)
+
+    a:hover
+      text-decoration: underline
+
+    &.meta
+      +tag
+      color: $brand-light-blue-alternative
+
+      & + *
+        margin-top: 16px
+
+  ul
+    +general-list-styling
+
+  hr
+    margin-bottom: 17px
+    border: 0
+    border-bottom: 1px dotted $brand-light-blue
+
+  > * + *
+    margin-top: 48px
+
+  > * + hr
+    margin-top: 26px
+
+  p + p,
+  p + ul,
+  ul + ul,
+  ul + p
+    margin-top: em(27px, 18px)
+
+@media (max-width: $media-phone)
+
+  .text-holder
+
+    > * + *
+      margin-top: 32px

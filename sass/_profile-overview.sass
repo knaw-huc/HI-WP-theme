@@ -1,0 +1,87 @@
+.profile-overview
+  width: 100%
+
+.profile-overview__heading
+  +heading-2
+
+.profile-overview__category
+
+  .profile-overview__heading + &
+    margin-top: 52px
+
+  & + .profile-overview__category
+    margin-top: 64px
+
+.profile-overview__category__heading
+  +heading-4
+  padding-bottom: 16px
+  border-bottom: 1px dotted $brand-light-blue
+
+.profile-overview__category__grid
+  display: flex
+  flex-wrap: wrap
+
+  .profile-button
+    margin-top: 32px
+    margin-left: 32px
+    width: calc((100% - 32px * 3) / 4)
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4)
+      margin-top: 24px
+
+    &:nth-child(4n-3)
+      margin-left: 0
+
+@media (max-width: 1140px)
+
+  .profile-overview__category__grid
+
+    .profile-button
+
+      &:nth-child(n)
+        margin-top: 32px
+        margin-left: 32px
+        width: calc((100% - 32px * 2) / 3)
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3)
+        margin-top: 24px
+
+      &:nth-child(3n-2)
+        margin-left: 0
+
+@media (max-width: $media-phone)
+
+  .profile-overview__category__grid
+
+    .profile-button
+
+      &:nth-child(n)
+        margin-top: 32px
+        margin-left: 32px
+        width: calc((100% - 32px * 1) / 2)
+
+      &:nth-child(1),
+      &:nth-child(2)
+        margin-top: 24px
+
+      &:nth-child(odd)
+        margin-left: 0
+
+@media (max-width: 550px)
+
+  .profile-overview__category__grid
+
+    .profile-button
+
+      &:nth-child(n)
+        margin-top: 32px
+        margin-left: 0
+        width: 100%
+
+      &:nth-child(1)
+        margin-top: 24px

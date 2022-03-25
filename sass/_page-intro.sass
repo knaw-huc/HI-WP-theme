@@ -1,0 +1,199 @@
+.page-intro
+  padding: 50px 0 64px
+  overflow: hidden
+  background: #667991
+
+.page-intro__text
+  +wrapper
+  color: $brand-white
+
+  h2
+    +heading-2
+    @media (max-width: $media-phone)
+      font-size: 24px
+
+  p
+    +paragraph-chivo-large
+    margin-top: em(30px, 20px)
+
+.page-intro__carousel
+  margin-top: 48px
+  display: block
+  height: 396px
+  opacity: 0
+  transition: opacity 1s .2s ease-out
+
+  &.owl-loaded
+    opacity: 1
+
+  .owl-stage-outer
+    overflow: visible
+
+  &.page-intro__carousel--desktop,
+  &.page-intro__carousel--mobile
+    height: 297px
+
+  @media (max-width: $media-phone)
+    height: 367px
+
+    &.page-intro__carousel--desktop,
+    &.page-intro__carousel--mobile
+      height: 158px
+
+  &__item
+    display: flex
+    justify-content: space-between
+
+    .card + .card
+      margin-left: 32px
+
+  .card
+    outline: none
+
+  .owl-nav
+
+    @media (max-width: $media-phone)
+      display: none
+
+    .owl-prev,
+    .owl-next
+      position: absolute
+      top: 68px
+      width: 64px
+      height: 64px
+      font-size: 0
+      background-color: $brand-dark-blue
+      transition: color .3s ease, background .3s ease
+
+      &:hover
+        background-color: $brand-black
+
+    .owl-prev
+      left: 0
+      background-image: url('../img/owl-prev.svg')
+
+    .owl-next
+      right: 0
+      background-image: url('../img/owl-next.svg')
+
+  &.page-intro__carousel--desktop
+
+    .owl-nav
+
+      .owl-prev,
+      .owl-next
+        top: 50%
+        margin-top: -32px
+
+  // Onderzoeksprojecten
+  .owl-item .card--thumbnail
+    opacity: .33
+
+    .card__info
+
+      h6
+        +disable-multiline-truncate
+
+  .owl-item.center .card--thumbnail
+    opacity: 1
+
+  // Resources
+  @media (max-width: 1889px)
+
+    .owl-item .card--default:not(.card--thumbnail)
+      opacity: .33
+      transition: opacity .15s ease, box-shadow .2s ease, transform .35s ease
+
+    .owl-item:hover .card--default:not(.card--thumbnail)
+      opacity: .66
+
+    .owl-item.active
+
+      .card--default:not(.card--thumbnail)
+        opacity: 1
+
+    .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active
+
+      .card--default:not(.card--thumbnail)
+        opacity: .33
+
+      &:hover .card--default:not(.card--thumbnail)
+        opacity: .66
+
+  @media (max-width: 1118px)
+
+    .owl-item .card--default:not(.card--thumbnail)
+      opacity: .33
+
+    .owl-item:hover .card--default:not(.card--thumbnail)
+      opacity: .66
+
+    .owl-item.active
+
+      .card--default:not(.card--thumbnail)
+        opacity: .33
+
+    .owl-item.center
+
+      .card--default:not(.card--thumbnail)
+        opacity: 1
+
+    .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active
+
+      .card--default:not(.card--thumbnail)
+        opacity: .33
+
+      &:hover .card--default:not(.card--thumbnail)
+        opacity: .66
+
+  @media (min-width: $media-phone + 1)
+
+    .owl-item .card--default:not(.card--thumbnail)
+      width: 352px
+
+  @media (max-width: $media-phone)
+
+    .card--default:not(.card--thumbnail)
+      width: 280px
+      max-width: 280px
+
+      .card__info
+        height: auto
+
+      .card__info__section + .card__info__section
+        margin-top: 16px
+
+// Onderzoeksprojecten
+@media (min-width: 1201px)
+
+  .page-intro__carousel--mobile
+    display: none !important
+
+@media (max-width: 1200px)
+
+  .page-intro__carousel--desktop
+    display: none !important
+
+@media (max-width: $media-phone)
+
+  .page-intro__carousel .card--thumbnail
+
+    .card__visual
+      width: 280px
+
+    .card__info__section
+
+      &:not(:nth-of-type(1))
+        display: none
+
+      h6
+        text-align: center
+
+@media (max-width: $media-phone)
+
+  .page-intro
+    padding-top: 24px
+    padding-bottom: 48px
+
+  .page-intro__text p
+    margin-top: 1em

@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'CharisSIL';
+  src: url('../fonts/CharisSIL.eot');
+  src: url('../fonts/CharisSIL.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CharisSIL.woff') format('woff'),
+       url('../fonts/CharisSIL.ttf')  format('truetype'),
+       url('../fonts/CharisSIL.svg#fce281fce3710bdef0bac6e899de067e') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'CharisSIL';
+  src: url('../fonts/CharisSIL-Bold.eot');
+  src: url('../fonts/CharisSIL-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/CharisSIL-Bold.woff') format('woff'),
+       url('../fonts/CharisSIL-Bold.ttf')  format('truetype'),
+       url('../fonts/CharisSIL-Bold.svg#fce281fce3710bdef0bac6e899de067e') format('svg');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Genericons';
+  src: url('../fonts/Genericons.eot');
+  src: url('../fonts/Genericons.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Genericons.woff') format('woff'),
+       url('../fonts/Genericons.ttf')  format('truetype'),
+       url('../fonts/Genericons.svg#fce281fce3710bdef0bac6e899de067e') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
+
+// regular (400)
+// bold (700)
+$charis-sil: 'CharisSIL', serif;
+
+// regular (400)
+$chivo: 'Chivo', sans-serif;
+
+// regular (400)
+$asul: 'Asul', sans-serif;
+
+// regular (400)
+$genericons: 'Genericons';

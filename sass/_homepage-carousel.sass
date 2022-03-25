@@ -1,0 +1,113 @@
+.homepage-carousel
+  display: block
+  min-height: 346px
+  overflow: hidden
+  opacity: 0
+  transition: opacity 1s .2s ease-out
+
+  &.owl-loaded
+    overflow: visible
+    opacity: 1
+
+.homepage-carousel__item
+  position: relative
+
+  &__label
+    +paragraph-chivo-small
+    position: absolute
+    top: 0
+    left: 0
+    z-index: $z-index-content
+    padding: 7px 14px 5px
+    color: $brand-light-blue
+    background: $brand-dark-blue
+
+  .card--default
+    flex-direction: row
+    max-width: 100%
+    height: 306px
+
+    .card__info
+      justify-content: center
+      align-items: center
+      width: calc(100% - 544px)
+      height: 100%
+      background: $brand-light-blue
+
+      &__section
+        width: auto
+        max-width: 100%
+
+        &:not(:first-child)
+          margin-top: em(24px, 18px)
+
+        h6
+          +heading-1
+          +disable-multiline-truncate
+          text-align: center
+
+        p
+          margin-top: em(24px, 18px)
+          text-align: center
+
+        .tag-list
+          flex-direction: row
+
+        .tag-list__item
+          color: $brand-dark-blue
+
+          & + .tag-list__item
+            margin-left: 16px
+
+    .card__visual
+      width: 544px
+
+      &::before
+        display: none
+
+.owl-dots
+  margin-top: 24px
+  display: flex
+
+.owl-dot
+  width: 16px
+  height: 16px
+  background: $brand-white
+  border: 2px solid $brand-white
+  border-radius: 16px
+
+  & + .owl-dot
+    margin-left: 8px
+
+  &.active
+    background: $brand-dark-blue
+
+@media (max-width: $media-tablet-portrait)
+
+  .homepage-carousel .owl-stage-outer
+    background: $brand-light-blue
+
+  .homepage-carousel__item
+
+    .card--default
+      flex-direction: column
+      height: auto
+
+      .card__visual,
+      .card__info
+        width: 100%
+
+        img
+          position: relative
+
+      .card__info__section
+
+        h6:last-child
+          margin-bottom: 8px
+
+        p
+          font-size: 14px
+
+        p,
+        &:not(:first-child)
+          margin-top: 8px

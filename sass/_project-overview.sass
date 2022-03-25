@@ -1,0 +1,78 @@
+.project-overview
+  display: flex
+  flex-wrap: wrap
+
+  .project-filter + &
+    margin-top: 64px
+
+  .card
+    margin-top: 32px
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3)
+      margin-top: 0
+
+    &:nth-child(3n-1),
+    &:nth-child(3n)
+      margin-left: 32px
+
+@media (max-width: 1183px)
+
+  .project-overview
+
+    .card
+
+      &:nth-child(n)
+        margin-top: 32px
+        margin-left: 0
+
+      &:nth-child(1),
+      &:nth-child(2)
+        margin-top: 0
+
+      &:nth-child(even)
+        margin-right: 32px
+        margin-left: 32px
+
+@media (max-width: 900px)
+
+  .project-overview
+
+    .card
+
+      &:nth-child(even)
+        margin-right: 0
+
+@media (max-width: 790px)
+
+  .project-overview
+
+    .card
+      width: calc((100% - 32px) / 2)
+
+      &:nth-child(1),
+      &:nth-child(2)
+        margin-top: 0
+
+@media (max-width: $media-phone)
+
+  .project-overview
+    flex-direction: column
+
+    .card
+      width: 100%
+
+      &:nth-child(n)
+        margin-top: 32px
+        margin-left: 0
+
+      &:nth-child(1)
+        margin-top: 0
+
+@media (max-width: 1183px) and (min-width: $media-phone + 1)
+
+  .homepage-heading + .project-overview
+
+    .card:nth-of-type(3)
+      display: none

@@ -1,0 +1,49 @@
+.disclaimer
+  position: relative
+  float: left
+  clear: left
+  margin-top: 2em
+  display: block
+  width: auto
+  height: auto
+  font-size: 16px
+  text-align: left
+  color: $brand-white
+
+.disclaimer *
+  display: inline-block
+  overflow: visible
+
+.disclaimer div
+  float: none
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  width: auto
+  height: auto
+  text-align: left
+  overflow: visible
+
+.disclaimer span
+  +paragraph-chivo-small
+  pointer-events: none
+  user-select: none
+
+.disclaimer svg
+  position: relative
+  margin-top: 6px
+  width: auto
+  height: 0.85em
+  overflow: visible !important
+  opacity: 1
+  transition: opacity 0.25s ease
+
+.disclaimer svg *
+  transition: fill 0.25s ease
+  fill: $brand-white
+
+.disclaimer svg:hover
+  opacity: 0.75
+
+.disclaimer svg:hover *
+  fill: $brand-white

@@ -1,0 +1,28 @@
+.homepage-intro
+  margin-bottom: 32px
+  padding: 28px 0 44px
+  background: $brand-dark-blue
+
+  &__text
+    +wrapper
+    text-align: center
+    color: $brand-white
+
+    p
+      +paragraph-large
+
+  .project-filter
+    +wrapper
+    margin-top: 24px
+    border: 0
+
+  .project-filter__button:hover
+    color: $brand-dark-blue
+    background: $brand-white
+
+@media (max-width: $media-tablet-portrait)
+
+  .homepage-intro
+
+    .project-filter
+      max-width: 256px

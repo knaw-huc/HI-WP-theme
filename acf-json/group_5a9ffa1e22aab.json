@@ -1,0 +1,51 @@
+{
+    "key": "group_5a9ffa1e22aab",
+    "title": "Sidebar: Gerelateerde publicaties",
+    "fields": [
+        {
+            "key": "field_5a9ffa1e26f3d",
+            "label": "Gerelateerde publicaties",
+            "name": "sidebar_related_publications",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "publication",
+                "publication_pure"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ]
+    ],
+    "menu_order": 12,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1529759465
+}

@@ -1,0 +1,132 @@
+.sidebar__item
+
+  & + .sidebar__item
+    margin-top: 64px
+
+.sidebar__item__heading
+  +heading-4
+  padding-bottom: 16px
+  border-bottom: 1px dotted $brand-light-blue
+
+.sidebar__item__text-holder
+  +paragraph-small
+
+  & + .sidebar__item__button
+    margin-top: 24px
+
+  &--filter-links
+    font-family: $chivo
+
+  p
+    margin-top: 16px
+
+    & + p
+      margin-top: em(20px, 14px)
+
+    a:hover
+      text-decoration: underline
+
+  span
+    color: $brand-light-blue-alternative
+
+  &--person
+
+    p
+      margin-top: 16px
+
+      strong
+        +name
+        line-height: unitless(20px, 14px)
+
+      & + p
+        margin-top: em(8px, 14px)
+
+.sidebar__item__text-link
+  +paragraph-chivo-small
+  display: block
+  padding: 12px 0
+  border-bottom: 1px dotted $brand-light-blue
+
+  &:hover
+    text-decoration: underline
+
+    span
+      text-decoration: none
+
+  span
+    display: inline-block
+    color: $brand-light-blue
+
+.sidebar__item__social-media
+  +remove-list-styles
+  display: flex
+  padding: 12px 0
+  border-bottom: 1px dotted $brand-light-blue
+
+.sidebar__item__social-media__item
+  font-family: $genericons
+  font-size: 28px
+
+  & + .sidebar__item__social-media__item
+    margin-left: 8px
+
+.sidebar__item__button
+  +theme-button
+  margin-top: 16px
+
+.sidebar__item__body
+
+  .card
+    margin-top: 23px
+
+  .tag-list
+    margin-top: 16px
+
+  .profile-button
+    margin-top: 24px
+    display: flex
+
+    & + .profile-button
+      margin-top: 32px
+
+  &:nth-child(1)
+
+    .sidebar__item__button:nth-child(1)
+      margin-top: 0
+
+@media (max-width: $media-tablet-portrait)
+
+  .sidebar__item
+
+    & + .sidebar__item
+      margin-top: 24px
+
+    &__heading
+      position: relative
+      padding-right: 150px
+      cursor: pointer
+
+      &::after
+        position: absolute
+        right: 0
+        bottom: 16px
+        font-family: $genericons
+        color: $brand-dark-blue
+        content: ''
+
+    &.is-active
+
+      .sidebar__item__heading::after
+        transform: rotate(180deg)
+
+      .sidebar__item__body
+        display: block
+
+    &__body
+      margin-bottom: 40px
+      display: none
+
+    &:last-child
+
+      .sidebar__item__body
+        margin-bottom: 0

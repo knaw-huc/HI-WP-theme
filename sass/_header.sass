@@ -1,0 +1,225 @@
+$navigation-height: 64px
+$logo-size: 128px
+
+body
+  padding-top: $navigation-height
+
+.header
+  position: fixed
+  top: 0
+  z-index: $z-index-above-content
+  width: 100%
+
+  .admin-bar &
+    top: 32px
+
+    @media only screen and (max-width: 782px)
+      top: 46px
+
+  .hide-in-header
+    display: none
+
+.logo
+  position: absolute
+  top: 0
+  left: 0
+  z-index: $z-index-above-content + 1
+  display: block
+  width: $logo-size
+  height: $logo-size
+
+  &__mobile
+    display: none
+
+.header__bar
+  position: absolute
+  top: 0
+  right: 0
+  left: $logo-size
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: $navigation-height
+  padding-right: 42px
+  padding-left: 32px
+  background: $brand-black
+  transition: transform .6s ease
+
+  &--search
+    transform: translate3d(100%, 0, 0)
+
+.header--search
+
+  .header__bar
+
+    &--navigation
+      transform: translate3d(-100%, 0, 0)
+
+    &--search
+      transform: translate3d(0, 0, 0)
+
+.navigation
+  +remove-list-styles
+  display: flex
+
+  &--pages
+    flex-grow: 1
+
+  &--open-search
+    margin-left: 60px
+
+.navigation__item
+  position: relative
+
+  & + .navigation__item
+    margin-left: $navigation-height / 2
+
+  &:hover
+
+    .navigation--sub
+      display: flex
+
+.navigation__item__button
+  +paragraph-chivo-medium
+  position: relative
+  display: block
+  line-height: 1.4285714286
+  white-space: nowrap
+  color: $brand-white
+  border-bottom: 1px solid transparent
+
+  &:hover,
+  &.is-active
+    border-bottom: 1px solid currentcolor
+
+  &::after
+    position: absolute
+    top: 1px
+    display: inline-block
+    width: 24px
+    height: 24px
+    font-family: $genericons
+    font-size: 24px
+    line-height: 1
+
+  &--has-sub
+
+    &::after
+      right: -25px
+      content: ''
+
+.navigation--open-search
+
+  .navigation__item__button
+
+    &::after
+      left: -31px
+      content: ''
+
+.navigation--close-search
+
+  .navigation__item__button
+
+    &::before
+      position: absolute
+      top: 3px
+      left: -26px
+      display: inline-block
+      width: 20px
+      height: 20px
+      content: ''
+      background: url('../img/close-search-ico.svg') center no-repeat
+      background-size: contain
+
+.navigation--sub
+  position: absolute
+  left: -$navigation-height / 4
+  display: none
+  flex-direction: column
+  align-items: flex-start
+  padding: $navigation-height / 4
+  background: $brand-black
+
+  .navigation__item
+    margin-top: $navigation-height / 8
+
+    & + .navigation__item
+      margin-left: 0
+
+.search-form
+  flex-grow: 1
+
+.search-form__input
+  +paragraph-chivo-medium
+  width: calc(100% - 40px)
+  height: 30px
+  padding: 0
+  color: $brand-white
+  background: transparent
+  border: 0
+  border-radius: 0
+  outline: 0
+  -webkit-appearance: none
+
+.header
+
+  .mobile-navigation__button
+    display: none
+    font-family: $genericons
+    font-size: 28px
+    line-height: 1
+    text-align: center
+    color: $brand-white
+    background: none
+
+@media (max-width: 1439px)
+
+  $navigation-height: 64px
+  $logo-size: 77px
+
+  .logo
+    width: $logo-size
+    height: $navigation-height
+    background: $brand-black
+
+    &__desktop
+      display: none
+
+    &__mobile
+      margin: 8px
+      display: block
+      width: 69px
+
+  .header__bar
+    left: $logo-size
+
+@media (max-width: $media-tablet-portrait)
+
+  .header__bar
+    padding-right: 24px
+    padding-left: 24px
+
+  .navigation__item + .navigation__item
+    margin-left: 24px
+
+  .navigation__item__button--has-sub
+
+    &::after
+      display: none
+
+  .navigation__item
+
+    &:hover
+
+      .navigation--sub
+        display: none
+
+@media (max-width: $media-phone)
+
+  .header
+
+    .mobile-navigation__button
+      display: block
+
+  .navigation
+    display: none

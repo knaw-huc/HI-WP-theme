@@ -1,0 +1,76 @@
+{
+    "key": "group_5aa007e7f0d8b",
+    "title": "Sidebar: Tekst",
+    "fields": [
+        {
+            "key": "field_5aa0080082c2a",
+            "label": "Titel",
+            "name": "sidebar_text_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Contact",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5aa0080a82c2b",
+            "label": "Tekst",
+            "name": "sidebar_text_body",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Neem voor meer informatie contact op met de afdeling Communicatie. Zij leggen desgewenst contact met de juiste medewerker uit het instituut.\r\n\r\ncommunicatie[AT]huygens.knaw.nl\r\nThijs van der Veen, +31 20 224 68 18",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-sidebar.php"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ]
+    ],
+    "menu_order": 15,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1580216769
+}

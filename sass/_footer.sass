@@ -1,0 +1,89 @@
+.footer
+  margin-top: 64px
+  width: 100%
+  padding-top: 67px
+  padding-bottom: 104px
+  overflow: hidden
+  color: $brand-white
+  background: $brand-dark-blue
+
+  .newsletter + &
+    margin-top: 0
+
+.footer__inner
+  +wrapper
+  display: flex
+
+.footer__column
+
+  &:nth-child(1)
+    width: 330px
+    padding-right: 32px
+    flex-shrink: 0
+
+  &:nth-child(2)
+    width: 430px
+    padding-right: 32px
+
+    *
+      max-width: 260px
+
+  &:nth-child(3)
+    flex-shrink: 0
+
+  h2
+    +heading-4
+
+  p
+    +paragraph-chivo-small
+    margin-top: em(25px, 14px)
+
+    & + p
+      margin-top: em(20px, 14px)
+
+    a:hover
+      text-decoration: underline
+
+.logo-holder
+  +remove-list-styles
+  margin-top: em(25px, 14px)
+  display: flex
+  align-items: center
+
+.logo-holder__item
+
+  & + .logo-holder__item
+    margin-left: 34px
+
+  a,
+  img
+    display: block
+
+@media (max-width: 1100px)
+
+  .logo-holder
+    flex-direction: column
+    align-items: flex-start
+
+  .logo-holder__item
+
+    & + .logo-holder__item
+      margin-top: 25px
+      margin-left: 0
+
+@media (max-width: $media-tablet-portrait)
+
+  .main--white + .footer
+    margin-top: 0
+
+@media (max-width: 940px)
+
+  .footer
+    padding-top: 32px
+    padding-bottom: 48px
+
+  .footer__inner
+    flex-direction: column
+
+  .footer__column + .footer__column
+    margin-top: 48px

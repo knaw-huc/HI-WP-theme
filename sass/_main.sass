@@ -1,0 +1,66 @@
+.main
+  +wrapper
+
+  & + .main
+    margin-top: 64px
+
+  &--white
+    display: flex
+    max-width: 1248px
+    padding: 64px
+    background: $brand-white
+
+.main__column
+
+  &--body
+    flex-grow: 1
+    flex-shrink: 1
+
+  &--aside
+    margin-left: 127px
+    width: 255px
+    flex-shrink: 0
+
+  &--profile
+    width: calc((100% - 32px) / 2)
+
+    &:not(:first-child)
+      margin-left: 32px
+
+@media (max-width: $media-tablet)
+
+  .main
+
+    &--white
+      padding: 32px 32px 64px
+
+  .main__column
+
+    &--aside
+      margin-left: 64px
+
+@media (max-width: $media-tablet-portrait)
+
+  .main
+
+    &--white
+      flex-direction: column
+      width: 100%
+      padding-right: 25px
+      padding-left: 25px
+
+  .main__column
+    width: 100%
+
+    &--aside
+      margin-top: 64px
+      margin-left: 0
+
+    &--empty
+      display: none
+
+    &--profile
+
+      &:not(:first-child)
+        margin-top: 32px
+        margin-left: 0

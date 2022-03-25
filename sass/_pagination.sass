@@ -1,0 +1,52 @@
+.pagination
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-top: 22px
+  border-top: 1px dotted $brand-light-blue
+
+.pagination__column
+  display: flex
+  justify-content: space-between
+  align-items: center
+  min-width: 132px
+
+.pagination__button,
+.page-numbers
+  +paragraph-chivo-small
+  display: flex
+  align-items: center
+
+  & + .pagination__button,
+  .page-numbers
+    margin-left: 18px
+
+  &::before,
+  &::after
+    position: relative
+    top: -2px
+    width: 18px
+    height: 16px
+    font-family: $genericons
+    font-size: 18px
+    line-height: 1
+
+  &--previous
+
+    &::before
+      margin-right: 8px
+      content: ''
+
+  &--next
+
+    &::after
+      margin-left: 8px
+      content: ''
+
+.page-numbers
+  +paragraph-chivo-medium
+
+@media (max-width: $media-phone)
+
+  .pagination__column:nth-child(2)
+    display: none

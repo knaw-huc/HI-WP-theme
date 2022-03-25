@@ -1,0 +1,77 @@
+.newsletter
+  margin-top: 68px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 48px 0 64px
+  background: #667991
+
+  &__heading
+    +heading-4
+    text-align: center
+    color: $brand-white
+
+  & > div
+    +wrapper
+    max-width: 740px
+
+  form
+    margin-top: 24px
+
+    > div
+      display: flex
+
+    input
+      height: 40px
+      border: 0
+      border-radius: 0
+      outline: 0
+      -webkit-appearance: none
+
+      &[type='email']
+        +paragraph-small
+        flex-grow: 1
+        padding: 0 15px
+        color: $brand-dark-blue
+        background: $brand-white
+
+        &::placeholder
+          color: $brand-light-blue
+
+      &[type='submit']
+        margin-left: 32px
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 256px
+        font-family: $chivo
+        font-size: 16px
+        color: $brand-white
+        cursor: pointer
+        background: $brand-dark-blue
+        transition: color .3s ease, background .3s ease
+
+        &:hover
+          background: $brand-black
+
+@media (max-width: $media-phone)
+
+  .newsletter
+    padding: 32px 0 40px
+
+    &__heading
+      margin-right: 25px
+      margin-left: 25px
+
+    form
+
+      > div
+        flex-direction: column
+
+      input
+
+        &[type='submit']
+          margin-top: 16px
+          margin-left: 0
+          width: 100%

@@ -1,0 +1,70 @@
+.project-filter
+  margin-top: 48px
+  border-bottom: 1px dotted $brand-light-blue
+
+.project-filter__heading
+  +heading-4
+
+.project-filter__button-holder
+  margin-top: 24px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  width: 100%
+
+.project-filter__information
+  margin-top: 48px
+  margin-bottom: 48px
+
+  p
+    +paragraph-chivo-medium
+
+  a
+    +paragraph-chivo-small
+    margin-top: 24px
+    display: inline-block
+    color: #667991
+    border-bottom: 1px solid currentcolor
+
+    &:hover
+      color: $brand-dark-blue
+
+    &::after
+      position: relative
+      top: 4px
+      right: -4px
+      font-family: $genericons
+      font-size: 18px
+      content: ''
+
+.project-filter__button
+  +theme-button
+  position: relative
+  width: calc((100% - 32px * 3) / 4)
+
+.project-filter__select-holder
+  margin-top: 16px
+  display: flex
+
+@media (max-width: $media-tablet-portrait)
+
+  .project-filter__button
+    width: calc((100% - 23px * 1) / 2)
+
+    &:nth-child(n)
+      margin-top: 23px
+
+    &:nth-child(1),
+    &:nth-child(2)
+      margin-top: 0
+
+@media (max-width: $media-tablet-portrait)
+
+  .project-filter__button
+    width: 100%
+
+    &:nth-child(n)
+      margin-top: 8px
+
+    &:nth-child(1)
+      margin-top: 0

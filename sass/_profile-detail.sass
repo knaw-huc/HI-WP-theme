@@ -1,0 +1,182 @@
+.profile-section
+
+  & + .profile-section
+    margin-top: 64px
+
+  &--intro
+    padding-bottom: 64px
+    border-bottom: 1px dotted $brand-light-blue
+
+  &--details
+    padding-bottom: 32px
+    border-bottom: 1px dotted $brand-light-blue
+
+  .profile-button
+    cursor: default
+
+    .profile-button__portrait
+      width: 160px
+      height: 160px
+      border-radius: 160px
+
+    .profile-button__text
+      margin-left: 32px
+
+      &__name
+        margin-top: 8px
+        margin-bottom: 8px
+        font-size: 40px
+        text-decoration: none
+
+  &.text-holder
+
+    p
+
+      strong
+        +paragraph-medium
+        font-weight: bold
+
+.profile-section__heading
+  +heading-4
+  padding-bottom: 16px
+  border-bottom: 1px dotted $brand-light-blue
+
+.profile-meta
+  display: flex
+  flex-direction: column
+
+  * + &,
+  & + .profile-meta
+    margin-top: 24px
+
+  &__name
+    +tag
+    color: $brand-light-blue-alternative
+
+  &__value
+    +paragraph-large
+
+.profile-social-media
+  +remove-list-styles
+  margin-top: 3px
+  display: flex
+
+.profile-social-media__item
+  font-family: $genericons
+  font-size: 26px
+
+  & + .profile-social-media__item
+    margin-left: 8px
+
+.profile-social-media__item__button
+
+  &--instagram
+    font-size: 27px
+
+  &--website
+    position: relative
+    top: -5px
+    left: -2px
+    font-size: 37px
+
+.profile-section__project-overview
+  display: flex
+  flex-wrap: wrap
+
+  .card
+    margin-top: 32px
+    width: calc((100% - 32px) / 2)
+
+    &:nth-child(1),
+    &:nth-child(2)
+      margin-top: 23px
+
+    &:nth-child(even)
+      margin-left: 32px
+
+.publication-overview__section__heading
+  +paragraph-chivo-medium
+  margin-top: 16px
+
+.publication-overview__section__list
+  +general-list-styling
+  +paragraph-chivo-small
+  margin-top: 16px
+
+  &.is-open
+    margin-bottom: 51px
+
+    .publication-overview__section__list__item:nth-child(n)
+      display: block
+
+  &:last-child
+    margin-bottom: 51px
+
+  .publication-overview__section__list__item
+    display: none
+    padding-left: 36px
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5)
+      display: block
+
+    &::before
+      left: 11px
+
+.publication-overview__section__toggle
+  +paragraph-chivo-small
+  margin-top: 16px
+  margin-bottom: 31px
+  margin-left: 36px
+  display: inline-block
+  color: #667991
+  border-bottom: 1px solid currentColor
+
+  &:hover
+    color: $brand-dark-blue
+
+  &.is-hidden
+    display: none
+
+@media (max-width: $media-tablet-portrait)
+
+  .profile-section
+
+    & + .profile-section
+      margin-top: 32px
+
+    &--intro
+      padding-bottom: 32px
+      border-bottom: 1px dotted $brand-light-blue
+
+    &--details
+      padding-bottom: 32px
+      border-bottom: 1px dotted $brand-light-blue
+
+@media (max-width: $media-phone)
+
+  .profile-section--intro
+
+    .profile-button
+      flex-direction: column
+      align-items: center
+
+      .profile-button__text
+        margin-top: 24px
+        margin-left: 0
+        text-align: center
+
+  .profile-section__project-overview
+
+    .card
+
+      &:nth-child(n)
+        margin-top: 32px
+        margin-left: 0
+        width: 100%
+
+      &:nth-child(1)
+        margin-top: 23px
