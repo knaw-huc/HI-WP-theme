@@ -3,6 +3,31 @@
     "title": "Profiel: details",
     "fields": [
         {
+            "key": "field_6254313558d0f",
+            "label": "Afdeling kop",
+            "name": "profile_department_heading",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Onderzoeksgroep": "Onderzoeksgroep",
+                "Afdeling": "Afdeling"
+            },
+            "default_value": "Onderzoeksgroep",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_5a9fb5b6166db",
             "label": "Afdeling",
             "name": "profile_department",
@@ -182,7 +207,8 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1528980996
+    "show_in_rest": 0,
+    "modified": 1649684941
 }

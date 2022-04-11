@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2022-04-11 15:02+0200\n"
+"POT-Creation-Date: 2022-04-11 15:56+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -36,7 +36,7 @@ msgid "Sorry! De pagina die je zoekt bestaat niet of niet meer."
 msgstr ""
 "Sorry! The page you are looking for does not exist or no longer exists."
 
-#: archive-project.php:9 inc/search/project.php:3 single-profile.php:215
+#: archive-project.php:9 inc/search/project.php:3 single-profile.php:228
 msgid "Onderzoeksprojecten"
 msgstr "Research projects"
 
@@ -52,7 +52,7 @@ msgstr "Design & Development:"
 msgid "Visit Vruchtvlees"
 msgstr "Bezoek Vruchtvlees"
 
-#: footer.php:86 header.php:78
+#: footer.php:84 header.php:78
 msgid "Zoeken"
 msgstr "Search"
 
@@ -225,31 +225,35 @@ msgstr "Location"
 msgid "Aanvang/einde"
 msgstr "Start/end"
 
-#: single-profile.php:68
+#: single-profile.php:73
+msgid "Onderzoeksgroep"
+msgstr "Research group"
+
+#: single-profile.php:75
 msgid "Afdeling"
 msgstr "Department"
 
-#: single-profile.php:78
+#: single-profile.php:90
 msgid "Specialisatie"
 msgstr "Specialization"
 
-#: single-profile.php:88
+#: single-profile.php:100
 msgid "Contact"
 msgstr "Contact"
 
-#: single-profile.php:278
+#: single-profile.php:291
 msgid "Publicaties"
 msgstr "Publications"
 
-#: single-profile.php:306
+#: single-profile.php:319
 msgid "Belangrijkste publicaties"
 msgstr "Main publications"
 
-#: single-profile.php:323
+#: single-profile.php:336
 msgid "Overige publicaties"
 msgstr "Other publications"
 
-#: single-profile.php:340
+#: single-profile.php:353
 msgid "Populair-wetenschappelijke publicaties"
 msgstr "Popular scientific publications"
 

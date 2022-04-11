@@ -17,6 +17,7 @@
       <!-- end .profile-section -->
 
       <?php
+      $profileDepartmentHeading = get_field('profile_department_heading');
       $profileDepartment = get_field('profile_department');
       $profileFocus = get_field('profile_focus');
       $profileEmail = get_field('profile_email');
@@ -28,6 +29,9 @@
       $profileWebsite = get_field('profile_website');
       $profileText = get_field_without_ptags_on_images('profile_text');
 
+      if(empty($profileDepartmentHeading) && isset(get_field('pure_profile')[0])) {
+        $profileDepartmentHeading = get_field('profile_department_heading', get_field('pure_profile')[0]);
+      }
       if(empty($profileDepartment) && isset(get_field('pure_profile')[0])) {
         $profileDepartment = get_field('profile_department', get_field('pure_profile')[0]);
       }
@@ -62,10 +66,18 @@
 
       <div class="profile-section profile-section--details">
 
-        <?php if(!empty($profileDepartment)) { ?>
+        <?php if(!empty($profileDepartmentHeading) && !empty($profileDepartment)) { ?>
+
+          <?php
+          if($profileDepartmentHeading == 'Onderzoeksgroep') {
+            $profileDepartmentHeading = __('Onderzoeksgroep', 'huygens');
+          } elseif($profileDepartmentHeading == 'Afdeling') {
+            $profileDepartmentHeading = __('Afdeling', 'huygens');
+          }
+          ?>
 
           <div class="profile-meta">
-            <span class="profile-meta__name"><?php _e('Afdeling', 'huygens'); ?></span>
+            <span class="profile-meta__name"><?= $profileDepartmentHeading; ?></span>
             <span class="profile-meta__value"><?= $profileDepartment; ?></span>
           </div>
           <!-- end .profile-meta -->
@@ -198,6 +210,7 @@
       <?php
       $projects = get_posts(array(
         'post_type' => 'project',
+        'posts_per_page' => 6,
         'meta_query' => array(
           array(
             'key' => 'sidebar_related_profiles', // name of custom field

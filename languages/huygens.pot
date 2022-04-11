@@ -12,7 +12,7 @@ msgstr ""
 "<translations@example."
 "com>\n"
 "POT-Creation-Date: "
-"2022-04-11 15:02+0200\n"
+"2022-04-11 15:56+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -75,7 +75,7 @@ msgstr ""
 
 #: archive-project.php:9
 #: inc/search/project.php:3
-#: single-profile.php:215
+#: single-profile.php:228
 msgid "Onderzoeksprojecten"
 msgstr ""
 
@@ -94,7 +94,7 @@ msgstr ""
 msgid "Visit Vruchtvlees"
 msgstr ""
 
-#: footer.php:86
+#: footer.php:84
 #: header.php:78
 msgid "Zoeken"
 msgstr ""
@@ -311,32 +311,36 @@ msgstr ""
 msgid "Aanvang/einde"
 msgstr ""
 
-#: single-profile.php:68
+#: single-profile.php:73
+msgid "Onderzoeksgroep"
+msgstr ""
+
+#: single-profile.php:75
 msgid "Afdeling"
 msgstr ""
 
-#: single-profile.php:78
+#: single-profile.php:90
 msgid "Specialisatie"
 msgstr ""
 
-#: single-profile.php:88
+#: single-profile.php:100
 msgid "Contact"
 msgstr ""
 
-#: single-profile.php:278
+#: single-profile.php:291
 msgid "Publicaties"
 msgstr ""
 
-#: single-profile.php:306
+#: single-profile.php:319
 msgid ""
 "Belangrijkste publicaties"
 msgstr ""
 
-#: single-profile.php:323
+#: single-profile.php:336
 msgid "Overige publicaties"
 msgstr ""
 
-#: single-profile.php:340
+#: single-profile.php:353
 msgid ""
 "Populair-"
 "wetenschappelijke "
