@@ -12,7 +12,7 @@
 
         <?php if($i < 3) { ?>
 
-          <a href="<?= get_post_type_archive_link('project'); ?>?tag=<?= $tag->slug; ?>" class="tag-list__item"><?php echo $tag->name . ' '; ?></a>
+          <a href="<?= get_post_type_archive_link('project'); ?>?tag=<?= $tag->slug; ?>" class="tag-list__item" <?php if(isset($disableTagListTabindex) && $disableTagListTabindex) { echo ' tabindex="-1"'; } ?>><?php echo $tag->name . ' '; ?></a>
 
           <?php $i++; ?>
 

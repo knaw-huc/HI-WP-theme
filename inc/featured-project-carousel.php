@@ -28,6 +28,8 @@ $carousel_items_desktop = array();
 
 <?php endif; ?>
 
+<?php $disableTagListTabindex = true; ?>
+
 <div class="page-intro__carousel page-intro__carousel--desktop owl-carousel">
 
   <?php if($carousel_items_desktop): ?>
@@ -79,3 +81,5 @@ $carousel_items_desktop = array();
 
 </div>
 <!-- end .page-intro__carousel -->
+
+<?php $disableTagListTabindex = false; ?>

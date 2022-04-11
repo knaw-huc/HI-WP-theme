@@ -20,23 +20,47 @@ $('.js-toggle-mobile-navigation').click(function(e) {
 });
 
 // Carousel
-$('.page-intro__carousel').owlCarousel({
-  'loop': true,
-  'smartSpeed': 600,
-  'margin': 24,
-  'autoWidth': true,
-  'center': true,
-  'dots': false,
-  'nav': true,
-  'autoplay': true,
-  'autoplayTimeout': 3000,
-  'autoplayHoverPause': true,
-  'responsive': {
-    768: {
-      'margin': 32,
+if ($(window).width() < 1200) {
+
+  $('.page-intro__carousel--mobile').owlCarousel({
+    'loop': true,
+    'smartSpeed': 600,
+    'margin': 24,
+    'autoWidth': true,
+    'center': true,
+    'dots': false,
+    'nav': true,
+    'autoplay': true,
+    'autoplayTimeout': 3000,
+    'autoplayHoverPause': true,
+    'responsive': {
+      768: {
+        'margin': 32,
+      },
     },
-  },
-});
+  });
+
+} else {
+
+  $('.page-intro__carousel--desktop').owlCarousel({
+    'loop': true,
+    'smartSpeed': 600,
+    'margin': 24,
+    'autoWidth': true,
+    'center': true,
+    'dots': false,
+    'nav': true,
+    'autoplay': true,
+    'autoplayTimeout': 3000,
+    'autoplayHoverPause': true,
+    'responsive': {
+      768: {
+        'margin': 32,
+      },
+    },
+  });
+
+}
 
 // Homepage carousel
 $('.homepage-carousel').owlCarousel({

@@ -1820,8 +1820,6 @@ body {
     justify-content: space-between; }
     .page-intro__carousel__item .card + .card {
       margin-left: 32px; }
-  .page-intro__carousel .card {
-    outline: none; }
   @media (max-width: 767px) {
     .page-intro__carousel .owl-nav {
       display: none; } }
@@ -1894,11 +1892,13 @@ body {
         margin-top: 16px; } }
 @media (min-width: 1201px) {
   .page-intro__carousel--mobile {
-    display: none !important; } }
+    display: none !important;
+    visibility: hidden !important; } }
 
 @media (max-width: 1200px) {
   .page-intro__carousel--desktop {
-    display: none !important; } }
+    display: none !important;
+    visibility: hidden !important; } }
 
 @media (max-width: 767px) {
   .page-intro__carousel .card--thumbnail .card__visual {
