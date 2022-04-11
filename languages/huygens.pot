@@ -116,7 +116,7 @@ msgstr ""
 #: inc/project-filter.php:60
 #: inc/project-filter.php:62
 msgid ""
-"Circulation of Impact"
+"Impact of Circulation"
 msgstr ""
 
 #: front-page.php:29

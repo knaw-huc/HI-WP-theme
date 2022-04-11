@@ -65,8 +65,8 @@ msgid "Vernieuwing editeren"
 msgstr "Edit renewal"
 
 #: front-page.php:16 inc/project-filter.php:60 inc/project-filter.php:62
-msgid "Circulation of Impact"
-msgstr "Circulation of Impact"
+msgid "Impact of Circulation"
+msgstr "Impact of Circulation"
 
 #: front-page.php:29
 msgid "Uitgelicht"

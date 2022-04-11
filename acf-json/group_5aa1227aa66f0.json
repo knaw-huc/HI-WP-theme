@@ -157,6 +157,44 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_5d9dfbdf5eba8",
+            "label": "Kolom 3 Privacy Statement",
+            "name": "footer_column_3_logos_privacy_statement",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d9dff5a98c1f",
+            "label": "Privacy Statement tekst",
+            "name": "privacy_statement_tekst",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -176,5 +214,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1520842996
+    "modified": 1571398659
 }

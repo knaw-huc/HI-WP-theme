@@ -13,7 +13,7 @@
         <a class="project-filter__button project-filter__button--yellow" href="<?= get_post_type_archive_link('project'); ?>?thema=debatcultuur"><?php _e('Debatcultuur', 'huygens'); ?></a>
         <a class="project-filter__button project-filter__button--orange" href="<?= get_post_type_archive_link('project'); ?>?thema=bestuur-van-nederland"><?php _e('Bestuur van Nederland', 'huygens'); ?></a>
         <a class="project-filter__button project-filter__button--blue" href="<?= get_post_type_archive_link('project'); ?>?thema=vernieuwing-editeren"><?php _e('Vernieuwing editeren', 'huygens'); ?></a>
-        <a class="project-filter__button project-filter__button--green" href="<?= get_post_type_archive_link('project'); ?>?thema=circulation-of-impact"><?php _e('Circulation of Impact', 'huygens'); ?></a>
+        <a class="project-filter__button project-filter__button--green" href="<?= get_post_type_archive_link('project'); ?>?thema=impact-of-circulation"><?php _e('Impact of Circulation', 'huygens'); ?></a>
       </div>
       <!-- end .project-filter__button-holder -->
 

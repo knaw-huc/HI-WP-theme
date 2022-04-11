@@ -14,6 +14,8 @@
           <span class="homepage-carousel__item__label"><?php _e('Onderzoeksproject', 'huygens'); ?></span>
         <?php } elseif(get_post_type() == 'post') { ?>
           <span class="homepage-carousel__item__label"><?php _e('Nieuws', 'huygens'); ?></span>
+        <?php } elseif(get_post_type() == 'event') { ?>
+          <span class="homepage-carousel__item__label"><?php _e('Evenementen', 'huygens'); ?></span>
         <?php } ?>
 
         <?php include(get_template_directory() . '/inc/homepage-carousel-card.php'); ?>

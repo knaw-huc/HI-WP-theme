@@ -17,6 +17,9 @@ add_image_size('footer-logo--large', 1000, 60, false);
 add_image_size('footer-logo--regular', 500, 30, false);
 add_image_size('footer-logo--small', 250, 15, false);
 
+// Turn off Gutenberg editor
+add_filter('use_block_editor_for_post', '__return_false', 10);
+
 // Remove comments section in CMS
 function remove_menus(){
   remove_menu_page('edit-comments.php');

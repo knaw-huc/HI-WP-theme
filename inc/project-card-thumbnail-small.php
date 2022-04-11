@@ -13,7 +13,7 @@
 
         if($thema->slug == 'bestuur-van-nederland') {
           $themaColor = 'orange';
-        } else if($thema->slug == 'circulation-of-impact') {
+        } else if($thema->slug == 'impact-of-circulation') {
           $themaColor = 'green';
         } else if($thema->slug == 'debatcultuur') {
           $themaColor = 'yellow';

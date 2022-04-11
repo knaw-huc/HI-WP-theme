@@ -43,6 +43,9 @@ $('.homepage-carousel').owlCarousel({
   'items': 1,
   'loop': true,
   'dots': true,
+  'autoplay': true,
+  'autoplayTimeout': 3000,
+  'autoplayHoverPause': true,
 });
 
 // Custom select elements

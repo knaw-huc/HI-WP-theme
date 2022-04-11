@@ -1,6 +1,6 @@
 <a href="<?php the_permalink(); ?>" class="card card--default card--thumbnail">
 
-  <div class="card__visual image-filter">
+  <div class="card__visual image-filter image-filter--white">
 
     <?php echo wp_get_attachment_image(get_field('page_image')['id'], 'card-thumbnail--regular', 0, array('alt' => get_the_title())); ?>
 
@@ -13,7 +13,7 @@
 
         if($thema->slug == 'bestuur-van-nederland') {
           $themaColor = 'orange';
-        } else if($thema->slug == 'circulation-of-impact') {
+        } else if($thema->slug == 'impact-of-circulation') {
           $themaColor = 'green';
         } else if($thema->slug == 'debatcultuur') {
           $themaColor = 'yellow';

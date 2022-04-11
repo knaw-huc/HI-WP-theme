@@ -56,10 +56,10 @@ query_posts($args);
       <a class="project-filter__button project-filter__button--blue" href="?thema=vernieuwing-editeren"><?php _e('Vernieuwing editeren', 'huygens'); ?></a>
     <?php } ?>
 
-    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'circulation-of-impact') { ?>
-      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Circulation of Impact', 'huygens'); ?></a>
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'impact-of-circulation') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Impact of Circulation', 'huygens'); ?></a>
     <?php } else { ?>
-      <a class="project-filter__button project-filter__button--green" href="?thema=circulation-of-impact"><?php _e('Circulation of Impact', 'huygens'); ?></a>
+      <a class="project-filter__button project-filter__button--green" href="?thema=impact-of-circulation"><?php _e('Impact of Circulation', 'huygens'); ?></a>
     <?php } ?>
 
   </div>
