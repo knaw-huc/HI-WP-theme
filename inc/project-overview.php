@@ -30,7 +30,7 @@ if(isset($_GET['tag'])) {
 query_posts($args);
 ?>
 
-<div class="project-overview">
+<div class="project-overview" role="main">
 
   <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>

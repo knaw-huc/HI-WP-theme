@@ -13,9 +13,9 @@
 
   <div class="main main--white">
 
-    <main class="main__column profile-overview">
+    <main class="main__column profile-overview" role="main">
 
-      <h2 class="profile-overview__heading"><?php the_title(); ?></h2>
+      <h1 class="profile-overview__heading"><?php the_title(); ?></h1>
 
       <?php if( have_rows('profile_category') ): ?>
 

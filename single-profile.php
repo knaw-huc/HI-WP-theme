@@ -7,7 +7,7 @@
 
   <div class="main main--white">
 
-    <main class="main__column main__column--profile">
+    <main class="main__column main__column--profile" role="main">
 
       <div class="profile-section profile-section--intro">
 

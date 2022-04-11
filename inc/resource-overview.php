@@ -42,7 +42,7 @@ if(isset($_GET['rtag']) && strlen($selected_tags[0]) > 0) {
 query_posts($args);
 ?>
 
-<div class="resource-overview__list">
+<div class="resource-overview__list" role="main">
 
   <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>

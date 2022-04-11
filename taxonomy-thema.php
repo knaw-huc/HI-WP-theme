@@ -7,7 +7,7 @@
 
   <div class="main main--white">
 
-    <main class="main__column main__column--body text-holder">
+    <main class="main__column main__column--body text-holder" role="main">
 
       <?php $term = get_queried_object(); ?>
 

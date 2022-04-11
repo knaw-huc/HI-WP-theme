@@ -7,7 +7,7 @@
 
   <div class="main main--white">
 
-    <main class="main__column main__column--body main__column--event text-holder">
+    <main class="main__column main__column--body main__column--event text-holder" role="main">
 
       <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>

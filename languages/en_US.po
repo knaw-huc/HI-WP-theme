@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2018-09-23 18:31+0200\n"
+"POT-Creation-Date: 2022-04-11 15:02+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
 "_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:4 search.php:42
@@ -48,7 +48,11 @@ msgstr "Resources"
 msgid "Design & Development:"
 msgstr "Design & Development:"
 
-#: footer.php:83 header.php:78
+#: footer.php:16
+msgid "Visit Vruchtvlees"
+msgstr "Bezoek Vruchtvlees"
+
+#: footer.php:86 header.php:78
 msgid "Zoeken"
 msgstr "Search"
 
@@ -80,6 +84,10 @@ msgstr "View all resources"
 msgid "Schrijf je in voor de nieuwsbrief"
 msgstr "Sign up for our newsletter"
 
+#: front-page.php:79
+msgid "Abonneren"
+msgstr "Sign up"
+
 #: header.php:89
 msgid "Typ hier uw zoekterm en druk op enter"
 msgstr "Type your search term and press enter"
@@ -95,6 +103,10 @@ msgstr "Research project"
 #: inc/homepage-carousel.php:16 inc/search/post.php:3 index.php:5
 msgid "Nieuws"
 msgstr "News"
+
+#: inc/homepage-carousel.php:18 inc/search/event.php:3
+msgid "Evenementen"
+msgstr "Events"
 
 #: inc/homepage-resource-card.php:29 inc/resource-card.php:29
 #: inc/sidebar/resource-button.php:8
@@ -134,10 +146,6 @@ msgstr "Clear selection"
 #: inc/resource-filter.php:164 inc/sidebar/resource-meta.php:44
 msgid "Onderwerp"
 msgstr "Subject"
-
-#: inc/search/event.php:3
-msgid "Evenementen"
-msgstr "Events"
 
 #: inc/search/page.php:3
 msgid "Overigen"
@@ -248,6 +256,3 @@ msgstr "Popular scientific publications"
 #: single.php:45
 msgid "Gerelateerde nieuwsberichten"
 msgstr "Related news"
-
-#~ msgid "Abonneren"
-#~ msgstr "Sign up"

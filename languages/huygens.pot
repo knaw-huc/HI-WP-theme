@@ -7,16 +7,17 @@ msgstr ""
 "Project-Id-Version: "
 "Blank WordPress Pot "
 "v1.0.0\n"
-"POT-Creation-Date: "
-"2018-09-23 18:31+0200\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Your "
-"Name <you@example.com>\n"
-"Language-Team: \n"
 "Report-Msgid-Bugs-To: "
 "Translator Name "
 "<translations@example."
 "com>\n"
+"POT-Creation-Date: "
+"2022-04-11 15:02+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Your "
+"Name <you@example.com>\n"
+"Language-Team: \n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/"
 "plain; charset=UTF-8\n"
@@ -43,14 +44,16 @@ msgstr ""
 "__ngettext_noop:1,2;_c,"
 "_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"Language: en_US\n"
 "X-Generator: Poedit "
-"2.1.1\n"
+"3.0.1\n"
 "X-Poedit-"
 "SearchPath-0: .\n"
 "X-Poedit-"
 "SearchPathExcluded-0: "
 "functions.php\n"
+"X-Poedit-"
+"SearchPathExcluded-1: "
+"temp\n"
 
 #: 404.php:4 search.php:42
 msgid ""
@@ -87,7 +90,11 @@ msgid ""
 "Design & Development:"
 msgstr ""
 
-#: footer.php:83
+#: footer.php:16
+msgid "Visit Vruchtvlees"
+msgstr ""
+
+#: footer.php:86
 #: header.php:78
 msgid "Zoeken"
 msgstr ""
@@ -134,6 +141,10 @@ msgid ""
 "nieuwsbrief"
 msgstr ""
 
+#: front-page.php:79
+msgid "Abonneren"
+msgstr ""
+
 #: header.php:89
 msgid ""
 "Typ hier uw zoekterm en "
@@ -154,6 +165,11 @@ msgstr ""
 msgid "Nieuws"
 msgstr ""
 
+#: inc/homepage-carousel.php:18
+#: inc/search/event.php:3
+msgid "Evenementen"
+msgstr ""
+
 #: inc/homepage-resource-card.php:29
 #: inc/resource-card.php:29
 #: inc/sidebar/resource-button.php:8
@@ -167,8 +183,7 @@ msgid ""
 msgstr ""
 
 #: inc/project-filter.php:76
-msgid ""
-"Meer over dit thema"
+msgid "Meer over dit thema"
 msgstr ""
 
 #: inc/project-filter.php:101
@@ -201,10 +216,6 @@ msgstr ""
 #: inc/resource-filter.php:164
 #: inc/sidebar/resource-meta.php:44
 msgid "Onderwerp"
-msgstr ""
-
-#: inc/search/event.php:3
-msgid "Evenementen"
 msgstr ""
 
 #: inc/search/page.php:3
@@ -318,13 +329,11 @@ msgstr ""
 
 #: single-profile.php:306
 msgid ""
-"Belangrijkste "
-"publicaties"
+"Belangrijkste publicaties"
 msgstr ""
 
 #: single-profile.php:323
-msgid ""
-"Overige publicaties"
+msgid "Overige publicaties"
 msgstr ""
 
 #: single-profile.php:340

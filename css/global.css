@@ -1042,8 +1042,10 @@ img {
       @media (max-width: 767px) {
         .text-holder p strong {
           font-size: 20px; } }
-    .text-holder p a:hover {
+    .text-holder p a {
       text-decoration: underline; }
+      .text-holder p a:hover {
+        text-decoration: none; }
     .text-holder p.meta {
       font-family: "Chivo", sans-serif;
       font-size: 14px;
@@ -1091,8 +1093,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start; }
-  .tag-list a:hover {
-    color: #002048; }
 
 .tag-list__item {
   font-family: "Chivo", sans-serif;
@@ -1103,7 +1103,7 @@ img {
   display: flex;
   align-items: center;
   height: 20px;
-  color: #9AA9B5; }
+  color: #002048; }
   .tag-list__item::before {
     position: relative;
     top: -1px;
@@ -1363,9 +1363,8 @@ img {
     align-items: center;
     font-size: 32px;
     color: #FFF;
-    background: #CED8DA; }
+    background: #002048; }
     .card__button:hover {
-      background: #002048;
       transition: color .3s ease, background .3s ease; }
       .card__button:hover .card__button__text {
         display: block; }
@@ -1931,10 +1930,10 @@ body {
     letter-spacing: -0.0142857143em;
     margin-left: 23px;
     display: inline-block;
-    color: #667991;
     border-bottom: 1px solid currentColor; }
     .homepage-heading__button:hover {
-      color: #002048; }
+      color: #002048;
+      border-bottom-color: transparent; }
     .homepage-heading__button::after {
       position: relative;
       top: 4px;

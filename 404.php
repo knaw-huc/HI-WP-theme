@@ -7,7 +7,7 @@
 
   <div class="main main--white">
 
-    <main class="main__column main__column--body text-holder">
+    <main class="main__column main__column--body text-holder" role="main">
 
       <h1><?php _e('Deze pagina is niet gevonden', 'huygens'); ?></h1>
       <h5><?php _e('Sorry! De pagina die je zoekt bestaat niet of niet meer.', 'huygens'); ?></h5>

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-  <div class="homepage-intro">
+  <div class="homepage-intro" role="navigation">
 
     <div class="homepage-intro__text">
       <?php the_field('intro_text'); ?>
@@ -23,10 +23,10 @@
   </div>
   <!-- end .homepage-intro -->
 
-  <div class="main">
+  <div class="main" role="main">
 
     <div class="homepage-heading">
-      <h4 class="homepage-heading__text"><?php _e('Uitgelicht', 'huygens'); ?></h4>
+      <h1 class="homepage-heading__text"><?php _e('Uitgelicht', 'huygens'); ?></h1>
     </div>
     <!-- end .homepage-heading -->
 

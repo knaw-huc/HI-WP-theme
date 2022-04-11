@@ -40,13 +40,13 @@
 
     <div class="page-heading">
       <a class="page-heading__button" href="<?php bloginfo('url'); ?>"><?php _e('Terug naar de homepage', 'huygens'); ?></a>
-      <h2>Resultaten voor ‘<?php echo get_search_query(); ?>’</h2>
+      <h1>Resultaten voor ‘<?php echo get_search_query(); ?>’</h1>
     </div>
     <!-- end .page-heading -->
 
     <div class="main main--white">
 
-      <main class="main__column main__column--body text-holder">
+      <main class="main__column main__column--body text-holder" role="main">
         <p><?php _e('Niets gevonden.', 'huygens'); ?></p>
       </main>
       <!-- end .main__column -->

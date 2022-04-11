@@ -32,9 +32,17 @@ if(empty($profileProfileFunction) && isset(get_field('pure_profile')[0])) {
   <!-- end .profile-button__portrait -->
 
   <div class="profile-button__text">
+
     <span class="profile-button__text__title"><?= $profileProfileTitle; ?></span>
-    <span class="profile-button__text__name"><?= $profileTitle; ?></span>
+
+    <?php if(is_singular('profile')) : ?>
+      <h1 class="profile-button__text__name"><?= $profileTitle; ?></h1>
+    <?php else : ?>
+      <span class="profile-button__text__name"><?= $profileTitle; ?></span>
+    <?php endif; ?>
+
     <span class="profile-button__text__function"><?= $profileProfileFunction; ?></span>
+
   </div>
   <!-- end .profile-button__text -->
 

@@ -8,13 +8,13 @@
 
   <div class="page-heading">
     <a class="page-heading__button" href="<?= get_the_permalink(get_page_by_path('informatie')); ?>"><?php _e('Terug naar het overzicht', 'huygens'); ?></a>
-    <h2><?php the_title(); ?></h2>
+    <h1><?php the_title(); ?></h1>
   </div>
   <!-- end .page-heading -->
 
   <div class="main">
 
-    <div class="event-overview">
+    <div class="event-overview" role="main">
 
       <?php
       $today = date('Ymd');
