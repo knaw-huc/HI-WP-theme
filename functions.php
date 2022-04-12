@@ -323,15 +323,6 @@ function new_excerpt_ellipsis( $more ) {
 }
 add_filter('excerpt_more', 'new_excerpt_ellipsis');
 
-// Lazyload
-function prepare_for_lazyload($image) {
-  $image = str_replace('class="', 'class="lazyload ', $image);
-  $image = str_replace(' src="', ' data-src="', $image);
-  $image = str_replace(' srcset="', ' data-srcset="', $image);
-
-  return $image;
-}
-
 // Get linked elements (provided by multilingualpress)
 function get_linked_elements() {
   // ask mlp

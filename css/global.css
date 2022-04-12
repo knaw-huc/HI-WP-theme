@@ -958,12 +958,6 @@ h1, h2, h3, h4, h5, h6, p, blockquote, dl, dd {
 img {
   max-width: 100%;
   height: auto; }
-  img.lazyload {
-    transition: opacity 0.8s ease; }
-    img.lazyload[src=''], img.lazyload:not([src]) {
-      opacity: 0; }
-    img.lazyload[src] {
-      opacity: 1; }
 
 .image-filter {
   position: relative;

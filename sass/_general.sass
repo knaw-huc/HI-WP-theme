@@ -24,16 +24,6 @@ img
   max-width: 100%
   height: auto
 
-  &.lazyload
-    transition: opacity 0.8s ease
-
-    &[src=''],
-    &:not([src])
-      opacity: 0
-
-    &[src]
-      opacity: 1
-
 .image-filter
   position: relative
   background: rgba($brand-dark-blue, .5)

@@ -1,6 +1,3 @@
-// Lazyload
-lazyload();
-
 // Navigation
 $('.js-open-search').click(function(e) {
   $('.header').toggleClass('header--search');
