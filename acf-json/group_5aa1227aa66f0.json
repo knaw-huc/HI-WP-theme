@@ -112,7 +112,7 @@
             },
             "collapsed": "",
             "min": 0,
-            "max": 2,
+            "max": 0,
             "layout": "table",
             "button_label": "Regel toevoegen",
             "sub_fields": [
@@ -234,5 +234,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1649681795
+    "modified": 1649683998
 }

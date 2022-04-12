@@ -1731,23 +1731,19 @@ body {
   padding: 0;
   list-style: none;
   margin-top: 1.7857142857em;
-  display: flex;
-  align-items: center; }
-
-.logo-holder__item + .logo-holder__item {
-  margin-left: 34px; }
-
-.logo-holder__item a,
-.logo-holder__item img {
-  display: block; }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 34px;
+  grid-row-gap: 34px; }
+  .logo-holder a,
+  .logo-holder img {
+    display: block; }
 
 @media (max-width: 1100px) {
   .logo-holder {
-    flex-direction: column;
-    align-items: flex-start; }
-  .logo-holder__item + .logo-holder__item {
-    margin-top: 25px;
-    margin-left: 0; } }
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px; } }
 
 @media (max-width: 1023px) {
   .main--white + .footer {
