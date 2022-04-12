@@ -24,6 +24,7 @@
     <aside class="main__column main__column--aside sidebar">
       <?php include('inc/sidebar/themas.php'); ?>
       <?php include('inc/sidebar/tags.php'); ?>
+      <?php include('inc/sidebar/resources.php'); ?>
       <?php include('inc/sidebar/related-profiles.php'); ?>
       <?php include('inc/sidebar/links.php'); ?>
       <?php include('inc/sidebar/publications.php'); ?>

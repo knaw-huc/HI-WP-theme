@@ -1,6 +1,6 @@
 <div class="sidebar__item">
 
-  <h4 class="sidebar__item__heading"><?php _e('Gerelateerde thema’s', 'huygens'); ?></h4>
+  <h4 class="sidebar__item__heading"><?php _e('Onderzoeksgroepen', 'huygens'); ?></h4>
 
   <div class="sidebar__item__body">
 
