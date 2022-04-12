@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2022-04-12 10:58+0200\n"
+"POT-Creation-Date: 2022-04-12 17:06+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -36,11 +36,12 @@ msgid "Sorry! De pagina die je zoekt bestaat niet of niet meer."
 msgstr ""
 "Sorry! The page you are looking for does not exist or no longer exists."
 
-#: archive-project.php:9 inc/search/project.php:3 single-profile.php:228
+#: archive-project.php:9 inc/search/project.php:3 single-profile.php:241
 msgid "Onderzoeksprojecten"
 msgstr "Research projects"
 
 #: archive-resource.php:9 front-page.php:45 inc/search/resource.php:3
+#: inc/sidebar/resources.php:7
 msgid "Resources"
 msgstr "Resources"
 
@@ -113,6 +114,10 @@ msgstr "Events"
 msgid "Bekijk resource"
 msgstr "Open resource"
 
+#: inc/profile-button.php:66
+msgid "bij"
+msgstr "at"
+
 #: inc/project-filter.php:37
 msgid "Filter onderzoeksprojecten"
 msgstr "Filter research projects"
@@ -171,11 +176,11 @@ msgstr "Related publications"
 msgid "Gerelateerde evenementen"
 msgstr "Related events"
 
-#: inc/sidebar/related-posts.php:7
+#: inc/sidebar/related-posts.php:13
 msgid "Gerelateerd nieuws"
 msgstr "Related news"
 
-#: inc/sidebar/related-profiles.php:7
+#: inc/sidebar/related-profiles.php:13
 msgid "Gerelateerde medewerkers"
 msgstr "Related employees"
 
@@ -200,7 +205,7 @@ msgid "Onderzoeksgroepen"
 msgstr "Research groups"
 
 #: index.php:4 page-events.php:10 page-profile-overview.php:10
-#: page-sidebar.php:11 page.php:5 single-event.php:4 single-profile.php:4
+#: page-sidebar.php:11 page.php:5 single-event.php:4 single-profile.php:17
 #: single-project.php:4 single-resource.php:4 single.php:4 taxonomy-thema.php:4
 msgid "Terug naar het overzicht"
 msgstr "Back to the overview"
@@ -225,35 +230,35 @@ msgstr "Location"
 msgid "Aanvang/einde"
 msgstr "Start/end"
 
-#: single-profile.php:73
+#: single-profile.php:86
 msgid "Onderzoeksgroep"
 msgstr "Research group"
 
-#: single-profile.php:75
+#: single-profile.php:88
 msgid "Afdeling"
 msgstr "Department"
 
-#: single-profile.php:90
+#: single-profile.php:103
 msgid "Specialisatie"
 msgstr "Specialization"
 
-#: single-profile.php:100
+#: single-profile.php:113
 msgid "Contact"
 msgstr "Contact"
 
-#: single-profile.php:291
+#: single-profile.php:304
 msgid "Publicaties"
 msgstr "Publications"
 
-#: single-profile.php:319
+#: single-profile.php:332
 msgid "Belangrijkste publicaties"
 msgstr "Main publications"
 
-#: single-profile.php:336
+#: single-profile.php:349
 msgid "Overige publicaties"
 msgstr "Other publications"
 
-#: single-profile.php:353
+#: single-profile.php:366
 msgid "Populair-wetenschappelijke publicaties"
 msgstr "Popular scientific publications"
 

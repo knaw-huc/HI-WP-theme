@@ -2849,8 +2849,9 @@ body {
 
 .profile-button {
   display: flex; }
-  .profile-button:hover .profile-button__text__name {
-    text-decoration: underline; }
+
+a.profile-button:hover .profile-button__text__name {
+  text-decoration: underline; }
 
 .profile-button__portrait {
   width: 80px;

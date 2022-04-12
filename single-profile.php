@@ -1,3 +1,16 @@
+<?php
+ob_start();
+
+$profileType = get_field('profile_type');
+
+if(empty($profileType) && isset(get_field('pure_profile')[0])) {
+  $profileType = get_field('profile_type', get_field('pure_profile')[0]);
+}
+
+if($profileType == 'external') {
+  header('Location: ' . get_bloginfo('url'));
+}
+?>
 <?php get_header(); ?>
 
   <div class="page-heading">

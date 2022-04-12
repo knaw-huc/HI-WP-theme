@@ -3,6 +3,30 @@
     "title": "Profiel informatie",
     "fields": [
         {
+            "key": "field_62558e836a989",
+            "label": "Profile type",
+            "name": "profile_type",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "internal": "Intern",
+                "external": "Extern"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "internal",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_5a9f9d37c27c7",
             "label": "Titel",
             "name": "profile_title",
@@ -39,6 +63,57 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_62558efd41c85",
+            "label": "Werkgever",
+            "name": "profile_employer",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62558e836a989",
+                        "operator": "==",
+                        "value": "external"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62558f1341c86",
+            "label": "URL",
+            "name": "profile_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62558e836a989",
+                        "operator": "==",
+                        "value": "external"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         },
         {
             "key": "field_5a9f9e14e49de",
@@ -89,7 +164,8 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1528980991
+    "show_in_rest": 0,
+    "modified": 1649774367
 }

@@ -12,7 +12,7 @@ msgstr ""
 "<translations@example."
 "com>\n"
 "POT-Creation-Date: "
-"2022-04-12 10:58+0200\n"
+"2022-04-12 17:06+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -75,13 +75,14 @@ msgstr ""
 
 #: archive-project.php:9
 #: inc/search/project.php:3
-#: single-profile.php:228
+#: single-profile.php:241
 msgid "Onderzoeksprojecten"
 msgstr ""
 
 #: archive-resource.php:9
 #: front-page.php:45
 #: inc/search/resource.php:3
+#: inc/sidebar/resources.php:7
 msgid "Resources"
 msgstr ""
 
@@ -176,6 +177,10 @@ msgstr ""
 msgid "Bekijk resource"
 msgstr ""
 
+#: inc/profile-button.php:66
+msgid "bij"
+msgstr ""
+
 #: inc/project-filter.php:37
 msgid ""
 "Filter "
@@ -244,11 +249,11 @@ msgid ""
 "Gerelateerde evenementen"
 msgstr ""
 
-#: inc/sidebar/related-posts.php:7
+#: inc/sidebar/related-posts.php:13
 msgid "Gerelateerd nieuws"
 msgstr ""
 
-#: inc/sidebar/related-profiles.php:7
+#: inc/sidebar/related-profiles.php:13
 msgid ""
 "Gerelateerde medewerkers"
 msgstr ""
@@ -281,7 +286,7 @@ msgstr ""
 #: page-sidebar.php:11
 #: page.php:5
 #: single-event.php:4
-#: single-profile.php:4
+#: single-profile.php:17
 #: single-project.php:4
 #: single-resource.php:4
 #: single.php:4
@@ -310,36 +315,36 @@ msgstr ""
 msgid "Aanvang/einde"
 msgstr ""
 
-#: single-profile.php:73
+#: single-profile.php:86
 msgid "Onderzoeksgroep"
 msgstr ""
 
-#: single-profile.php:75
+#: single-profile.php:88
 msgid "Afdeling"
 msgstr ""
 
-#: single-profile.php:90
+#: single-profile.php:103
 msgid "Specialisatie"
 msgstr ""
 
-#: single-profile.php:100
+#: single-profile.php:113
 msgid "Contact"
 msgstr ""
 
-#: single-profile.php:291
+#: single-profile.php:304
 msgid "Publicaties"
 msgstr ""
 
-#: single-profile.php:319
+#: single-profile.php:332
 msgid ""
 "Belangrijkste publicaties"
 msgstr ""
 
-#: single-profile.php:336
+#: single-profile.php:349
 msgid "Overige publicaties"
 msgstr ""
 
-#: single-profile.php:353
+#: single-profile.php:366
 msgid ""
 "Populair-"
 "wetenschappelijke "
