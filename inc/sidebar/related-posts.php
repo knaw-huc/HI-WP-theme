@@ -1,4 +1,10 @@
-<?php $posts = get_field('sidebar_related_posts'); ?>
+<?php
+if(isset($term)) {
+  $posts = get_field('sidebar_related_posts', $term);
+} else {
+  $posts = get_field('sidebar_related_posts');
+}
+?>
 
 <?php if($posts): ?>
 

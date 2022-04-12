@@ -18,10 +18,45 @@
     </main>
     <!-- end .main__column -->
 
-    <aside class="main__column main__column--aside main__column--empty sidebar">
-
+    <aside class="main__column main__column--aside sidebar">
+      <?php include('inc/sidebar/related-posts.php'); ?>
+      <?php include('inc/sidebar/related-profiles.php'); ?>
     </aside>
     <!-- end .main__column -->
+
+  </div>
+  <!-- end .main -->
+
+  <div class="main">
+
+    <?php
+    $args = array(
+      'post_type' => 'project',
+      'posts_per_page' => '-1',
+    );
+
+    // Button: Thema
+    $args['tax_query'][] = array(
+      'taxonomy' => 'thema',
+      'field' => 'name',
+      'terms' => single_term_title('', false)
+    );
+
+    query_posts($args);
+    ?>
+
+    <div class="project-overview">
+
+      <?php if ( have_posts() ) : ?>
+        <?php while ( have_posts() ) : the_post(); ?>
+
+          <?php include(get_template_directory() . '/inc/project-card.php'); ?>
+
+        <?php endwhile; ?>
+      <?php endif; ?>
+
+    </div>
+    <!-- end .project-overview -->
 
   </div>
   <!-- end .main -->
