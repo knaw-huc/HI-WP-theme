@@ -17,6 +17,10 @@
         $themaColor = 'yellow';
       } else if($thema->slug == 'vernieuwing-editeren') {
         $themaColor = 'blue';
+      } else if($thema->slug == 'thema-5') {
+        $themaColor = 'purple';
+      } else if($thema->slug == 'databeheer') {
+        $themaColor = 'brown';
       }
 
       echo '<a href="' . get_term_link($thema) .'" class="sidebar__item__button sidebar__item__button--' . $themaColor . '">' . $thema->name . '</a>';

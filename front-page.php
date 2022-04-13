@@ -14,6 +14,8 @@
         <a class="project-filter__button project-filter__button--orange" href="<?= get_post_type_archive_link('project'); ?>?thema=bestuur-van-nederland"><?php _e('Bestuur van Nederland', 'huygens'); ?></a>
         <a class="project-filter__button project-filter__button--blue" href="<?= get_post_type_archive_link('project'); ?>?thema=vernieuwing-editeren"><?php _e('Vernieuwing editeren', 'huygens'); ?></a>
         <a class="project-filter__button project-filter__button--green" href="<?= get_post_type_archive_link('project'); ?>?thema=impact-of-circulation"><?php _e('Impact of Circulation', 'huygens'); ?></a>
+        <a class="project-filter__button project-filter__button--purple" href="<?= get_post_type_archive_link('project'); ?>?thema=thema-5"><?php _e('Thema 5', 'huygens'); ?></a>
+        <a class="project-filter__button project-filter__button--brown" href="<?= get_post_type_archive_link('project'); ?>?thema=databeheer"><?php _e('Databeheer', 'huygens'); ?></a>
       </div>
       <!-- end .project-filter__button-holder -->
 

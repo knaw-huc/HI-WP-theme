@@ -19,6 +19,10 @@
           $themaColor = 'yellow';
         } else if($thema->slug == 'vernieuwing-editeren') {
           $themaColor = 'blue';
+        } else if($thema->slug == 'thema-5') {
+          $themaColor = 'purple';
+        } else if($thema->slug == 'databeheer') {
+          $themaColor = 'brown';
         }
 
         echo '<div class="card__visual__markers__item card__visual__markers__item--' . $themaColor . '"></div>';

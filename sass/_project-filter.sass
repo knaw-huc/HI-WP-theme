@@ -40,7 +40,15 @@
 .project-filter__button
   +theme-button
   position: relative
-  width: calc((100% - 32px * 3) / 4)
+  width: calc((100% - 23px * 2) / 3)
+
+  &:nth-child(n)
+    margin-top: 23px
+
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3)
+    margin-top: 0
 
 .project-filter__select-holder
   margin-top: 16px

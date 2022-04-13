@@ -62,6 +62,18 @@ query_posts($args);
       <a class="project-filter__button project-filter__button--green" href="?thema=impact-of-circulation"><?php _e('Impact of Circulation', 'huygens'); ?></a>
     <?php } ?>
 
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'thema-5') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Thema 5', 'huygens'); ?></a>
+    <?php } else { ?>
+      <a class="project-filter__button project-filter__button--purple" href="?thema=thema-5"><?php _e('Thema 5', 'huygens'); ?></a>
+    <?php } ?>
+
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'databeheer') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Databeheer', 'huygens'); ?></a>
+    <?php } else { ?>
+      <a class="project-filter__button project-filter__button--brown" href="?thema=databeheer"><?php _e('Databeheer', 'huygens'); ?></a>
+    <?php } ?>
+
   </div>
   <!-- end .project-filter__button-holder -->
 
