@@ -983,40 +983,44 @@ img {
 .text-holder {
   color: #002048; }
   .text-holder h1 {
-    font-family: "Chivo", sans-serif;
-    font-size: 48px;
+    font-family: "Asul", sans-serif;
+    font-size: 32px;
     font-weight: 400;
     line-height: 1;
     font-family: "Asul", sans-serif; }
-    @media (max-width: 767px) {
-      .text-holder h1 {
-        font-size: 32px; } }
-  .text-holder h2 {
+  .text-holder h1:first-child,
+  .text-holder .meta:first-child + h1 {
     font-family: "Chivo", sans-serif;
     font-size: 48px;
     font-weight: 400;
     line-height: 1; }
     @media (max-width: 767px) {
-      .text-holder h2 {
+      .text-holder h1:first-child,
+      .text-holder .meta:first-child + h1 {
         font-size: 32px; } }
-  .text-holder h3 {
+  .text-holder h2 {
     font-family: "Asul", sans-serif;
     font-size: 32px;
     font-weight: 400;
     line-height: 1; }
-  .text-holder h4 {
+  .text-holder h3 {
     font-family: "Chivo", sans-serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 1; }
-  .text-holder h5 {
+  .text-holder h4 {
     font-family: "Asul", sans-serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 1; }
     @media (max-width: 767px) {
-      .text-holder h5 {
+      .text-holder h4 {
         font-size: 20px; } }
+  .text-holder h5 {
+    font-family: "Asul", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.1; }
   .text-holder h6 {
     font-family: "Asul", sans-serif;
     font-size: 20px;
