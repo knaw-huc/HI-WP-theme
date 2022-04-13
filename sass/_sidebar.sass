@@ -8,6 +8,11 @@
   padding-bottom: 16px
   border-bottom: 1px dotted $brand-light-blue
 
+  &.hide-on-desktop
+
+    @media (min-width: $media-tablet-portrait + 1px)
+      display: none
+
 .sidebar__item__text-holder
   +paragraph-small
 

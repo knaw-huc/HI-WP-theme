@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2022-04-12 17:06+0200\n"
+"POT-Creation-Date: 2022-04-13 11:06+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "Onderzoeksprojecten"
 msgstr "Research projects"
 
-#: archive-resource.php:9 front-page.php:45 inc/search/resource.php:3
+#: archive-resource.php:9 front-page.php:47 inc/search/resource.php:3
 #: inc/sidebar/resources.php:7
 msgid "Resources"
 msgstr "Resources"
@@ -73,19 +73,27 @@ msgstr "Edit renewal"
 msgid "Impact of Circulation"
 msgstr "Impact of Circulation"
 
-#: front-page.php:29
+#: front-page.php:17 inc/project-filter.php:66 inc/project-filter.php:68
+msgid "Thema 5"
+msgstr ""
+
+#: front-page.php:18 inc/project-filter.php:72 inc/project-filter.php:74
+msgid "Databeheer"
+msgstr ""
+
+#: front-page.php:31
 msgid "Uitgelicht"
 msgstr "Featured"
 
-#: front-page.php:46
+#: front-page.php:48
 msgid "Bekijk alle resources"
 msgstr "View all resources"
 
-#: front-page.php:72
+#: front-page.php:74
 msgid "Schrijf je in voor de nieuwsbrief"
 msgstr "Sign up for our newsletter"
 
-#: front-page.php:79
+#: front-page.php:81
 msgid "Abonneren"
 msgstr "Sign up"
 
@@ -122,16 +130,16 @@ msgstr "at"
 msgid "Filter onderzoeksprojecten"
 msgstr "Filter research projects"
 
-#: inc/project-filter.php:76
+#: inc/project-filter.php:88
 msgid "Meer over dit thema"
 msgstr "More on this theme"
 
-#: inc/project-filter.php:101 inc/project-filter.php:103
+#: inc/project-filter.php:113 inc/project-filter.php:115
 #: inc/resource-filter.php:119 inc/sidebar/resource-meta.php:31
 msgid "Periode"
 msgstr "Period"
 
-#: inc/project-filter.php:140 inc/project-filter.php:142
+#: inc/project-filter.php:152 inc/project-filter.php:154
 msgid "Tag"
 msgstr "Tag"
 
@@ -167,6 +175,14 @@ msgstr "Contact person"
 #: inc/sidebar/links.php:5
 msgid "Links"
 msgstr "Links"
+
+#: inc/sidebar/project-website.php:5
+msgid "Project"
+msgstr "Project"
+
+#: inc/sidebar/project-website.php:10
+msgid "Bezoek projectwebsite"
+msgstr "Visit project website"
 
 #: inc/sidebar/publications.php:7
 msgid "Gerelateerde publicaties"
@@ -261,6 +277,26 @@ msgstr "Other publications"
 #: single-profile.php:366
 msgid "Populair-wetenschappelijke publicaties"
 msgstr "Popular scientific publications"
+
+#: single-project.php:24
+msgid "Looptijd"
+msgstr "Duration"
+
+#: single-project.php:33
+msgid "Subsidieverstrekker"
+msgstr "Subsidy provider"
+
+#: single-project.php:42
+msgid "Subsidieomvang"
+msgstr "Subsidy size"
+
+#: single-project.php:51
+msgid "Opvallend"
+msgstr "Remarkable"
+
+#: single-project.php:60
+msgid "Valorisatie"
+msgstr "Valorisation"
 
 #: single.php:45
 msgid "Gerelateerde nieuwsberichten"

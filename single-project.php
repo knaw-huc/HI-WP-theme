@@ -13,6 +13,7 @@
         <?php while ( have_posts() ) : the_post(); ?>
 
           <h1><?php the_title(); ?></h1>
+          <?php include('inc/project-details.php'); ?>
           <?php the_content(); ?>
 
         <?php endwhile; ?>
@@ -22,6 +23,7 @@
     <!-- end .main__column -->
 
     <aside class="main__column main__column--aside sidebar">
+      <?php include('inc/sidebar/project-website.php'); ?>
       <?php include('inc/sidebar/themas.php'); ?>
       <?php include('inc/sidebar/tags.php'); ?>
       <?php include('inc/sidebar/resources.php'); ?>

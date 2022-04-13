@@ -74,6 +74,26 @@
   ul + p
     margin-top: em(27px, 18px)
 
+  table
+    +paragraph-medium
+    border-collapse: collapse
+    border-top: 1px dotted $brand-light-blue
+
+    strong
+      +heading-5
+      line-height: unitless(32px, 24px)
+
+    tr
+      border-bottom: 1px dotted $brand-light-blue
+
+    td
+      padding-top: 12px
+      padding-bottom: 12px
+      vertical-align: top
+
+      & + td
+        padding-left: 16px
+
 @media (max-width: $media-phone)
 
   .text-holder

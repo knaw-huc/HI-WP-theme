@@ -1078,6 +1078,30 @@ img {
   .text-holder ul + ul,
   .text-holder ul + p {
     margin-top: 1.5em; }
+  .text-holder table {
+    font-family: "CharisSIL", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    border-collapse: collapse;
+    border-top: 1px dotted #CED8DA; }
+    .text-holder table strong {
+      font-family: "Asul", sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1;
+      line-height: 1.3333333333; }
+      @media (max-width: 767px) {
+        .text-holder table strong {
+          font-size: 20px; } }
+    .text-holder table tr {
+      border-bottom: 1px dotted #CED8DA; }
+    .text-holder table td {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      vertical-align: top; }
+      .text-holder table td + td {
+        padding-left: 16px; }
 
 @media (max-width: 767px) {
   .text-holder > * + * {
@@ -2193,7 +2217,9 @@ body {
   line-height: 1;
   padding-bottom: 16px;
   border-bottom: 1px dotted #CED8DA; }
-
+  @media (min-width: 1024px) {
+    .sidebar__item__heading.hide-on-desktop {
+      display: none; } }
 .sidebar__item__text-holder {
   font-family: "CharisSIL", serif;
   font-size: 14px;

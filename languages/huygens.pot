@@ -12,7 +12,7 @@ msgstr ""
 "<translations@example."
 "com>\n"
 "POT-Creation-Date: "
-"2022-04-12 17:06+0200\n"
+"2022-04-13 11:06+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -80,7 +80,7 @@ msgid "Onderzoeksprojecten"
 msgstr ""
 
 #: archive-resource.php:9
-#: front-page.php:45
+#: front-page.php:47
 #: inc/search/resource.php:3
 #: inc/sidebar/resources.php:7
 msgid "Resources"
@@ -127,22 +127,34 @@ msgid ""
 "Impact of Circulation"
 msgstr ""
 
-#: front-page.php:29
+#: front-page.php:17
+#: inc/project-filter.php:66
+#: inc/project-filter.php:68
+msgid "Thema 5"
+msgstr ""
+
+#: front-page.php:18
+#: inc/project-filter.php:72
+#: inc/project-filter.php:74
+msgid "Databeheer"
+msgstr ""
+
+#: front-page.php:31
 msgid "Uitgelicht"
 msgstr ""
 
-#: front-page.php:46
+#: front-page.php:48
 msgid ""
 "Bekijk alle resources"
 msgstr ""
 
-#: front-page.php:72
+#: front-page.php:74
 msgid ""
 "Schrijf je in voor de "
 "nieuwsbrief"
 msgstr ""
 
-#: front-page.php:79
+#: front-page.php:81
 msgid "Abonneren"
 msgstr ""
 
@@ -187,19 +199,19 @@ msgid ""
 "onderzoeksprojecten"
 msgstr ""
 
-#: inc/project-filter.php:76
+#: inc/project-filter.php:88
 msgid "Meer over dit thema"
 msgstr ""
 
-#: inc/project-filter.php:101
-#: inc/project-filter.php:103
+#: inc/project-filter.php:113
+#: inc/project-filter.php:115
 #: inc/resource-filter.php:119
 #: inc/sidebar/resource-meta.php:31
 msgid "Periode"
 msgstr ""
 
-#: inc/project-filter.php:140
-#: inc/project-filter.php:142
+#: inc/project-filter.php:152
+#: inc/project-filter.php:154
 msgid "Tag"
 msgstr ""
 
@@ -237,6 +249,15 @@ msgstr ""
 
 #: inc/sidebar/links.php:5
 msgid "Links"
+msgstr ""
+
+#: inc/sidebar/project-website.php:5
+msgid "Project"
+msgstr ""
+
+#: inc/sidebar/project-website.php:10
+msgid ""
+"Bezoek projectwebsite"
 msgstr ""
 
 #: inc/sidebar/publications.php:7
@@ -349,6 +370,26 @@ msgid ""
 "Populair-"
 "wetenschappelijke "
 "publicaties"
+msgstr ""
+
+#: single-project.php:24
+msgid "Looptijd"
+msgstr ""
+
+#: single-project.php:33
+msgid "Subsidieverstrekker"
+msgstr ""
+
+#: single-project.php:42
+msgid "Subsidieomvang"
+msgstr ""
+
+#: single-project.php:51
+msgid "Opvallend"
+msgstr ""
+
+#: single-project.php:60
+msgid "Valorisatie"
 msgstr ""
 
 #: single.php:45
