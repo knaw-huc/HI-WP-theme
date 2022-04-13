@@ -1,5 +1,12 @@
 {
   "files.exclude": {
     "temp": true
-  }
+  },
+  "todo-tree.filtering.excludeGlobs": [
+    "**/.vscode/**",
+    "**/*.min.*",
+    "**/*.map",
+    "**/vendor/**",
+    "**/temp/*"
+  ]
 }
