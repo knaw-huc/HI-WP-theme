@@ -38,40 +38,40 @@ query_posts($args);
 
   <div class="project-filter__button-holder">
 
-    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'debatcultuur') { ?>
-      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Debatcultuur', 'huygens'); ?></a>
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'politieke-cultuur-en-geschiedenis') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Politieke Cultuur en Geschiedenis', 'huygens'); ?></a>
     <?php } else { ?>
-      <a class="project-filter__button project-filter__button--yellow" href="?thema=debatcultuur"><?php _e('Debatcultuur', 'huygens'); ?></a>
+      <a class="project-filter__button project-filter__button--yellow" href="?thema=politieke-cultuur-en-geschiedenis"><?php _e('Politieke Cultuur en Geschiedenis', 'huygens'); ?></a>
     <?php } ?>
 
-    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'bestuur-van-nederland') { ?>
-      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Bestuur van Nederland', 'huygens'); ?></a>
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'kennis-en-kunstpraktijken') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Kennis- en kunstpraktijken', 'huygens'); ?></a>
     <?php } else { ?>
-      <a class="project-filter__button project-filter__button--orange" href="?thema=bestuur-van-nederland"><?php _e('Bestuur van Nederland', 'huygens'); ?></a>
+      <a class="project-filter__button project-filter__button--orange" href="?thema=kennis-en-kunstpraktijken"><?php _e('Kennis- en kunstpraktijken', 'huygens'); ?></a>
     <?php } ?>
 
-    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'vernieuwing-editeren') { ?>
-      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Vernieuwing editeren', 'huygens'); ?></a>
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'liveslab') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('LivesLab', 'huygens'); ?></a>
     <?php } else { ?>
-      <a class="project-filter__button project-filter__button--blue" href="?thema=vernieuwing-editeren"><?php _e('Vernieuwing editeren', 'huygens'); ?></a>
+      <a class="project-filter__button project-filter__button--blue" href="?thema=liveslab"><?php _e('LivesLab', 'huygens'); ?></a>
     <?php } ?>
 
-    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'impact-of-circulation') { ?>
-      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Impact of Circulation', 'huygens'); ?></a>
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'digitale-edities') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Digitale Edities', 'huygens'); ?></a>
     <?php } else { ?>
-      <a class="project-filter__button project-filter__button--green" href="?thema=impact-of-circulation"><?php _e('Impact of Circulation', 'huygens'); ?></a>
+      <a class="project-filter__button project-filter__button--green" href="?thema=digitale-edities"><?php _e('Digitale Edities', 'huygens'); ?></a>
     <?php } ?>
 
-    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'thema-5') { ?>
-      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Thema 5', 'huygens'); ?></a>
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'computationele-literatuurwetenschap') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Computationele literatuurwetenschap', 'huygens'); ?></a>
     <?php } else { ?>
-      <a class="project-filter__button project-filter__button--purple" href="?thema=thema-5"><?php _e('Thema 5', 'huygens'); ?></a>
+      <a class="project-filter__button project-filter__button--purple" href="?thema=computationele-literatuurwetenschap"><?php _e('Computationele literatuurwetenschap', 'huygens'); ?></a>
     <?php } ?>
 
-    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'databeheer') { ?>
-      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Databeheer', 'huygens'); ?></a>
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'datamanagement') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('Datamanagement', 'huygens'); ?></a>
     <?php } else { ?>
-      <a class="project-filter__button project-filter__button--brown" href="?thema=databeheer"><?php _e('Databeheer', 'huygens'); ?></a>
+      <a class="project-filter__button project-filter__button--brown" href="?thema=datamanagement"><?php _e('Datamanagement', 'huygens'); ?></a>
     <?php } ?>
 
   </div>

@@ -10,12 +10,31 @@
     <div class="project-filter">
 
       <div class="project-filter__button-holder">
-        <a class="project-filter__button project-filter__button--yellow" href="<?= get_post_type_archive_link('project'); ?>?thema=debatcultuur"><?php _e('Debatcultuur', 'huygens'); ?></a>
-        <a class="project-filter__button project-filter__button--orange" href="<?= get_post_type_archive_link('project'); ?>?thema=bestuur-van-nederland"><?php _e('Bestuur van Nederland', 'huygens'); ?></a>
-        <a class="project-filter__button project-filter__button--blue" href="<?= get_post_type_archive_link('project'); ?>?thema=vernieuwing-editeren"><?php _e('Vernieuwing editeren', 'huygens'); ?></a>
-        <a class="project-filter__button project-filter__button--green" href="<?= get_post_type_archive_link('project'); ?>?thema=impact-of-circulation"><?php _e('Impact of Circulation', 'huygens'); ?></a>
-        <a class="project-filter__button project-filter__button--purple" href="<?= get_post_type_archive_link('project'); ?>?thema=thema-5"><?php _e('Thema 5', 'huygens'); ?></a>
-        <a class="project-filter__button project-filter__button--brown" href="<?= get_post_type_archive_link('project'); ?>?thema=databeheer"><?php _e('Databeheer', 'huygens'); ?></a>
+
+        <a class="project-filter__button project-filter__button--yellow" href="<?= get_post_type_archive_link('project'); ?>?thema=politieke-cultuur-en-geschiedenis">
+          <?php _e('Politieke Cultuur en Geschiedenis', 'huygens'); ?>
+        </a>
+
+        <a class="project-filter__button project-filter__button--orange" href="<?= get_post_type_archive_link('project'); ?>?thema=kennis-en-kunstpraktijken">
+          <?php _e('Kennis- en kunstpraktijken', 'huygens'); ?>
+        </a>
+
+        <a class="project-filter__button project-filter__button--blue" href="<?= get_post_type_archive_link('project'); ?>?thema=liveslab">
+          <?php _e('LivesLab', 'huygens'); ?>
+        </a>
+
+        <a class="project-filter__button project-filter__button--green" href="<?= get_post_type_archive_link('project'); ?>?thema=digitale-edities">
+          <?php _e('Digitale Edities', 'huygens'); ?>
+        </a>
+
+        <a class="project-filter__button project-filter__button--purple" href="<?= get_post_type_archive_link('project'); ?>?thema=computationele-literatuurwetenschap">
+          <?php _e('Computationele literatuurwetenschap', 'huygens'); ?>
+        </a>
+
+        <a class="project-filter__button project-filter__button--brown" href="<?= get_post_type_archive_link('project'); ?>?thema=datamanagement">
+          <?php _e('Datamanagement', 'huygens'); ?>
+        </a>
+
       </div>
       <!-- end .project-filter__button-holder -->
 

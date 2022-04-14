@@ -1335,7 +1335,7 @@ img {
         .card__visual .card__visual__markers__item--yellow {
           background: #FFD54F; }
         .card__visual .card__visual__markers__item--purple {
-          background: #A54C94; }
+          background: #5B67C6; }
         .card__visual .card__visual__markers__item--brown {
           background: #A5894C; }
     .card__visual img {
@@ -1999,7 +1999,7 @@ body {
 
 @media (max-width: 1023px) {
   .homepage-intro .project-filter {
-    max-width: 256px; } }
+    max-width: 340px; } }
 
 .homepage-carousel {
   display: block;
@@ -2318,7 +2318,7 @@ body {
   .sidebar__item__button--green {
     background: #4CA55D; }
   .sidebar__item__button--purple {
-    background: #A54C94; }
+    background: #5B67C6; }
   .sidebar__item__button--brown {
     background: #A5894C; }
   .sidebar__item__button--active {
@@ -2334,7 +2334,9 @@ body {
       transition: color .3s ease; }
     .sidebar__item__button--active:hover::after {
       color: #FFF; }
-
+  @media (min-width: 1024px) {
+    .sidebar__item__button {
+      font-size: 12px; } }
 .sidebar__item__body .card {
   margin-top: 23px; }
 
@@ -2455,7 +2457,7 @@ body {
   .project-filter__button--green {
     background: #4CA55D; }
   .project-filter__button--purple {
-    background: #A54C94; }
+    background: #5B67C6; }
   .project-filter__button--brown {
     background: #A5894C; }
   .project-filter__button--active {

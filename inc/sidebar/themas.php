@@ -8,23 +8,8 @@
     $themas = wp_get_post_terms($post->ID, 'thema');
 
     foreach($themas as $thema) {
-
-      if($thema->slug == 'bestuur-van-nederland') {
-        $themaColor = 'orange';
-      } else if($thema->slug == 'impact-of-circulation') {
-        $themaColor = 'green';
-      } else if($thema->slug == 'debatcultuur') {
-        $themaColor = 'yellow';
-      } else if($thema->slug == 'vernieuwing-editeren') {
-        $themaColor = 'blue';
-      } else if($thema->slug == 'thema-5') {
-        $themaColor = 'purple';
-      } else if($thema->slug == 'databeheer') {
-        $themaColor = 'brown';
-      }
-
+      include(get_template_directory() . '/inc/get-theme-color.php');
       echo '<a href="' . get_term_link($thema) .'" class="sidebar__item__button sidebar__item__button--' . $themaColor . '">' . $thema->name . '</a>';
-
     }
     ?>
 

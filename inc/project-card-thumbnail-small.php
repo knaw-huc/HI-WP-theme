@@ -2,7 +2,9 @@
 
   <div class="card__visual image-filter">
 
-    <?php echo wp_get_attachment_image(get_field('page_image')['id'], 'card--regular', 0, array('alt' => get_the_title())); ?>
+    <?php if ( get_field('page_image') ) : ?>
+      <?php echo wp_get_attachment_image(get_field('page_image')['id'], 'card--regular', 0, array('alt' => get_the_title())); ?>
+    <?php endif; ?>
 
     <div class="card__visual__markers">
 
@@ -10,23 +12,8 @@
       $themas = wp_get_post_terms($post->ID, 'thema');
 
       foreach($themas as $thema) {
-
-        if($thema->slug == 'bestuur-van-nederland') {
-          $themaColor = 'orange';
-        } else if($thema->slug == 'impact-of-circulation') {
-          $themaColor = 'green';
-        } else if($thema->slug == 'debatcultuur') {
-          $themaColor = 'yellow';
-        } else if($thema->slug == 'vernieuwing-editeren') {
-          $themaColor = 'blue';
-        } else if($thema->slug == 'thema-5') {
-          $themaColor = 'purple';
-        } else if($thema->slug == 'databeheer') {
-          $themaColor = 'brown';
-        }
-
+        include(get_template_directory() . '/inc/get-theme-color.php');
         echo '<div class="card__visual__markers__item card__visual__markers__item--' . $themaColor . '"></div>';
-
       }
       ?>
 

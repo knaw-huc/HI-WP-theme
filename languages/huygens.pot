@@ -12,7 +12,7 @@ msgstr ""
 "<translations@example."
 "com>\n"
 "POT-Creation-Date: "
-"2022-04-13 11:06+0200\n"
+"2022-04-14 10:41+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -80,7 +80,7 @@ msgid "Onderzoeksprojecten"
 msgstr ""
 
 #: archive-resource.php:9
-#: front-page.php:47
+#: front-page.php:48
 #: inc/search/resource.php:3
 #: inc/sidebar/resources.php:7
 msgid "Resources"
@@ -100,61 +100,64 @@ msgstr ""
 msgid "Zoeken"
 msgstr ""
 
-#: front-page.php:13
+#: front-page.php:14
 #: inc/project-filter.php:42
 #: inc/project-filter.php:44
-msgid "Debatcultuur"
-msgstr ""
-
-#: front-page.php:14
-#: inc/project-filter.php:48
-#: inc/project-filter.php:50
 msgid ""
-"Bestuur van Nederland"
+"Politieke Cultuur en "
+"Geschiedenis"
 msgstr ""
 
 #: front-page.php:15
-#: inc/project-filter.php:54
-#: inc/project-filter.php:56
+#: inc/project-filter.php:48
+#: inc/project-filter.php:50
 msgid ""
-"Vernieuwing editeren"
+"Kennis- en "
+"kunstpraktijken"
 msgstr ""
 
 #: front-page.php:16
-#: inc/project-filter.php:60
-#: inc/project-filter.php:62
-msgid ""
-"Impact of Circulation"
+#: inc/project-filter.php:54
+#: inc/project-filter.php:56
+msgid "LivesLab"
 msgstr ""
 
 #: front-page.php:17
-#: inc/project-filter.php:66
-#: inc/project-filter.php:68
-msgid "Thema 5"
+#: inc/project-filter.php:60
+#: inc/project-filter.php:62
+msgid "Digitale Edities"
 msgstr ""
 
 #: front-page.php:18
-#: inc/project-filter.php:72
-#: inc/project-filter.php:74
-msgid "Databeheer"
+#: inc/project-filter.php:66
+#: inc/project-filter.php:68
+msgid ""
+"Computationele "
+"literatuurwetenschap"
 msgstr ""
 
-#: front-page.php:31
+#: front-page.php:19
+#: inc/project-filter.php:72
+#: inc/project-filter.php:74
+msgid "Datamanagement"
+msgstr ""
+
+#: front-page.php:32
 msgid "Uitgelicht"
 msgstr ""
 
-#: front-page.php:48
+#: front-page.php:49
 msgid ""
 "Bekijk alle resources"
 msgstr ""
 
-#: front-page.php:74
+#: front-page.php:75
 msgid ""
 "Schrijf je in voor de "
 "nieuwsbrief"
 msgstr ""
 
-#: front-page.php:81
+#: front-page.php:82
 msgid "Abonneren"
 msgstr ""
 
@@ -191,6 +194,26 @@ msgstr ""
 
 #: inc/profile-button.php:66
 msgid "bij"
+msgstr ""
+
+#: inc/project-details.php:8
+msgid "Looptijd"
+msgstr ""
+
+#: inc/project-details.php:17
+msgid "Subsidieverstrekker"
+msgstr ""
+
+#: inc/project-details.php:26
+msgid "Subsidieomvang"
+msgstr ""
+
+#: inc/project-details.php:35
+msgid "Opvallend"
+msgstr ""
+
+#: inc/project-details.php:44
+msgid "Valorisatie"
 msgstr ""
 
 #: inc/project-filter.php:37
@@ -370,26 +393,6 @@ msgid ""
 "Populair-"
 "wetenschappelijke "
 "publicaties"
-msgstr ""
-
-#: single-project.php:24
-msgid "Looptijd"
-msgstr ""
-
-#: single-project.php:33
-msgid "Subsidieverstrekker"
-msgstr ""
-
-#: single-project.php:42
-msgid "Subsidieomvang"
-msgstr ""
-
-#: single-project.php:51
-msgid "Opvallend"
-msgstr ""
-
-#: single-project.php:60
-msgid "Valorisatie"
 msgstr ""
 
 #: single.php:45
