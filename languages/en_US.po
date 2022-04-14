@@ -71,11 +71,11 @@ msgstr "LivesLab"
 
 #: front-page.php:27 inc/project-filter.php:60 inc/project-filter.php:62
 msgid "Digitale Edities"
-msgstr "Digital Editions"
+msgstr "Innovating Digital Editions"
 
 #: front-page.php:31 inc/project-filter.php:66 inc/project-filter.php:68
 msgid "Computationele literatuurwetenschap"
-msgstr "Computational literary studies"
+msgstr "Computational Literary Studies"
 
 #: front-page.php:35 inc/project-filter.php:72 inc/project-filter.php:74
 msgid "Datamanagement"
