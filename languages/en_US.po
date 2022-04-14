@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2022-04-14 10:41+0200\n"
+"POT-Creation-Date: 2022-04-14 10:55+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "Onderzoeksprojecten"
 msgstr "Research projects"
 
-#: archive-resource.php:9 front-page.php:48 inc/search/resource.php:3
+#: archive-resource.php:9 front-page.php:66 inc/search/resource.php:3
 #: inc/sidebar/resources.php:7
 msgid "Resources"
 msgstr "Resources"
@@ -57,43 +57,43 @@ msgstr "Bezoek Vruchtvlees"
 msgid "Zoeken"
 msgstr "Search"
 
-#: front-page.php:14 inc/project-filter.php:42 inc/project-filter.php:44
+#: front-page.php:15 inc/project-filter.php:42 inc/project-filter.php:44
 msgid "Politieke Cultuur en Geschiedenis"
 msgstr "Political Culture and History"
 
-#: front-page.php:15 inc/project-filter.php:48 inc/project-filter.php:50
+#: front-page.php:19 inc/project-filter.php:48 inc/project-filter.php:50
 msgid "Kennis- en kunstpraktijken"
 msgstr "Knowledge and Art Practices"
 
-#: front-page.php:16 inc/project-filter.php:54 inc/project-filter.php:56
+#: front-page.php:23 inc/project-filter.php:54 inc/project-filter.php:56
 msgid "LivesLab"
 msgstr "LivesLab"
 
-#: front-page.php:17 inc/project-filter.php:60 inc/project-filter.php:62
+#: front-page.php:27 inc/project-filter.php:60 inc/project-filter.php:62
 msgid "Digitale Edities"
 msgstr "Digital Editions"
 
-#: front-page.php:18 inc/project-filter.php:66 inc/project-filter.php:68
+#: front-page.php:31 inc/project-filter.php:66 inc/project-filter.php:68
 msgid "Computationele literatuurwetenschap"
 msgstr "Computational literary studies"
 
-#: front-page.php:19 inc/project-filter.php:72 inc/project-filter.php:74
+#: front-page.php:35 inc/project-filter.php:72 inc/project-filter.php:74
 msgid "Datamanagement"
 msgstr "Data Management"
 
-#: front-page.php:32
+#: front-page.php:50
 msgid "Uitgelicht"
 msgstr "Featured"
 
-#: front-page.php:49
+#: front-page.php:67
 msgid "Bekijk alle resources"
 msgstr "View all resources"
 
-#: front-page.php:75
+#: front-page.php:93
 msgid "Schrijf je in voor de nieuwsbrief"
 msgstr "Sign up for our newsletter"
 
-#: front-page.php:82
+#: front-page.php:100
 msgid "Abonneren"
 msgstr "Sign up"
 
@@ -237,8 +237,8 @@ msgid "Tags"
 msgstr "Tags"
 
 #: inc/sidebar/themas.php:3
-msgid "Onderzoeksgroepen"
-msgstr "Research groups"
+msgid "Afdelingen"
+msgstr "Departments"
 
 #: index.php:4 page-events.php:10 page-profile-overview.php:10
 #: page-sidebar.php:11 page.php:5 single-event.php:4 single-profile.php:17
@@ -301,6 +301,9 @@ msgstr "Popular scientific publications"
 #: single.php:45
 msgid "Gerelateerde nieuwsberichten"
 msgstr "Related news"
+
+#~ msgid "Onderzoeksgroepen"
+#~ msgstr "Research groups"
 
 #~ msgid "Debatcultuur"
 #~ msgstr "Debate culture"

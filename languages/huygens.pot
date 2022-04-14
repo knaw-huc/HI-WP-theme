@@ -12,7 +12,7 @@ msgstr ""
 "<translations@example."
 "com>\n"
 "POT-Creation-Date: "
-"2022-04-14 10:41+0200\n"
+"2022-04-14 10:55+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -80,7 +80,7 @@ msgid "Onderzoeksprojecten"
 msgstr ""
 
 #: archive-resource.php:9
-#: front-page.php:48
+#: front-page.php:66
 #: inc/search/resource.php:3
 #: inc/sidebar/resources.php:7
 msgid "Resources"
@@ -100,7 +100,7 @@ msgstr ""
 msgid "Zoeken"
 msgstr ""
 
-#: front-page.php:14
+#: front-page.php:15
 #: inc/project-filter.php:42
 #: inc/project-filter.php:44
 msgid ""
@@ -108,7 +108,7 @@ msgid ""
 "Geschiedenis"
 msgstr ""
 
-#: front-page.php:15
+#: front-page.php:19
 #: inc/project-filter.php:48
 #: inc/project-filter.php:50
 msgid ""
@@ -116,19 +116,19 @@ msgid ""
 "kunstpraktijken"
 msgstr ""
 
-#: front-page.php:16
+#: front-page.php:23
 #: inc/project-filter.php:54
 #: inc/project-filter.php:56
 msgid "LivesLab"
 msgstr ""
 
-#: front-page.php:17
+#: front-page.php:27
 #: inc/project-filter.php:60
 #: inc/project-filter.php:62
 msgid "Digitale Edities"
 msgstr ""
 
-#: front-page.php:18
+#: front-page.php:31
 #: inc/project-filter.php:66
 #: inc/project-filter.php:68
 msgid ""
@@ -136,28 +136,28 @@ msgid ""
 "literatuurwetenschap"
 msgstr ""
 
-#: front-page.php:19
+#: front-page.php:35
 #: inc/project-filter.php:72
 #: inc/project-filter.php:74
 msgid "Datamanagement"
 msgstr ""
 
-#: front-page.php:32
+#: front-page.php:50
 msgid "Uitgelicht"
 msgstr ""
 
-#: front-page.php:49
+#: front-page.php:67
 msgid ""
 "Bekijk alle resources"
 msgstr ""
 
-#: front-page.php:75
+#: front-page.php:93
 msgid ""
 "Schrijf je in voor de "
 "nieuwsbrief"
 msgstr ""
 
-#: front-page.php:82
+#: front-page.php:100
 msgid "Abonneren"
 msgstr ""
 
@@ -321,7 +321,7 @@ msgid "Tags"
 msgstr ""
 
 #: inc/sidebar/themas.php:3
-msgid "Onderzoeksgroepen"
+msgid "Afdelingen"
 msgstr ""
 
 #: index.php:4
