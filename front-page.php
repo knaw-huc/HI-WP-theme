@@ -3,7 +3,7 @@
   <div class="homepage-intro" role="navigation">
 
     <div class="homepage-intro__logo">
-      <img src="<?php bloginfo('template_url'); ?>/img/logo-homepage-intro.png" alt="Huygens ING">
+      <img src="<?php bloginfo('template_url'); ?>/img/logo-homepage-intro.svg" alt="Huygens ING">
     </div>
     <!-- end .homepage-intro__logo -->
 
