@@ -1630,11 +1630,11 @@ body {
   .logo {
     width: 77px;
     height: 64px;
-    background: #000; }
+    background: #FFF; }
     .logo__desktop {
       display: none; }
     .logo__mobile {
-      margin: 8px;
+      margin: 8px auto;
       display: block;
       width: 69px; }
   .header__bar {
@@ -1968,6 +1968,12 @@ body {
   margin-bottom: 32px;
   padding: 28px 0 44px;
   background: #002048; }
+  .homepage-intro__logo {
+    margin-bottom: 24px; }
+    .homepage-intro__logo img {
+      display: block;
+      margin: 0 auto;
+      width: 200px; }
   .homepage-intro__text {
     margin-right: auto;
     margin-left: auto;

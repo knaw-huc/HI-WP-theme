@@ -2,6 +2,11 @@
 
   <div class="homepage-intro" role="navigation">
 
+    <div class="homepage-intro__logo">
+      <img src="<?php bloginfo('template_url'); ?>/img/logo-homepage-intro.png" alt="Huygens ING">
+    </div>
+    <!-- end .homepage-intro__logo -->
+
     <div class="homepage-intro__text">
       <?php the_field('intro_text'); ?>
     </div>

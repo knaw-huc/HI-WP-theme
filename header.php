@@ -57,8 +57,8 @@
     <header class="header">
 
       <a class="logo" href="<?php bloginfo('url'); ?>">
-        <img class="logo__desktop" src="<?php bloginfo('template_url'); ?>/img/logo-blue.svg" alt="Huygens ING">
-        <img class="logo__mobile" src="<?php bloginfo('template_url'); ?>/img/logo-white.svg" alt="Huygens ING">
+        <img class="logo__desktop" src="<?php bloginfo('template_url'); ?>/img/logo-desktop.png" alt="Huygens ING">
+        <img class="logo__mobile" src="<?php bloginfo('template_url'); ?>/img/logo-mobile.png" alt="Huygens ING">
       </a>
       <!-- end .logo -->
 
