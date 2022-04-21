@@ -206,10 +206,73 @@ if($profileType == 'external') {
       </div>
       <!-- end .profile-section -->
 
-      <?php if(!empty($profileText)) { ?>
+      <?php
+      $profilePublications1 = get_field('profile_publications_1');
+
+      if(empty($profilePublications1) && isset(get_field('pure_profile')[0])) {
+        $profilePublications1 = get_field('profile_publications_1', get_field('pure_profile')[0]);
+      }
+      ?>
+
+      <?php if(!empty($profileText) || is_array($profilePublications1)) { ?>
 
         <div class="profile-section text-holder">
+
           <?= $profileText; ?>
+
+          <?php if ( is_array($profilePublications1) ) : ?>
+
+            <h5><?php _e('Belangrijkste publicaties', 'huygens'); ?></h5>
+
+            <?php $posts = $profilePublications1; ?>
+
+            <?php
+            if(empty($profilePublications1)) {
+
+              $args = array(
+                'post_type' => 'publication_pure',
+                'posts_per_page' => '-1',
+                'meta_key' => 'profile_uuid',
+                'meta_value' => get_field('uuid', get_field('pure_profile')[0]->ID),
+                'meta_compare' => 'LIKE'
+              );
+
+              $posts = get_posts($args);
+
+            }
+            ?>
+
+            <?php if($posts): ?>
+
+              <ul>
+
+                <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+
+                  <?php setup_postdata($post); ?>
+
+                  <?php
+                  $publicationTitle = get_the_title();
+                  $publicationURL = get_field('publication_url');
+
+                  if(empty($publicationURL) && isset(get_field('pure_publication')[0])) {
+                    $publicationURL = get_field('publication_url', get_field('pure_publication')[0]);
+                  }
+                  ?>
+
+                  <li>
+                    <a href="<?= $publicationURL; ?>" target="_blank"><?= $publicationTitle; ?></a>
+                  </li>
+
+                <?php endforeach; ?>
+
+                <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+
+              </ul>
+
+            <?php endif; ?>
+
+          <?php endif; ?>
+
         </div>
         <!-- end .profile-section -->
 
@@ -277,105 +340,6 @@ if($profileType == 'external') {
 
           </div>
           <!-- end .profile-section__project-overview -->
-
-        </div>
-        <!-- end .profile-section -->
-
-      <?php endif; ?>
-
-      <?php
-      $profilePublications1 = get_field('profile_publications_1');
-      $profilePublications2 = get_field('profile_publications_2');
-      $profilePublications3 = get_field('profile_publications_3');
-
-      if(empty($profilePublications1) && isset(get_field('pure_profile')[0])) {
-        $profilePublications1 = get_field('profile_publications_1', get_field('pure_profile')[0]);
-      }
-      if(empty($profilePublications2) && isset(get_field('pure_profile')[0])) {
-        $profilePublications2 = get_field('profile_publications_2', get_field('pure_profile')[0]);
-      }
-      if(empty($profilePublications3) && isset(get_field('pure_profile')[0])) {
-        $profilePublications3 = get_field('profile_publications_3', get_field('pure_profile')[0]);
-      }
-      ?>
-
-      <?php if ( is_array($profilePublications1) || is_array($profilePublications2) || is_array($profilePublications3) ) : ?>
-
-        <div class="profile-section">
-
-          <h4 class="profile-section__heading"><?php _e('Publicaties', 'huygens'); ?></h4>
-
-          <div class="publication-overview">
-
-            <?php $posts = $profilePublications1; ?>
-
-            <?php
-            if(empty($profilePublications1) && empty($profilePublications2) && empty($profilePublications3)) {
-
-              $args = array(
-                'post_type' => 'publication_pure',
-                'posts_per_page' => '-1',
-                'meta_key' => 'profile_uuid',
-                'meta_value' => get_field('uuid', get_field('pure_profile')[0]->ID),
-                'meta_compare' => 'LIKE'
-              );
-
-              $posts = get_posts($args);
-
-            }
-            ?>
-
-            <?php if($posts): ?>
-
-              <?php $i = 0; ?>
-
-              <div class="publication-overview__section">
-
-                <h5 class="publication-overview__section__heading"><?php _e('Belangrijkste publicaties', 'huygens'); ?></h5>
-
-                <?php include(get_template_directory() . '/inc/publication-overview-section-list.php'); ?>
-
-              </div>
-              <!-- end .publication-overview__section -->
-
-            <?php endif; ?>
-
-            <?php $posts = $profilePublications2; ?>
-
-            <?php if($posts): ?>
-
-              <?php $i = 0; ?>
-
-              <div class="publication-overview__section">
-
-                <h5 class="publication-overview__section__heading"><?php _e('Overige publicaties', 'huygens'); ?></h5>
-
-                <?php include(get_template_directory() . '/inc/publication-overview-section-list.php'); ?>
-
-              </div>
-              <!-- end .publication-overview__section -->
-
-            <?php endif; ?>
-
-            <?php $posts = $profilePublications3; ?>
-
-            <?php if($posts): ?>
-
-              <?php $i = 0; ?>
-
-              <div class="publication-overview__section">
-
-                <h5 class="publication-overview__section__heading"><?php _e('Populair-wetenschappelijke publicaties', 'huygens'); ?></h5>
-
-                <?php include(get_template_directory() . '/inc/publication-overview-section-list.php'); ?>
-
-              </div>
-              <!-- end .publication-overview__section -->
-
-            <?php endif; ?>
-
-          </div>
-          <!-- end .publication-overview -->
 
         </div>
         <!-- end .profile-section -->

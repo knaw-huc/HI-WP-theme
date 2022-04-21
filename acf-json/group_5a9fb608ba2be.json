@@ -30,58 +30,74 @@
             "return_format": "object"
         },
         {
-            "key": "field_5a9fc9e800f6f",
-            "label": "Overige publicaties",
-            "name": "profile_publications_2",
-            "type": "relationship",
+            "key": "field_5a9fc9e800f70",
+            "label": "Titel",
+            "name": "title",
+            "type": "textarea",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "publication",
-                "publication_pure"
-            ],
-            "taxonomy": [],
-            "filters": [
-                "search",
-                "post_type"
-            ],
-            "elements": "",
-            "min": "",
-            "max": "",
-            "return_format": "object"
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
         },
         {
-            "key": "field_5a9fca0c00f72",
-            "label": "Populair-wetenschappelijke publicaties",
-            "name": "profile_publications_3",
-            "type": "relationship",
+            "key": "field_5a9fca0c00f73",
+            "label": "Titel",
+            "name": "title",
+            "type": "textarea",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "publication",
-                "publication_pure"
-            ],
-            "taxonomy": [],
-            "filters": [
-                "search",
-                "post_type"
-            ],
-            "elements": "",
-            "min": "",
-            "max": "",
-            "return_format": "object"
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5a9fc9e800f71",
+            "label": "URL",
+            "name": "url",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5a9fca0c00f74",
+            "label": "URL",
+            "name": "url",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -108,7 +124,8 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1529759463
+    "show_in_rest": 0,
+    "modified": 1650548010
 }

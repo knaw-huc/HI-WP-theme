@@ -36,6 +36,9 @@
   h5
     +heading-6
 
+    & + ul
+      margin-top: 16px
+
   h6
     +heading-6
 
@@ -80,24 +83,36 @@
     margin-top: em(27px, 18px)
 
   table
-    +paragraph-medium
+    +paragraph-chivo-medium
     border-collapse: collapse
-    border-top: 1px dotted $brand-light-blue
+    background: $brand-light-blue
+
+    @media (max-width: $media-phone)
+      font-size: 14px
 
     strong
       +heading-5
       line-height: unitless(32px, 24px)
 
     tr
-      border-bottom: 1px dotted $brand-light-blue
+      &:first-child
+
+        td
+          padding-top: 24px
+
+      &:last-child
+
+        td
+          padding-bottom: 24px
 
     td
       padding-top: 12px
       padding-bottom: 12px
       vertical-align: top
+      padding-left: 24px
 
-      & + td
-        padding-left: 16px
+      &:last-child
+        padding-right: 24px
 
 @media (max-width: $media-phone)
 

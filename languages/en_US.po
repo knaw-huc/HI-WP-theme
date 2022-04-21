@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2022-04-14 10:55+0200\n"
+"POT-Creation-Date: 2022-04-21 15:35+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -36,11 +36,11 @@ msgid "Sorry! De pagina die je zoekt bestaat niet of niet meer."
 msgstr ""
 "Sorry! The page you are looking for does not exist or no longer exists."
 
-#: archive-project.php:9 inc/search/project.php:3 single-profile.php:241
+#: archive-project.php:9 inc/search/project.php:3 single-profile.php:304
 msgid "Onderzoeksprojecten"
 msgstr "Research projects"
 
-#: archive-resource.php:9 front-page.php:66 inc/search/resource.php:3
+#: archive-resource.php:9 front-page.php:71 inc/search/resource.php:3
 #: inc/sidebar/resources.php:7
 msgid "Resources"
 msgstr "Resources"
@@ -50,50 +50,50 @@ msgid "Design & Development:"
 msgstr "Design & Development:"
 
 #: footer.php:16
-msgid "Visit Vruchtvlees"
-msgstr "Bezoek Vruchtvlees"
+msgid "Bezoek Vruchtvlees"
+msgstr "Visit Vruchtvlees"
 
 #: footer.php:84 header.php:78
 msgid "Zoeken"
 msgstr "Search"
 
-#: front-page.php:15 inc/project-filter.php:42 inc/project-filter.php:44
+#: front-page.php:20 inc/project-filter.php:42 inc/project-filter.php:44
 msgid "Politieke Cultuur en Geschiedenis"
 msgstr "Political Culture and History"
 
-#: front-page.php:19 inc/project-filter.php:48 inc/project-filter.php:50
+#: front-page.php:24 inc/project-filter.php:48 inc/project-filter.php:50
 msgid "Kennis- en kunstpraktijken"
 msgstr "Knowledge and Art Practices"
 
-#: front-page.php:23 inc/project-filter.php:54 inc/project-filter.php:56
+#: front-page.php:28 inc/project-filter.php:54 inc/project-filter.php:56
 msgid "LivesLab"
 msgstr "LivesLab"
 
-#: front-page.php:27 inc/project-filter.php:60 inc/project-filter.php:62
+#: front-page.php:32 inc/project-filter.php:60 inc/project-filter.php:62
 msgid "Digitale Edities"
 msgstr "Innovating Digital Editions"
 
-#: front-page.php:31 inc/project-filter.php:66 inc/project-filter.php:68
+#: front-page.php:36 inc/project-filter.php:66 inc/project-filter.php:68
 msgid "Computationele literatuurwetenschap"
 msgstr "Computational Literary Studies"
 
-#: front-page.php:35 inc/project-filter.php:72 inc/project-filter.php:74
+#: front-page.php:40 inc/project-filter.php:72 inc/project-filter.php:74
 msgid "Datamanagement"
 msgstr "Data Management"
 
-#: front-page.php:50
+#: front-page.php:55
 msgid "Uitgelicht"
 msgstr "Featured"
 
-#: front-page.php:67
+#: front-page.php:72
 msgid "Bekijk alle resources"
 msgstr "View all resources"
 
-#: front-page.php:93
+#: front-page.php:98
 msgid "Schrijf je in voor de nieuwsbrief"
 msgstr "Sign up for our newsletter"
 
-#: front-page.php:100
+#: front-page.php:105
 msgid "Abonneren"
 msgstr "Sign up"
 
@@ -162,10 +162,6 @@ msgstr "Period"
 #: inc/project-filter.php:152 inc/project-filter.php:154
 msgid "Tag"
 msgstr "Tag"
-
-#: inc/publication-overview-section-list.php:29
-msgid "Bekijk meer"
-msgstr "View more"
 
 #: inc/resource-filter.php:74 inc/sidebar/resource-meta.php:18
 msgid "Type"
@@ -276,31 +272,32 @@ msgstr "Department"
 
 #: single-profile.php:103
 msgid "Specialisatie"
-msgstr "Specialization"
+msgstr "Specialisation"
 
 #: single-profile.php:113
 msgid "Contact"
 msgstr "Contact"
 
-#: single-profile.php:304
-msgid "Publicaties"
-msgstr "Publications"
-
-#: single-profile.php:332
+#: single-profile.php:225
 msgid "Belangrijkste publicaties"
 msgstr "Main publications"
 
-#: single-profile.php:349
-msgid "Overige publicaties"
-msgstr "Other publications"
-
-#: single-profile.php:366
-msgid "Populair-wetenschappelijke publicaties"
-msgstr "Popular scientific publications"
+#: single-profile.php:353
+msgid "Publicaties"
+msgstr "Publications"
 
 #: single.php:45
 msgid "Gerelateerde nieuwsberichten"
 msgstr "Related news"
+
+#~ msgid "Bekijk meer"
+#~ msgstr "View more"
+
+#~ msgid "Overige publicaties"
+#~ msgstr "Other publications"
+
+#~ msgid "Populair-wetenschappelijke publicaties"
+#~ msgstr "Popular scientific publications"
 
 #~ msgid "Onderzoeksgroepen"
 #~ msgstr "Research groups"

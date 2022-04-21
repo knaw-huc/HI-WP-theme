@@ -12,7 +12,7 @@ msgstr ""
 "<translations@example."
 "com>\n"
 "POT-Creation-Date: "
-"2022-04-14 14:49+0200\n"
+"2022-04-21 15:35+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -75,12 +75,12 @@ msgstr ""
 
 #: archive-project.php:9
 #: inc/search/project.php:3
-#: single-profile.php:241
+#: single-profile.php:304
 msgid "Onderzoeksprojecten"
 msgstr ""
 
 #: archive-resource.php:9
-#: front-page.php:66
+#: front-page.php:71
 #: inc/search/resource.php:3
 #: inc/sidebar/resources.php:7
 msgid "Resources"
@@ -92,7 +92,7 @@ msgid ""
 msgstr ""
 
 #: footer.php:16
-msgid "Visit Vruchtvlees"
+msgid "Bezoek Vruchtvlees"
 msgstr ""
 
 #: footer.php:84
@@ -100,7 +100,7 @@ msgstr ""
 msgid "Zoeken"
 msgstr ""
 
-#: front-page.php:15
+#: front-page.php:20
 #: inc/project-filter.php:42
 #: inc/project-filter.php:44
 msgid ""
@@ -108,7 +108,7 @@ msgid ""
 "Geschiedenis"
 msgstr ""
 
-#: front-page.php:19
+#: front-page.php:24
 #: inc/project-filter.php:48
 #: inc/project-filter.php:50
 msgid ""
@@ -116,19 +116,19 @@ msgid ""
 "kunstpraktijken"
 msgstr ""
 
-#: front-page.php:23
+#: front-page.php:28
 #: inc/project-filter.php:54
 #: inc/project-filter.php:56
 msgid "LivesLab"
 msgstr ""
 
-#: front-page.php:27
+#: front-page.php:32
 #: inc/project-filter.php:60
 #: inc/project-filter.php:62
 msgid "Digitale Edities"
 msgstr ""
 
-#: front-page.php:31
+#: front-page.php:36
 #: inc/project-filter.php:66
 #: inc/project-filter.php:68
 msgid ""
@@ -136,28 +136,28 @@ msgid ""
 "literatuurwetenschap"
 msgstr ""
 
-#: front-page.php:35
+#: front-page.php:40
 #: inc/project-filter.php:72
 #: inc/project-filter.php:74
 msgid "Datamanagement"
 msgstr ""
 
-#: front-page.php:50
+#: front-page.php:55
 msgid "Uitgelicht"
 msgstr ""
 
-#: front-page.php:67
+#: front-page.php:72
 msgid ""
 "Bekijk alle resources"
 msgstr ""
 
-#: front-page.php:93
+#: front-page.php:98
 msgid ""
 "Schrijf je in voor de "
 "nieuwsbrief"
 msgstr ""
 
-#: front-page.php:100
+#: front-page.php:105
 msgid "Abonneren"
 msgstr ""
 
@@ -236,10 +236,6 @@ msgstr ""
 #: inc/project-filter.php:152
 #: inc/project-filter.php:154
 msgid "Tag"
-msgstr ""
-
-#: inc/publication-overview-section-list.php:29
-msgid "Bekijk meer"
 msgstr ""
 
 #: inc/resource-filter.php:74
@@ -375,24 +371,13 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: single-profile.php:304
-msgid "Publicaties"
-msgstr ""
-
-#: single-profile.php:332
+#: single-profile.php:225
 msgid ""
 "Belangrijkste publicaties"
 msgstr ""
 
-#: single-profile.php:349
-msgid "Overige publicaties"
-msgstr ""
-
-#: single-profile.php:366
-msgid ""
-"Populair-"
-"wetenschappelijke "
-"publicaties"
+#: single-profile.php:353
+msgid "Publicaties"
 msgstr ""
 
 #: single.php:45
