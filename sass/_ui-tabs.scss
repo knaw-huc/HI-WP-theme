@@ -1,0 +1,54 @@
+.ui-tabs {
+  padding: 0;
+
+  .ui-tabs-nav {
+    padding: 8px 0 16px 0;
+
+    li {
+      margin-right: 8px;
+    }
+
+    .ui-tabs-anchor {
+      @include paragraph-chivo-small;
+      margin-top: 8px;
+      padding: 6px 13px;
+      background: $brand-light-blue;
+      border-radius: 3px;
+    }
+
+    li.ui-tabs-active .ui-tabs-anchor {
+      color: $brand-white;
+      background: $brand-dark-blue;
+    }
+  }
+
+  .ui-tabs-panel {
+    padding: 0;
+    padding-bottom: 16px;
+    border-top: 1px dotted $brand-light-blue;
+    border-bottom: 1px dotted $brand-light-blue;
+
+    h3 {
+      @include paragraph-chivo-medium;
+      margin-top: 16px;
+    }
+
+    > div {
+      @include general-list-styling;
+      @include paragraph-chivo-small;
+      margin-top: 16px;
+
+      > div {
+        padding-left: 36px;
+      }
+
+      > div::before {
+        left: 11px;
+      }
+
+      em {
+        font-style: normal;
+      }
+    }
+  }
+}

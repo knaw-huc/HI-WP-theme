@@ -97,6 +97,11 @@
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery.fitvids.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
 
+    <?php if(is_singular('profile') && get_field('publicaties_en_activiteiten')) : ?>
+      <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+      <script>$(function(){$("#activiteiten-tabs").tabs();});</script>
+    <?php endif; ?>
+
     <?php wp_footer(); ?>
 
   </body>
