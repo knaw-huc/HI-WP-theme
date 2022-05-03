@@ -28,76 +28,6 @@
             "min": "",
             "max": "",
             "return_format": "object"
-        },
-        {
-            "key": "field_5a9fc9e800f70",
-            "label": "Titel",
-            "name": "title",
-            "type": "textarea",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 3,
-            "new_lines": ""
-        },
-        {
-            "key": "field_5a9fca0c00f73",
-            "label": "Titel",
-            "name": "title",
-            "type": "textarea",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 3,
-            "new_lines": ""
-        },
-        {
-            "key": "field_5a9fc9e800f71",
-            "label": "URL",
-            "name": "url",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_5a9fca0c00f74",
-            "label": "URL",
-            "name": "url",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
         }
     ],
     "location": [
@@ -127,5 +57,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1650548010
+    "modified": 1651585537
 }
