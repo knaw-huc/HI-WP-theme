@@ -12,6 +12,10 @@ if($thema->slug == 'politieke-cultuur-en-geschiedenis') {
   $themaColor = 'purple';
 } else if($thema->slug == 'datamanagement') {
   $themaColor = 'brown';
+} else if($thema->slug == 'dhlab') {
+  $themaColor = 'turquoise';
+} else if($thema->slug == 'nl-lab') {
+  $themaColor = 'maroon';
 }
 
 ?>

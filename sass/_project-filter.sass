@@ -7,10 +7,11 @@
 
 .project-filter__button-holder
   margin-top: 24px
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
   width: 100%
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-column-gap: 23px
+  grid-row-gap: 23px
 
 .project-filter__information
   margin-top: 48px
@@ -40,15 +41,6 @@
 .project-filter__button
   +theme-button
   position: relative
-  width: calc((100% - 23px * 2) / 3)
-
-  &:nth-child(n)
-    margin-top: 23px
-
-  &:nth-child(1),
-  &:nth-child(2),
-  &:nth-child(3)
-    margin-top: 0
 
 .project-filter__select-holder
   margin-top: 16px
@@ -56,23 +48,6 @@
 
 @media (max-width: $media-tablet-portrait)
 
-  .project-filter__button
-    width: calc((100% - 23px * 1) / 2)
-
-    &:nth-child(n)
-      margin-top: 23px
-
-    &:nth-child(1),
-    &:nth-child(2)
-      margin-top: 0
-
-@media (max-width: $media-tablet-portrait)
-
-  .project-filter__button
-    width: 100%
-
-    &:nth-child(n)
-      margin-top: 8px
-
-    &:nth-child(1)
-      margin-top: 0
+  .project-filter__button-holder
+    grid-template-columns: repeat(1, 1fr)
+    grid-row-gap: 8px

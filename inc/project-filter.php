@@ -74,6 +74,18 @@ query_posts($args);
       <a class="project-filter__button project-filter__button--brown" href="?thema=datamanagement"><?php _e('Datamanagement', 'huygens'); ?></a>
     <?php } ?>
 
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'dhlab') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('DHLab', 'huygens'); ?></a>
+    <?php } else { ?>
+      <a class="project-filter__button project-filter__button--turquoise" href="?thema=dhlab"><?php _e('DHLab', 'huygens'); ?></a>
+    <?php } ?>
+
+    <?php if(isset($_GET['thema']) && $_GET['thema'] == 'nl-lab') { ?>
+      <a class="project-filter__button project-filter__button--active" href="?"><?php _e('NL-Lab', 'huygens'); ?></a>
+    <?php } else { ?>
+      <a class="project-filter__button project-filter__button--maroon" href="?thema=nl-lab"><?php _e('NL-Lab', 'huygens'); ?></a>
+    <?php } ?>
+
   </div>
   <!-- end .project-filter__button-holder -->
 
@@ -85,7 +97,13 @@ query_posts($args);
 
     <div class="project-filter__information">
       <?php the_field('thema_short_description', $thema); ?>
-      <a href="<?= get_term_link($thema); ?>"><?php _e('Meer over dit thema', 'huygens'); ?></a>
+
+      <?php if ( get_field('thema_long_description', $thema) ) : ?>
+        <a href="<?= get_term_link($thema); ?>"><?php _e('Meer over dit thema', 'huygens'); ?></a>
+      <?php elseif ( get_field('outgoing_link', $thema) ) : ?>
+        <a href="<?= get_term_link($thema); ?>" target="_blank"><?php _e('Bezoek website', 'huygens'); ?></a>
+      <?php endif; ?>
+
     </div>
     <!-- end .project-filter__information -->
 

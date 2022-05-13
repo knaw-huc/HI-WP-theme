@@ -39,6 +39,22 @@
             "toolbar": "basic",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_627d127e51e29",
+            "label": "Uitgaande link",
+            "name": "outgoing_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -56,7 +72,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1520839883
+    "show_in_rest": 0,
+    "modified": 1652363918
 }

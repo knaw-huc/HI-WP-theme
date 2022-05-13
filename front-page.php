@@ -40,6 +40,14 @@
           <?php _e('Datamanagement', 'huygens'); ?>
         </a>
 
+        <a class="project-filter__button project-filter__button--turquoise" href="<?= get_post_type_archive_link('project'); ?>?thema=dhlab">
+          <?php _e('DHLab', 'huygens'); ?>
+        </a>
+
+        <a class="project-filter__button project-filter__button--maroon" href="<?= get_post_type_archive_link('project'); ?>?thema=nl-lab">
+          <?php _e('NL-Lab', 'huygens'); ?>
+        </a>
+
       </div>
       <!-- end .project-filter__button-holder -->
 

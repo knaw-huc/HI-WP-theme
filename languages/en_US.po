@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2022-04-21 15:35+0200\n"
+"POT-Creation-Date: 2022-05-13 12:22+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "Onderzoeksprojecten"
 msgstr "Research projects"
 
-#: archive-resource.php:9 front-page.php:71 inc/search/resource.php:3
+#: archive-resource.php:9 front-page.php:79 inc/search/resource.php:3
 #: inc/sidebar/resources.php:7
 msgid "Resources"
 msgstr "Resources"
@@ -81,19 +81,27 @@ msgstr "Computational Literary Studies"
 msgid "Datamanagement"
 msgstr "Data Management"
 
-#: front-page.php:55
+#: front-page.php:44 inc/project-filter.php:78 inc/project-filter.php:80
+msgid "DHLab"
+msgstr "DHLab"
+
+#: front-page.php:48 inc/project-filter.php:84 inc/project-filter.php:86
+msgid "NL-Lab"
+msgstr "NL-Lab"
+
+#: front-page.php:63
 msgid "Uitgelicht"
 msgstr "Featured"
 
-#: front-page.php:72
+#: front-page.php:80
 msgid "Bekijk alle resources"
 msgstr "View all resources"
 
-#: front-page.php:98
+#: front-page.php:106
 msgid "Schrijf je in voor de nieuwsbrief"
 msgstr "Sign up for our newsletter"
 
-#: front-page.php:105
+#: front-page.php:113
 msgid "Abonneren"
 msgstr "Sign up"
 
@@ -150,16 +158,20 @@ msgstr "Valorisation"
 msgid "Filter onderzoeksprojecten"
 msgstr "Filter research projects"
 
-#: inc/project-filter.php:88
+#: inc/project-filter.php:102
 msgid "Meer over dit thema"
 msgstr "More on this theme"
 
-#: inc/project-filter.php:113 inc/project-filter.php:115
+#: inc/project-filter.php:104
+msgid "Bezoek website"
+msgstr "Visit website"
+
+#: inc/project-filter.php:131 inc/project-filter.php:133
 #: inc/resource-filter.php:119 inc/sidebar/resource-meta.php:31
 msgid "Periode"
 msgstr "Period"
 
-#: inc/project-filter.php:152 inc/project-filter.php:154
+#: inc/project-filter.php:170 inc/project-filter.php:172
 msgid "Tag"
 msgstr "Tag"
 
