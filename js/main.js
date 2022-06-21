@@ -59,6 +59,26 @@ if ($(window).width() < 1200) {
 
 }
 
+if ($('.page-intro__carousel--mobile').length == 0 && $('.page-intro__carousel--desktop').length == 0) {
+  $('.page-intro__carousel').owlCarousel({
+    'loop': true,
+    'smartSpeed': 600,
+    'margin': 24,
+    'autoWidth': true,
+    'center': true,
+    'dots': false,
+    'nav': true,
+    'autoplay': true,
+    'autoplayTimeout': 3000,
+    'autoplayHoverPause': true,
+    'responsive': {
+      768: {
+        'margin': 32,
+      },
+    },
+  });
+}
+
 // Homepage carousel
 $('.homepage-carousel').owlCarousel({
   'items': 1,
