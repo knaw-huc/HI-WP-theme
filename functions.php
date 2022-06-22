@@ -323,27 +323,6 @@ function new_excerpt_ellipsis( $more ) {
 }
 add_filter('excerpt_more', 'new_excerpt_ellipsis');
 
-// Get linked elements (provided by multilingualpress)
-function get_linked_elements() {
-  // ask mlp
-  $type = ( is_tax() ? 'term' : 'post' );
-  return mlp_get_linked_elements(get_queried_object_id(), $type, get_current_blog_id());
-}
-
-// Get term link (provided by multilingualpress)
-function get_blog_term_link( $blog_id, $term_id ) {
-  switch_to_blog( $blog_id );
-  $link = get_term_link( $term_id );
-  restore_current_blog();
-  return $link;
-}
-
-// Get language link (provided by multilingualpress)
-function get_language_link($site_id, $post_id) {
-  $link = ( is_tax() ? get_blog_term_link($site_id, $post_id) : get_blog_permalink($site_id, $post_id) );
-  return $link . '?noredirect=' . mlp_get_blog_language($site_id, false);
-}
-
 // Load translation files
 function transparent_theme_setup() {
    load_theme_textdomain( 'huygens', get_template_directory() . '/languages' );
