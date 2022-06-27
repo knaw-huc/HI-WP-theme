@@ -1,5 +1,5 @@
 <?php
-$menuItems = wp_get_nav_menu_items('header-menu');
+$menuItems = get_nav_menu_items_by_location('header-menu');
 ?>
 
 <ul class="navigation navigation--pages">

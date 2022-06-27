@@ -14,7 +14,7 @@
   <div class="main">
 
     <?php
-    $menuItems = wp_get_nav_menu_items('header-menu');
+    $menuItems = get_nav_menu_items_by_location('header-menu');
     ?>
 
     <div class="project-overview" role="main">
