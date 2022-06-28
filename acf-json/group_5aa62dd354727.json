@@ -58,6 +58,13 @@
                 "operator": "==",
                 "value": "front_page"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-homepage.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -68,7 +75,8 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1527014758
+    "show_in_rest": 0,
+    "modified": 1656408711
 }

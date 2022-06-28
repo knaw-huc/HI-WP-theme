@@ -29,13 +29,6 @@
                 "operator": "==",
                 "value": "acf-options"
             }
-        ],
-        [
-            {
-                "param": "page_type",
-                "operator": "==",
-                "value": "front_page"
-            }
         ]
     ],
     "menu_order": 2,
@@ -44,7 +37,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1520868241
+    "show_in_rest": 0,
+    "modified": 1656408886
 }
