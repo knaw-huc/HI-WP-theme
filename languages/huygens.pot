@@ -12,7 +12,7 @@ msgstr ""
 "<translations@example."
 "com>\n"
 "POT-Creation-Date: "
-"2022-05-13 12:22+0200\n"
+"2022-06-28 11:46+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -230,7 +230,7 @@ msgstr ""
 
 #: inc/project-filter.php:37
 msgid ""
-"Filter "
+"Afdelingen en "
 "onderzoeksprojecten"
 msgstr ""
 

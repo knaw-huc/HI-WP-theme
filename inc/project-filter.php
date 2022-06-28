@@ -34,7 +34,7 @@ query_posts($args);
 
 <div class="project-filter">
 
-  <h4 class="project-filter__heading"><?php _e('Filter onderzoeksprojecten', 'huygens'); ?></h4>
+  <h4 class="project-filter__heading"><?php _e('Afdelingen en onderzoeksprojecten', 'huygens'); ?></h4>
 
   <div class="project-filter__button-holder">
 
