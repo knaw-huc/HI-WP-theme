@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2022-06-28 11:46+0200\n"
+"POT-Creation-Date: 2022-06-28 15:16+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -45,13 +45,13 @@ msgstr "Research projects"
 msgid "Resources"
 msgstr "Resources"
 
-#: footer.php:13
-msgid "Design & Development:"
-msgstr "Design & Development:"
+#: footer.php:14
+msgid "Het Huygens Instituut is onderdeel van:"
+msgstr "Huygens Institute is part of:"
 
-#: footer.php:16
-msgid "Bezoek Vruchtvlees"
-msgstr "Visit Vruchtvlees"
+#: footer.php:21 footer.php:25
+msgid "Bezoek"
+msgstr "Bezoek"
 
 #: footer.php:84 header.php:78
 msgid "Zoeken"
@@ -301,6 +301,12 @@ msgstr "Publications"
 #: single.php:45
 msgid "Gerelateerde nieuwsberichten"
 msgstr "Related news"
+
+#~ msgid "Design & Development:"
+#~ msgstr "Design & Development:"
+
+#~ msgid "Bezoek Vruchtvlees"
+#~ msgstr "Visit Vruchtvlees"
 
 #~ msgid "Bekijk meer"
 #~ msgstr "View more"

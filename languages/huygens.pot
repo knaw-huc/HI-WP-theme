@@ -12,7 +12,7 @@ msgstr ""
 "<translations@example."
 "com>\n"
 "POT-Creation-Date: "
-"2022-06-28 11:46+0200\n"
+"2022-06-28 15:16+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -86,13 +86,15 @@ msgstr ""
 msgid "Resources"
 msgstr ""
 
-#: footer.php:13
+#: footer.php:14
 msgid ""
-"Design & Development:"
+"Het Huygens Instituut is "
+"onderdeel van:"
 msgstr ""
 
-#: footer.php:16
-msgid "Bezoek Vruchtvlees"
+#: footer.php:21
+#: footer.php:25
+msgid "Bezoek"
 msgstr ""
 
 #: footer.php:84
