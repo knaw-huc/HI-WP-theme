@@ -99,7 +99,7 @@ query_posts($args);
       <?php the_field('thema_short_description', $thema); ?>
 
       <?php if ( get_field('thema_long_description', $thema) ) : ?>
-        <a href="<?= get_term_link($thema); ?>"><?php _e('Meer over dit thema', 'huygens'); ?></a>
+        <a href="<?= get_term_link($thema); ?>"><?php _e('Meer over deze afdeling', 'huygens'); ?></a>
       <?php elseif ( get_field('outgoing_link', $thema) ) : ?>
         <a href="<?= get_field('outgoing_link', $thema); ?>" target="_blank"><?php _e('Bezoek website', 'huygens'); ?></a>
       <?php endif; ?>

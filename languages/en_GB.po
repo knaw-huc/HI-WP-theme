@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2022-06-28 15:16+0200\n"
+"POT-Creation-Date: 2022-07-04 15:23+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -159,8 +159,8 @@ msgid "Afdelingen en onderzoeksprojecten"
 msgstr "Departments and research projects"
 
 #: inc/project-filter.php:102
-msgid "Meer over dit thema"
-msgstr "More on this theme"
+msgid "Meer over deze afdeling"
+msgstr "More on this department"
 
 #: inc/project-filter.php:104
 msgid "Bezoek website"
