@@ -88,9 +88,9 @@
     </div>
     <!-- end .mobile-navigation -->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>
-      window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery-3.2.1.min.js"><\/script>');
+      window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery-3.4.0.min.js"><\/script>');
     </script>
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/SmoothScroll.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/vendor/owl.carousel.js"></script>
